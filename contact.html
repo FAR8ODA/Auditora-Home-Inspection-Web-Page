@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact | Auditora Home Inspection Vancouver</title>
+  <meta name="description" content="Contact Auditora Home Inspection. Call 604-719-5840 or send a message. Serving Greater Vancouver."/>
+  <link rel="canonical" href="https://auditora.ca/contact" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://auditora.ca/contact" />
+  <meta property="og:title" content="Contact | Auditora Home Inspection Vancouver" />
+  <meta property="og:description" content="Contact Auditora Home Inspection. Call 604-719-5840 or send a message. Serving Greater Vancouver." />
+  <meta property="og:site_name" content="Auditora Home Inspection" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--navy:#0d1b2a;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--off-white:#f0ece6;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
+    html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;}
+    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold-light);}
+    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
+    .page-hero{background:var(--navy);padding:140px 5% 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,151,58,0.07) 0%,transparent 70%);}
+    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px);background-size:60px 60px;}
+    .page-hero-inner{position:relative;z-index:2;max-width:640px;}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+    .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .section-tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,52px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px;}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;}
+    .container{max-width:1060px;margin:0 auto;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--navy);margin-bottom:14px;}
+    /* CONTACT LAYOUT */
+    .contact-section{padding:80px 5%;background:#fff;}
+    .contact-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;max-width:1060px;margin:0 auto;align-items:start;}
+    .contact-info-col{display:flex;flex-direction:column;gap:20px;}
+    .contact-info-col h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+    .contact-info-col p{font-size:15px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px;}
+    .contact-card{background:var(--cream);border-radius:14px;padding:20px 22px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:flex-start;gap:16px;text-decoration:none;transition:border-color 0.2s,transform 0.15s;}
+    .contact-card:hover{border-color:var(--gold);transform:translateX(3px);}
+    .contact-card-icon{width:44px;height:44px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+    .contact-card-text strong{display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;}
+    .contact-card-text span{font-size:14px;color:var(--muted);}
+    .response-note{background:rgba(201,151,58,0.1);border:1px solid rgba(201,151,58,0.25);border-radius:12px;padding:16px 20px;font-size:14px;color:var(--navy);line-height:1.6;}
+    /* FORM */
+    .form-card{background:var(--cream);border-radius:20px;padding:40px;}
+    .form-card h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+    .form-card p{font-size:14px;color:var(--muted);margin-bottom:28px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+    .form-group label{font-size:13px;font-weight:600;color:var(--navy);}
+    .form-group input,.form-group select,.form-group textarea{background:#fff;border:1.5px solid rgba(0,0,0,0.1);border-radius:8px;padding:12px 16px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text);outline:none;transition:border-color 0.2s;width:100%;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .submit-btn{width:100%;background:var(--gold);color:var(--navy);border:none;padding:16px;border-radius:8px;font-weight:600;font-size:16px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+    .submit-btn:hover{background:var(--gold-light);}
+    .form-success{display:none;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:20px;text-align:center;color:#15803d;font-size:15px;margin-top:16px;}
+    footer{background:#060d14;padding:60px 5% 30px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:14px;}
+    .footer-brand .ci{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+    .footer-brand .ci a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-brand .ci a:hover{color:var(--gold-light);}
+    .footer-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
+    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
+    @media(max-width:900px){.contact-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hamburger{display:flex;}}
+    @media(max-width:600px){.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li><li><a href="book.html" class="btn-nav">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    <div class="section-tag">Get In Touch</div>
+    <h1>We'd Love to<br>Hear From You</h1>
+    <p>Have a question, need a quote, or just want to talk through your situation? Reach out anytime.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info-col">
+      <div>
+        <h2>Contact Auditora</h2>
+        <p>The fastest way to book is online — but we're always happy to chat by phone or email too.</p>
+      </div>
+      <a href="tel:6047195840" class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-text"><strong>Phone / Call or Text</strong><span>604-719-5840</span></div>
+      </a>
+      <a href="mailto:info@auditora.ca" class="contact-card">
+        <div class="contact-card-icon">📧</div>
+        <div class="contact-card-text"><strong>Email</strong><span>info@auditora.ca</span></div>
+      </a>
+      <a href="book.html" class="contact-card">
+        <div class="contact-card-icon">📅</div>
+        <div class="contact-card-text"><strong>Book Online</strong><span>Fastest way — pick your date now</span></div>
+      </a>
+      <div class="contact-card" style="cursor:default;">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-text"><strong>Service Area</strong><span>Greater Vancouver &amp; Lower Mainland, BC</span></div>
+      </div>
+      <div class="response-note">
+        📬 We typically respond to emails and messages within a few hours during business hours.
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Send Us a Message</h3>
+      <p>Fill out the form and we'll get back to you promptly.</p>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="604-000-0000"/></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"/></div>
+      </div>
+      <div class="form-group"><label>Property Address (if known)</label><input type="text" placeholder="123 Main St, Vancouver, BC"/></div>
+      <div class="form-group">
+        <label>What type of inspection?</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Full Home Inspection</option>
+          <option>Condo Inspection</option>
+          <option>Townhouse Inspection</option>
+          <option>Pre-Listing Inspection</option>
+          <option>Not sure — I have a question</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your property or ask us anything..."></textarea></div>
+      <button class="submit-btn" onclick="submitForm()">📩 Send Message</button>
+      <div class="form-success" id="formSuccess">✅ Message sent! We'll get back to you shortly.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a><p>Certified residential and condo inspections in Greater Vancouver.</p><div class="ci"><a href="tel:6047195840">📞 604-719-5840</a><a href="mailto:info@auditora.ca">📧 info@auditora.ca</a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="book.html">Book Now</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Auditora Home Inspection. All rights reserved.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+  </div>
+</footer>
+<script>
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+  function submitForm(){
+    // This shows a success message — wire up to a real backend (Formspree, EmailJS, etc.) when hosting
+    document.getElementById('formSuccess').style.display='block';
+    setTimeout(()=>{document.getElementById('formSuccess').style.display='none';},5000);
+  }
+</script>
+</body>
+</html>

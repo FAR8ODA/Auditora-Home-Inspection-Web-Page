@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Pricing | Auditora Home Inspection Vancouver</title>
+  <meta name="description" content="Transparent home inspection pricing in Vancouver. Starting from $399 based on square footage. No hidden fees."/>
+  <link rel="canonical" href="https://auditora.ca/pricing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://auditora.ca/pricing" />
+  <meta property="og:title" content="Pricing | Auditora Home Inspection Vancouver" />
+  <meta property="og:description" content="Transparent home inspection pricing in Vancouver. Starting from $399 based on square footage. No hidden fees." />
+  <meta property="og:site_name" content="Auditora Home Inspection" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--navy:#0d1b2a;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--off-white:#f0ece6;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
+    html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;}
+    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold-light);}
+    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
+    .page-hero{background:var(--navy);padding:140px 5% 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,151,58,0.07) 0%,transparent 70%);}
+    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px);background-size:60px 60px;}
+    .page-hero-inner{position:relative;z-index:2;max-width:640px;}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+    .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .section-tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,52px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px;}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;}
+    .container{max-width:900px;margin:0 auto;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--navy);margin-bottom:14px;}
+    /* PRICING TABLE */
+    .pricing-section{padding:80px 5%;background:var(--off-white);}
+    .pricing-header{text-align:center;margin-bottom:50px;}
+    .pricing-header p{font-size:16px;color:var(--muted);font-weight:300;max-width:480px;margin:0 auto;}
+    .pricing-table-wrap{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 50px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);}
+    .pt-head{background:var(--navy);display:grid;grid-template-columns:1fr auto;padding:18px 40px;gap:20px;}
+    .pt-head span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+    .pt-head span:last-child{text-align:right;}
+    .pt-row{display:grid;grid-template-columns:1fr auto;padding:22px 40px;border-bottom:1px solid rgba(0,0,0,0.05);align-items:center;gap:20px;transition:background 0.15s;}
+    .pt-row:last-child{border-bottom:none;}
+    .pt-row:hover{background:rgba(201,151,58,0.04);}
+    .pt-size{font-size:16px;color:var(--text);}
+    .pt-sqft{font-size:13px;color:var(--muted);margin-top:3px;}
+    .pt-price{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);white-space:nowrap;}
+    .pt-row.highlighted{background:rgba(201,151,58,0.06);border-left:3px solid var(--gold);}
+    .pt-row.cta-row{background:var(--navy);border-bottom:none;padding:26px 40px;}
+    .pt-row.cta-row .pt-size{color:rgba(255,255,255,0.7);font-size:15px;}
+    .pt-row.cta-row .pt-sqft{color:rgba(255,255,255,0.4);}
+    .pt-row.cta-row .pt-price{color:var(--gold);font-size:16px;font-family:'DM Sans',sans-serif;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;}
+    .pricing-notes{margin-top:24px;display:flex;flex-direction:column;gap:10px;}
+    .pricing-note-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted);}
+    .pricing-note-item::before{content:'ℹ';color:var(--gold);font-size:14px;flex-shrink:0;}
+    /* WHATS INCLUDED */
+    .included-section{padding:80px 5%;background:#fff;}
+    .included-header{text-align:center;margin-bottom:50px;}
+    .included-header p{font-size:16px;color:var(--muted);font-weight:300;}
+    .included-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:900px;margin:0 auto;}
+    .included-item{background:var(--cream);border-radius:14px;padding:24px;border:1px solid rgba(0,0,0,0.05);}
+    .included-item .icon{font-size:28px;margin-bottom:12px;}
+    .included-item h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+    .included-item p{font-size:13px;color:var(--muted);line-height:1.6;}
+    /* FAQ */
+    .faq-section{padding:80px 5%;background:var(--cream);}
+    .faq-header{text-align:center;margin-bottom:50px;}
+    .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:4px;}
+    .faq-item{background:#fff;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);}
+    .faq-q{padding:20px 24px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+    .faq-q:hover{background:rgba(201,151,58,0.04);}
+    .faq-icon{font-size:18px;color:var(--gold);transition:transform 0.3s;flex-shrink:0;}
+    .faq-a{font-size:14px;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;}
+    .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    /* CTA */
+    .cta-banner{background:var(--navy);padding:80px 5%;text-align:center;position:relative;overflow:hidden;}
+    .cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(201,151,58,0.1) 0%,transparent 70%);}
+    .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);color:#fff;margin-bottom:14px;position:relative;z-index:2;}
+    .cta-banner p{font-size:16px;color:rgba(255,255,255,0.55);margin-bottom:36px;font-weight:300;position:relative;z-index:2;}
+    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
+    .btn-primary{background:var(--gold);color:var(--navy);padding:15px 30px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s;}
+    .btn-primary:hover{background:var(--gold-light);}
+    .btn-outline{border:1.5px solid rgba(255,255,255,0.3);color:#fff;padding:15px 28px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s,background 0.2s;}
+    .btn-outline:hover{border-color:var(--gold);background:rgba(201,151,58,0.08);}
+    footer{background:#060d14;padding:60px 5% 30px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:14px;}
+    .footer-brand .contact-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+    .footer-brand .contact-info a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-brand .contact-info a:hover{color:var(--gold-light);}
+    .footer-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
+    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hamburger{display:flex;}}
+    @media(max-width:600px){.pt-head,.pt-row{padding:16px 20px;}.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li><li><a href="pricing.html" class="active">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="book.html" class="btn-nav">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Pricing</div>
+    <div class="section-tag">Transparent Pricing</div>
+    <h1>Simple, Fair Pricing.<br>No Hidden Fees.</h1>
+    <p>Our inspection fees are based on home size. You'll know exactly what you're paying before you book.</p>
+  </div>
+</div>
+
+<section class="pricing-section">
+  <div class="container">
+    <div class="pricing-header reveal">
+      <div class="section-tag">Pricing Table</div>
+      <h2 class="section-title">Inspection Pricing by Square Footage</h2>
+      <p>All prices include the full inspection, thermal imaging, moisture testing, and your digital report.</p>
+    </div>
+    <div class="pricing-table-wrap reveal">
+      <div class="pt-head"><span>Home Size</span><span>Price</span></div>
+      <div class="pt-row">
+        <div><div class="pt-size">Small Home / Condo</div><div class="pt-sqft">Up to 1,000 sq ft</div></div>
+        <div class="pt-price">$399</div>
+      </div>
+      <div class="pt-row highlighted">
+        <div><div class="pt-size">Small–Medium Home</div><div class="pt-sqft">1,001 – 1,500 sq ft</div></div>
+        <div class="pt-price">$449</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-size">Medium Home</div><div class="pt-sqft">1,501 – 2,000 sq ft</div></div>
+        <div class="pt-price">$499</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-size">Large Home</div><div class="pt-sqft">2,001 – 2,500 sq ft</div></div>
+        <div class="pt-price">$549</div>
+      </div>
+      <div class="pt-row cta-row">
+        <div><div class="pt-size">Extra Large Home</div><div class="pt-sqft">2,500+ sq ft — custom quote</div></div>
+        <a href="tel:6047195840" class="pt-price">📞 Call for Quote →</a>
+      </div>
+    </div>
+    <div class="pricing-notes reveal">
+      <div class="pricing-note-item">Final price may vary based on property complexity, age, or unique features.</div>
+      <div class="pricing-note-item">All inspections include thermal imaging and moisture testing at no extra charge.</div>
+      <div class="pricing-note-item">Your detailed digital report is included and delivered within 24 hours.</div>
+      <div class="pricing-note-item">Not sure which tier you fall into? Call us and we'll figure it out together.</div>
+    </div>
+  </div>
+</section>
+
+<section class="included-section">
+  <div class="included-header reveal">
+    <div class="section-tag">What's Always Included</div>
+    <h2 class="section-title">Every Inspection, Every Time</h2>
+    <p>No matter what tier you're in, every Auditora inspection includes these.</p>
+  </div>
+  <div class="included-grid reveal">
+    <div class="included-item"><div class="icon">🏗️</div><h4>Structure &amp; Foundation</h4><p>Walls, floors, structure integrity, visible foundation.</p></div>
+    <div class="included-item"><div class="icon">🔌</div><h4>Electrical</h4><p>Panel, wiring, outlets, safety concerns.</p></div>
+    <div class="included-item"><div class="icon">🚿</div><h4>Plumbing</h4><p>Pipes, fixtures, water pressure, drain flow.</p></div>
+    <div class="included-item"><div class="icon">🌡️</div><h4>Thermal Imaging</h4><p>FLIR camera to detect hidden moisture and leaks.</p></div>
+    <div class="included-item"><div class="icon">🏠</div><h4>Roof &amp; Attic</h4><p>Roofing condition, attic insulation, ventilation.</p></div>
+    <div class="included-item"><div class="icon">💨</div><h4>HVAC</h4><p>Heating systems, ventilation, cooling units.</p></div>
+    <div class="included-item"><div class="icon">💧</div><h4>Moisture Testing</h4><p>Moisture meter checks throughout the property.</p></div>
+    <div class="included-item"><div class="icon">📋</div><h4>Digital Report</h4><p>Clear, photo-rich report delivered within 24 hours.</p></div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-header reveal">
+    <div class="section-tag">Common Questions</div>
+    <h2 class="section-title">Pricing FAQ</h2>
+  </div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I know the size of my home? <span class="faq-icon">+</span></div>
+      <div class="faq-a">You can find the square footage on the MLS listing, your property assessment, or the strata/building documents. If you're not sure, give us a call and we'll help you figure it out.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is the thermal imaging really included? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes — 100%. We use a FLIR thermal camera on every inspection at no extra charge. It helps us detect hidden moisture, insulation gaps, and electrical hotspots that a visual inspection alone can miss.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">When do I pay? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Payment is collected when you book online through our booking system. We accept major credit cards. Your booking is confirmed once payment is processed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How long does an inspection take? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Most inspections take 2–3.5 hours depending on home size and complexity. We never rush. You're welcome to attend and ask questions throughout.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">When do I receive my report? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Your full digital report is typically delivered within 24 hours of the inspection. It includes photos, findings, and clear explanations of everything we found.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What's your cancellation policy? <span class="faq-icon">+</span></div>
+      <div class="faq-a">We require at least 48 hours notice for cancellations or reschedules. See our full <a href="cancellation.html" style="color:var(--gold);">cancellation policy</a> for details.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Book Your Inspection?</h2>
+  <p>Book online in minutes, or call us to discuss your property.</p>
+  <div class="cta-buttons">
+    <a href="book.html" class="btn-primary">📅 Book Online Now</a>
+    <a href="tel:6047195840" class="btn-outline">📞 604-719-5840</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a><p>Certified residential and condo inspections in Greater Vancouver.</p><div class="contact-info"><a href="tel:6047195840">📞 604-719-5840</a><a href="mailto:info@auditora.ca">📧 info@auditora.ca</a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="book.html">Book Now</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Auditora Home Inspection. All rights reserved.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+  </div>
+</footer>
+<script>
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+  function toggleFaq(el){el.closest('.faq-item').classList.toggle('open');}
+  document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)e.target.classList.add('visible');},{threshold:0.1}).observe(el);});
+</script>
+</body>
+</html>

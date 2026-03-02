@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+
+# Redirect www.auditora.ca → auditora.ca (primary domain)
+[[redirects]]
+  from = "https://www.auditora.ca/*"
+  to = "https://auditora.ca/:splat"
+  status = 301
+  force = true
+
+# Redirect auditorahomeinspection.ca → auditora.ca
+[[redirects]]
+  from = "https://auditorahomeinspection.ca/*"
+  to = "https://auditora.ca/:splat"
+  status = 301
+  force = true
+
+# Redirect www.auditorahomeinspection.ca → auditora.ca
+[[redirects]]
+  from = "https://www.auditorahomeinspection.ca/*"
+  to = "https://auditora.ca/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

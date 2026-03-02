@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Book an Inspection | Auditora Home Inspection Vancouver</title>
+  <meta name="description" content="Book your home inspection online with Auditora. Pick a date, pay securely, and confirm your inspection in minutes."/>
+  <link rel="canonical" href="https://auditora.ca/book" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://auditora.ca/book" />
+  <meta property="og:title" content="Book an Inspection | Auditora Home Inspection Vancouver" />
+  <meta property="og:description" content="Book your home inspection online with Auditora. Pick a date, pay securely, and confirm your inspection in minutes." />
+  <meta property="og:site_name" content="Auditora Home Inspection" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--navy:#0d1b2a;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--off-white:#f0ece6;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
+    html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;}
+    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold-light);}
+    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
+    .page-hero{background:var(--navy);padding:140px 5% 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,151,58,0.07) 0%,transparent 70%);}
+    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px);background-size:60px 60px;}
+    .page-hero-inner{position:relative;z-index:2;text-align:center;max-width:640px;margin:0 auto;}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+    .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .section-tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,52px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px;}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;}
+    .container{max-width:1100px;margin:0 auto;}
+    /* HOW IT WORKS */
+    .how-section{padding:70px 5%;background:var(--cream);}
+    .steps{display:flex;gap:0;justify-content:center;max-width:900px;margin:40px auto 0;position:relative;}
+    .steps::before{content:'';position:absolute;top:28px;left:15%;right:15%;height:2px;background:rgba(201,151,58,0.25);z-index:0;}
+    .step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;}
+    .step-num{width:56px;height:56px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);margin-bottom:16px;border:3px solid var(--cream);}
+    .step h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+    .step p{font-size:13px;color:var(--muted);line-height:1.5;max-width:140px;}
+    /* BOOKING WIDGET */
+    .booking-section{padding:80px 5%;background:#fff;}
+    .booking-inner{display:grid;grid-template-columns:1fr 340px;gap:50px;max-width:1060px;margin:0 auto;align-items:start;}
+    .booking-widget-area{background:var(--cream);border-radius:20px;padding:40px;min-height:500px;border:2px dashed rgba(201,151,58,0.3);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:16px;}
+    .widget-icon{font-size:56px;}
+    .booking-widget-area h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:6px;}
+    .booking-widget-area p{font-size:14px;color:var(--muted);line-height:1.6;max-width:340px;}
+    .booking-widget-area code{font-size:12px;background:rgba(0,0,0,0.07);padding:10px 16px;border-radius:8px;display:block;margin-top:12px;color:var(--navy);font-family:monospace;line-height:1.6;text-align:left;}
+    .booking-sidebar{display:flex;flex-direction:column;gap:20px;}
+    .side-card{background:var(--cream);border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,0.06);}
+    .side-card h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+    .side-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+    .side-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .side-card ul li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;}
+    .side-card ul li::before{content:'✓';color:var(--gold);font-weight:700;font-size:12px;}
+    .call-card{background:var(--navy);border-radius:16px;padding:24px;text-align:center;}
+    .call-card p{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:14px;}
+    .call-card a{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;transition:background 0.2s;}
+    .call-card a:hover{background:var(--gold-light);}
+    footer{background:#060d14;padding:60px 5% 30px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:14px;}
+    .footer-brand .contact-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+    .footer-brand .contact-info a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-brand .contact-info a:hover{color:var(--gold-light);}
+    .footer-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
+    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
+    @media(max-width:900px){.booking-inner{grid-template-columns:1fr;}.steps::before{display:none;}.steps{flex-direction:column;gap:24px;align-items:flex-start;padding-left:20px;}.step{flex-direction:row;text-align:left;gap:16px;align-items:flex-start;}.step-num{flex-shrink:0;}.step p{max-width:none;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hamburger{display:flex;}}
+    @media(max-width:600px){.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="book.html" class="btn-nav active">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Book</div>
+    <div class="section-tag">Online Booking</div>
+    <h1>Book Your Inspection Online</h1>
+    <p>Pick your date, pay securely, and confirm your inspection — all in a few minutes. No phone calls required.</p>
+  </div>
+</div>
+
+<section class="how-section">
+  <div style="text-align:center;"><div class="section-tag">How It Works</div><h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);color:var(--navy);">Simple 4-Step Process</h2></div>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><h4>Choose a Date</h4><p>Pick from available slots in the calendar below</p></div>
+    <div class="step"><div class="step-num">2</div><h4>Fill Your Details</h4><p>Enter your property address and contact info</p></div>
+    <div class="step"><div class="step-num">3</div><h4>Pay Securely</h4><p>Pay online by credit card — fast and safe</p></div>
+    <div class="step"><div class="step-num">4</div><h4>You're Confirmed</h4><p>Receive a confirmation email with all the details</p></div>
+  </div>
+</section>
+
+<section class="booking-section">
+  <div class="booking-inner">
+    <!-- SQUARE APPOINTMENTS BOOKING -->
+    <div class="booking-widget-area">
+      <div class="widget-icon">📅</div>
+      <h3>Book Your Inspection Online</h3>
+      <p>Click the button below to choose your date and time, enter your property details, and pay securely — all through Square Appointments.</p>
+
+      <!-- ✅ SQUARE BOOKING BUTTON — replace YOUR_SQUARE_LINK with your actual Square URL -->
+      <a href="YOUR_SQUARE_LINK"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);padding:18px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:17px;margin-top:8px;box-shadow:0 4px 20px rgba(201,151,58,0.35);transition:background 0.2s;"
+         onmouseover="this.style.background='#e0b565'"
+         onmouseout="this.style.background='var(--gold)'">
+        📅 Open Booking Calendar
+      </a>
+
+      <p style="font-size:13px;color:var(--muted);margin-top:16px;">You'll be taken to our secure Square booking page.<br>Pay online by credit card. Confirmation sent to your email.</p>
+    </div>
+
+    <div class="booking-sidebar">
+      <div class="side-card">
+        <h4>📋 What's Included</h4>
+        <ul>
+          <li>Full property inspection</li>
+          <li>Thermal imaging (FLIR)</li>
+          <li>Moisture testing</li>
+          <li>Digital report in 24h</li>
+          <li>Photo documentation</li>
+          <li>Q&amp;A during inspection</li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h4>💲 Pricing</h4>
+        <p>Starting from <strong>$399</strong> based on square footage.</p>
+        <a href="pricing.html" style="display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;margin-top:10px;">See full pricing →</a>
+      </div>
+      <div class="side-card">
+        <h4>📍 Service Area</h4>
+        <p>Vancouver, Burnaby, North Van, West Van, Richmond, Coquitlam, Port Moody, Surrey, Langley, New Westminster &amp; more.</p>
+      </div>
+      <div class="call-card">
+        <p>Prefer to book by phone?</p>
+        <a href="tel:6047195840">📞 604-719-5840</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a><p>Certified residential and condo inspections in Greater Vancouver.</p><div class="contact-info"><a href="tel:6047195840">📞 604-719-5840</a><a href="mailto:info@auditora.ca">📧 info@auditora.ca</a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="book.html">Book Now</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Auditora Home Inspection. All rights reserved.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+  </div>
+</footer>
+<script>
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+</script>
+</body>
+</html>

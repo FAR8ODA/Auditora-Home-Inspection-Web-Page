@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>About Vahid | Auditora Home Inspection Vancouver</title>
+  <meta name="description" content="Meet Vahid, certified home inspector and founder of Auditora Home Inspection. HIABC member serving Greater Vancouver."/>
+  <link rel="canonical" href="https://auditora.ca/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://auditora.ca/about" />
+  <meta property="og:title" content="About Vahid | Auditora Home Inspection Vancouver" />
+  <meta property="og:description" content="Meet Vahid, certified home inspector and founder of Auditora Home Inspection. HIABC member serving Greater Vancouver." />
+  <meta property="og:site_name" content="Auditora Home Inspection" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--navy:#0d1b2a;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--off-white:#f0ece6;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
+    html{scroll-behavior:smooth;}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;}
+    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold-light);}
+    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;border-bottom:1px solid rgba(201,151,58,0.2);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
+    .page-hero{background:var(--navy);padding:140px 5% 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,151,58,0.07) 0%,transparent 70%);}
+    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px);background-size:60px 60px;}
+    .page-hero-inner{position:relative;z-index:2;max-width:640px;}
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+    .breadcrumb a{color:var(--gold-light);text-decoration:none;}
+    .section-tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,52px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px;}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--navy);margin-bottom:16px;}
+    /* ABOUT MAIN */
+    .about-main{padding:90px 5%;background:#fff;}
+    .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+    .about-photo-block{display:flex;flex-direction:column;gap:20px;}
+    .about-photo{background:var(--navy);border-radius:20px;min-height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+    .about-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(201,151,58,0.15) 0%,transparent 60%);}
+    .about-photo-placeholder{text-align:center;position:relative;z-index:2;}
+    .about-photo-placeholder .big-emoji{font-size:80px;display:block;margin-bottom:16px;}
+    .about-photo-placeholder p{color:rgba(255,255,255,0.5);font-size:14px;font-style:italic;}
+    .about-credentials{display:flex;flex-direction:column;gap:12px;}
+    .credential-badge{display:flex;align-items:center;gap:14px;background:var(--cream);border-radius:12px;padding:16px 20px;border:1px solid rgba(0,0,0,0.06);}
+    .cred-icon{width:40px;height:40px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+    .cred-text strong{display:block;font-size:14px;font-weight:600;color:var(--navy);}
+    .cred-text span{font-size:13px;color:var(--muted);}
+    .about-story .section-tag{display:block;margin-bottom:14px;}
+    .about-story p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:18px;font-weight:300;}
+    .about-story p strong{color:var(--text);font-weight:600;}
+    .about-story blockquote{border-left:3px solid var(--gold);padding:16px 20px;background:var(--cream);border-radius:0 10px 10px 0;margin:24px 0;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
+    .btn-primary{background:var(--gold);color:var(--navy);padding:15px 30px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s;}
+    .btn-primary:hover{background:var(--gold-light);}
+    /* TOOLS */
+    .tools-section{padding:80px 5%;background:var(--cream);}
+    .tools-header{text-align:center;margin-bottom:50px;}
+    .tools-header p{font-size:16px;color:var(--muted);font-weight:300;}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:0 auto;}
+    .tool-card{background:#fff;border-radius:16px;padding:28px 24px;text-align:center;border:1px solid rgba(0,0,0,0.05);transition:transform 0.2s,box-shadow 0.2s;}
+    .tool-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.07);}
+    .tool-icon{font-size:40px;margin-bottom:14px;}
+    .tool-card h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+    .tool-card p{font-size:13px;color:var(--muted);line-height:1.5;}
+    /* VALUES */
+    .values-section{padding:80px 5%;background:var(--navy);}
+    .values-header{text-align:center;margin-bottom:50px;}
+    .values-header .section-title{color:#fff;}
+    .values-header p{font-size:16px;color:rgba(255,255,255,0.5);font-weight:300;}
+    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1000px;margin:0 auto;}
+    .value-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:32px 24px;}
+    .value-card .icon{font-size:32px;margin-bottom:16px;}
+    .value-card h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:10px;}
+    .value-card p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;}
+    /* CTA */
+    .cta-banner{background:var(--off-white);padding:80px 5%;text-align:center;}
+    .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);color:var(--navy);margin-bottom:14px;}
+    .cta-banner p{font-size:16px;color:var(--muted);margin-bottom:36px;font-weight:300;}
+    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn-outline-dark{border:1.5px solid rgba(13,27,42,0.2);color:var(--navy);padding:15px 28px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s;}
+    .btn-outline-dark:hover{border-color:var(--gold);}
+    footer{background:#060d14;padding:60px 5% 30px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:14px;}
+    .footer-brand .contact-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+    .footer-brand .contact-info a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-brand .contact-info a:hover{color:var(--gold-light);}
+    .footer-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;}
+    .footer-col a:hover{color:var(--gold-light);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
+    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:900px){.about-inner{grid-template-columns:1fr;gap:40px;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hamburger{display:flex;}}
+    @media(max-width:600px){.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html" class="active">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="book.html" class="btn-nav">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+    <div class="section-tag">The Person Behind Auditora</div>
+    <h1>Meet Your Inspector</h1>
+    <p>Certified, trained, and genuinely invested in helping you make the right property decision.</p>
+  </div>
+</div>
+
+<section class="about-main">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo-block reveal">
+        <div class="about-photo">
+          <div class="about-photo-placeholder">
+            <span class="big-emoji">👷</span>
+            <p>Photo coming soon</p>
+          </div>
+        </div>
+        <div class="about-credentials">
+          <div class="credential-badge"><div class="cred-icon">🏅</div><div class="cred-text"><strong>HIABC Member</strong><span>Home Inspectors Association of BC</span></div></div>
+          <div class="credential-badge"><div class="cred-icon">📚</div><div class="cred-text"><strong>Carson Dunlop Trained</strong><span>Industry-leading home inspection training</span></div></div>
+          <div class="credential-badge"><div class="cred-icon">🛡️</div><div class="cred-text"><strong>Fully Insured</strong><span>Professional liability &amp; E&amp;O coverage</span></div></div>
+          <div class="credential-badge"><div class="cred-icon">🌡️</div><div class="cred-text"><strong>FLIR Thermal Certified</strong><span>Thermal imaging inspection tools</span></div></div>
+        </div>
+      </div>
+      <div class="about-story reveal">
+        <span class="section-tag">My Story</span>
+        <h2 class="section-title">Hi, I'm Vahid — Founder of Auditora</h2>
+        <p>I started Auditora Home Inspection with one simple goal: to give people in Greater Vancouver a home inspector they can actually trust. Someone who shows up prepared, explains things clearly, and puts your interests first — not a quick turnaround.</p>
+        <p>I trained through <strong>HIABC and Carson Dunlop</strong>, two of the most respected names in the inspection industry. I've invested in professional-grade tools including a <strong>FLIR thermal imaging camera</strong> and moisture meters because I believe a real inspection goes beyond what the eye can see.</p>
+        <blockquote>"A home is one of the biggest investments of your life. You deserve honest, detailed information — not a rushed walkthrough."</blockquote>
+        <p>Every inspection I do, I approach the same way: methodically, thoroughly, and with clear communication before, during, and after. You're welcome to attend your inspection and ask me anything along the way.</p>
+        <p>I serve clients across <strong>Vancouver, Burnaby, North Vancouver, Richmond, Coquitlam, and the entire Lower Mainland</strong>. I built Auditora to be the kind of company I'd want to hire myself.</p>
+        <a href="book.html" class="btn-primary">📅 Book Your Inspection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tools-section">
+  <div class="tools-header reveal">
+    <div class="section-tag">Professional Tools</div>
+    <h2 class="section-title">What I Inspect With</h2>
+    <p>Modern tools mean better inspections. Here's what comes on every job.</p>
+  </div>
+  <div class="tools-grid reveal">
+    <div class="tool-card"><div class="tool-icon">🌡️</div><h4>FLIR Thermal Camera</h4><p>Detects hidden moisture, insulation gaps, and electrical hotspots invisible to the naked eye.</p></div>
+    <div class="tool-card"><div class="tool-icon">💧</div><h4>Moisture Meter</h4><p>Measures moisture levels in walls, floors, and ceilings to catch water intrusion early.</p></div>
+    <div class="tool-card"><div class="tool-icon">🔍</div><h4>Inspection Scope</h4><p>For hard-to-reach areas like tight crawl spaces, attics, and behind panels.</p></div>
+    <div class="tool-card"><div class="tool-icon">📸</div><h4>Professional Camera</h4><p>High-resolution photos of every significant finding, included in your report.</p></div>
+    <div class="tool-card"><div class="tool-icon">⚡</div><h4>Electrical Tester</h4><p>Tests outlets, GFCIs, and panel safety throughout the property.</p></div>
+    <div class="tool-card"><div class="tool-icon">📋</div><h4>Digital Reporting</h4><p>Clear, photo-rich reports delivered digitally within 24 hours of your inspection.</p></div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-header reveal">
+    <div class="section-tag">What I Stand For</div>
+    <h2 class="section-title">My Commitments to You</h2>
+    <p>These aren't just words — they're how I run every single inspection.</p>
+  </div>
+  <div class="values-grid reveal">
+    <div class="value-card"><div class="icon">🎯</div><h4>Thoroughness</h4><p>I don't rush. Every inspection gets the time it needs, no matter the schedule.</p></div>
+    <div class="value-card"><div class="icon">💬</div><h4>Clear Communication</h4><p>I explain what I find in plain language — not confusing jargon.</p></div>
+    <div class="value-card"><div class="icon">✅</div><h4>Honesty</h4><p>I tell you what I see, good or bad. My job is to inform you, not please you.</p></div>
+    <div class="value-card"><div class="icon">🔒</div><h4>Professionalism</h4><p>On time, prepared, respectful of the property, and reliable every time.</p></div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Work Together?</h2>
+  <p>Book online in minutes or reach out with any questions.</p>
+  <div class="cta-buttons">
+    <a href="book.html" class="btn-primary">📅 Book Your Inspection</a>
+    <a href="contact.html" class="btn-outline-dark">📩 Send a Message</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a><p>Certified residential and condo inspections in Greater Vancouver.</p><div class="contact-info"><a href="tel:6047195840">📞 604-719-5840</a><a href="mailto:info@auditora.ca">📧 info@auditora.ca</a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="book.html">Book Now</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Auditora Home Inspection. All rights reserved.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+  </div>
+</footer>
+<script>
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+  document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)e.target.classList.add('visible');},{threshold:0.1}).observe(el);});
+</script>
+</body>
+</html>
