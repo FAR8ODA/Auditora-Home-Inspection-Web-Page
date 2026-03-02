@@ -1,0 +1,122 @@
+# 🏠 Auditora Home Inspection — Business Website
+
+> **Live Site:** [auditora.ca](https://auditora.ca) &nbsp;|&nbsp; **Alias:** [auditorahomeinspection.ca](https://auditorahomeinspection.ca)
+
+A fully custom, multi-page business website built from scratch for **Auditora Home Inspection** — a certified residential home inspection company serving Greater Vancouver, BC. Designed, developed, and deployed end-to-end with no frameworks or CMS.
+
+---
+
+## 📸 Preview
+
+![Auditora Homepage](https://auditora.ca)
+
+> Professional Home Inspections in Greater Vancouver 
+
+---
+
+## 🚀 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | Vanilla HTML5, CSS3, JavaScript |
+| **Fonts** | Google Fonts — Playfair Display + DM Sans |
+| **Hosting** | Netlify (free tier, drag & drop deploy) |
+| **DNS** | Netlify DNS via CanSpace registrar |
+| **Booking** | Square Appointments (third-party embed) |
+| **SSL** | Let's Encrypt via Netlify (auto-provisioned) |
+| **Version Control** | Git + GitHub |
+
+---
+
+## 📁 Project Structure
+
+```
+auditora/
+│
+├── index.html          # Homepage — hero, services, pricing, reviews, CTA
+├── services.html       # Full breakdown of all 4 inspection types
+├── pricing.html        # Pricing table + FAQ accordion
+├── book.html           # Booking page — Square Appointments integration
+├── about.html          # Inspector bio, credentials, tools, values
+├── contact.html        # Contact form + phone/email links
+├── privacy.html        # Privacy Policy (BC PIPA compliant)
+├── terms.html          # Terms & Conditions
+└── cancellation.html   # Cancellation Policy
+```
+
+---
+
+## ✨ Features
+
+- **9-page fully linked website** — every nav link, button, and footer link is functional
+- **Responsive design** — mobile-first layout with hamburger nav for small screens
+- **Scroll reveal animations** — IntersectionObserver-based fade-up animations throughout
+- **Interactive pricing FAQ** — accordion expand/collapse, no libraries
+- **Live phone & email links** — click-to-call and mailto on all pages
+- **Square Appointments integration** — third-party booking system linked from book page
+- **Legal pages** — Privacy Policy (BC PIPA), Terms & Conditions, Cancellation Policy
+- **Custom DNS configuration** — both `auditora.ca` and `auditorahomeinspection.ca` connected via Netlify DNS
+- **HTTPS / SSL** — auto-provisioned via Let's Encrypt through Netlify
+- **SEO-ready** — semantic HTML, meta descriptions, clean URL structure, page titles
+
+---
+
+## 🎨 Design Decisions
+
+- **Color palette:** Deep navy (`#0d1b2a`) + warm gold (`#c9973a`) — professional, trustworthy, premium
+- **Typography:** Playfair Display (headings) paired with DM Sans (body) — editorial meets clean
+- **Grid overlay + radial gradients** on hero sections for depth without images
+- **Gold accent underline** on card hover — subtle, polished interaction detail
+- **Trust bar** — HIABC, insured, thermal imaging credentials displayed prominently above the fold
+
+---
+
+## 🌐 Deployment
+
+Deployed on **Netlify** via manual drag-and-drop upload.
+
+**DNS Setup:**
+- Domains registered through **CanSpace Solutions**
+- Old conflicting `A records` (pointing to CanSpace's default IP `198.100.154.154`) removed
+- Netlify NETLIFY records auto-configured for both apex and www
+- SSL certificate provisioned after full DNS propagation (~12–24 hours)
+
+---
+
+## 📄 Pages Overview
+
+### `/` — Homepage
+Full business landing page. Hero with value proposition, trust bar, services preview, why choose us section, pricing table, client reviews, service area chips, and dual CTA.
+
+### `/services` — Services
+Detailed breakdown of all four inspection types: Full Home, Condo, Townhouse, and Pre-Listing. Each section includes a full includes checklist and booking CTA.
+
+### `/pricing` — Pricing
+Square footage–based pricing table ($399–$549+), what's always included grid, and an interactive FAQ accordion covering common client questions.
+
+### `/book` — Book Online
+Dedicated booking page with Square Appointments integration, step-by-step process guide, and sidebar with pricing, service area, and phone fallback.
+
+### `/about` — About
+Inspector biography, credential badges (HIABC, Carson Dunlop, insured, FLIR thermal), professional tools section, and core values.
+
+### `/contact` — Contact
+Contact form (name, phone, email, address, service type, message) with simulated submission state, plus direct phone/email cards.
+
+### Legal Pages
+`/privacy`, `/terms`, `/cancellation` — BC PIPA compliant privacy policy, inspection terms of service, and a tiered cancellation policy (48h / 24h / no-show).
+
+---
+
+## 🔧 Running Locally
+
+No build step required — pure HTML/CSS/JS.
+
+
+## 📝 License
+
+This project is the property of Auditora Home Inspection. The codebase is shared for portfolio purposes. All brand assets, copy, and business content are proprietary.
+
+---
+
+*Built with care. No frameworks. No CMS. Just clean code and a lot of DNS troubleshooting.* 😄
