@@ -1,403 +1,681 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Inspector in Vancouver | Auditora Home Inspection</title>
-  <meta name="description" content="Certified, insured, and detailed home inspections in Greater Vancouver. Book online instantly. Starting from $399." />
-  <link rel="canonical" href="https://auditora.ca/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://auditora.ca/" />
-  <meta property="og:title" content="Home Inspector in Vancouver | Auditora Home Inspection" />
-  <meta property="og:description" content="Certified, insured, and detailed home inspections in Greater Vancouver. Book online instantly. Starting from $399." />
-  <meta property="og:site_name" content="Auditora Home Inspection" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy:#0d1b2a; --navy-mid:#1a2e45; --navy-light:#243b55;
-      --gold:#c9973a; --gold-light:#e0b565;
-      --cream:#f8f4ef; --off-white:#f0ece6;
-      --text:#1a1a1a; --muted:#6b7280; --white:#ffffff;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Licensed Home Inspector in Vancouver | AuditorA Home Inspection</title>
+<meta name="description" content="Licensed home inspections in Greater Vancouver by Vahid Alikhanzadeh. Licensed by Consumer Protection BC, HIABC member. Call 604-719-5840 for a quote."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ═══ HERO ═══ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 5% 70px;
+  background: linear-gradient(135deg, #0E2A54 0%, #1B4F9C 62%, #2E6BC4 100%);
+  overflow: hidden;
+}
+.hero-photo-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/work-ladder.jpg') center 22% / cover no-repeat;
+  opacity: 0.22;
+  filter: saturate(0.7);
+}
+.hero-veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg,
+    rgba(14,42,84,0.96) 0%,
+    rgba(20,58,115,0.88) 42%,
+    rgba(27,79,156,0.55) 74%,
+    rgba(27,79,156,0.32) 100%);
+}
+.hero-glow {
+  position: absolute;
+  top: 8%; right: -6%;
+  width: 620px; height: 620px;
+  background: radial-gradient(circle, rgba(242,101,34,0.30) 0%, transparent 62%);
+  pointer-events: none;
+}
+.hero-grid-lines {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.032) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.032) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 88%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 88%);
+}
 
-    /* NAV */
-    nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,27,42,0.97); backdrop-filter:blur(12px); padding:0 5%; display:flex; align-items:center; justify-content:space-between; height:70px; border-bottom:1px solid rgba(201,151,58,0.2); }
-    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-    .nav-logo-icon { width:38px; height:38px; background:var(--gold); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px; }
-    .nav-logo-text { display:flex; flex-direction:column; line-height:1.1; }
-    .nav-logo-text span:first-child { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--white); }
-    .nav-logo-text span:last-child { font-size:10px; color:var(--gold-light); letter-spacing:1.5px; text-transform:uppercase; }
-    .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
-    .nav-links a { color:rgba(255,255,255,0.75); text-decoration:none; font-size:14px; font-weight:400; transition:color 0.2s; }
-    .nav-links a:hover { color:var(--gold-light); }
-    .nav-links a.active { color:var(--gold-light); }
-    .btn-nav { background:var(--gold)!important; color:var(--navy)!important; padding:9px 20px; border-radius:6px; font-weight:600!important; transition:background 0.2s!important; }
-    .btn-nav:hover { background:var(--gold-light)!important; }
-    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:5px; background:none; border:none; }
-    .hamburger span { display:block; width:24px; height:2px; background:var(--white); border-radius:2px; transition:0.3s; }
-    .mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:var(--navy); z-index:199; padding:20px 5%; flex-direction:column; gap:0; border-bottom:1px solid rgba(201,151,58,0.2); }
-    .mobile-menu.open { display:flex; }
-    .mobile-menu a { color:rgba(255,255,255,0.8); text-decoration:none; font-size:16px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
-    .mobile-menu a:last-child { border-bottom:none; background:var(--gold); color:var(--navy); font-weight:600; text-align:center; border-radius:8px; margin-top:10px; padding:14px; }
+.hero-wrap {
+  position: relative; z-index: 3;
+  max-width: 1180px; margin: 0 auto; width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
 
-    /* HERO */
-    .hero { min-height:100vh; background:var(--navy); position:relative; overflow:hidden; display:flex; align-items:center; padding:100px 5% 60px; }
-    .hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,151,58,0.08) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 0% 80%, rgba(36,59,85,0.8) 0%, transparent 60%); }
-    .hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px); background-size:60px 60px; }
-    .hero-content { position:relative; z-index:2; max-width:620px; animation:fadeUp 0.8s ease both; }
-    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(201,151,58,0.15); border:1px solid rgba(201,151,58,0.3); border-radius:100px; padding:6px 16px; font-size:12px; color:var(--gold-light); letter-spacing:1.5px; text-transform:uppercase; font-weight:500; margin-bottom:28px; }
-    .hero-badge::before { content:''; width:6px; height:6px; background:var(--gold); border-radius:50%; }
-    .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,62px); font-weight:700; color:var(--white); line-height:1.12; margin-bottom:22px; }
-    .hero h1 em { font-style:normal; color:var(--gold); }
-    .hero-sub { font-size:18px; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:40px; max-width:500px; font-weight:300; }
-    .hero-buttons { display:flex; gap:14px; flex-wrap:wrap; }
-    .btn-primary { background:var(--gold); color:var(--navy); padding:16px 32px; border-radius:8px; font-weight:600; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:background 0.2s,transform 0.15s; box-shadow:0 4px 20px rgba(201,151,58,0.35); }
-    .btn-primary:hover { background:var(--gold-light); transform:translateY(-1px); }
-    .btn-outline { border:1.5px solid rgba(255,255,255,0.3); color:var(--white); padding:15px 28px; border-radius:8px; font-weight:500; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:border-color 0.2s,background 0.2s; }
-    .btn-outline:hover { border-color:var(--gold); background:rgba(201,151,58,0.08); }
-    .hero-visual { position:absolute; right:5%; top:50%; transform:translateY(-50%); width:36%; max-width:460px; animation:fadeIn 1s ease 0.3s both; display:flex; flex-direction:column; gap:16px; }
-    .hero-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:20px 24px; backdrop-filter:blur(8px); }
-    .hero-card-label { font-size:11px; color:var(--gold-light); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
-    .check-row { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.8); font-size:14px; margin-bottom:8px; }
-    .check-icon { width:20px; height:20px; background:rgba(201,151,58,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--gold); flex-shrink:0; }
-    .hero-price-card { background:var(--gold); border-radius:14px; padding:20px 24px; display:flex; align-items:center; justify-content:space-between; }
-    .price-card-left span:first-child { display:block; font-size:11px; color:rgba(13,27,42,0.6); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
-    .price-card-left span:last-child { font-family:'Playfair Display',serif; font-size:32px; font-weight:700; color:var(--navy); }
-    .price-card-right { font-size:13px; color:rgba(13,27,42,0.65); text-align:right; line-height:1.4; }
+.hero-copy { animation: heroUp 0.9s cubic-bezier(0.2,0.8,0.3,1) both; }
+@keyframes heroUp { from { opacity:0; transform: translateY(34px);} to {opacity:1;transform:translateY(0);} }
 
-    /* TRUST BAR */
-    .trust-bar { background:var(--cream); border-bottom:1px solid rgba(0,0,0,0.06); padding:20px 5%; display:flex; align-items:center; justify-content:center; gap:clamp(20px,4vw,56px); flex-wrap:wrap; }
-    .trust-item { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:500; color:var(--navy); white-space:nowrap; }
-    .t-icon { width:30px; height:30px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; }
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: rgba(255,255,255,0.11);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.24);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.94); font-weight: 600;
+  margin-bottom: 28px;
+}
+.hero-pill::before { content:''; width:7px;height:7px;background:var(--orange);border-radius:50%;box-shadow:0 0 10px var(--orange); }
 
-    /* SECTIONS */
-    section { padding:90px 5%; }
-    .container { max-width:1140px; margin:0 auto; }
-    .section-tag { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:14px; }
-    .section-title { font-family:'Playfair Display',serif; font-size:clamp(26px,3.5vw,42px); font-weight:700; color:var(--navy); line-height:1.2; margin-bottom:16px; }
-    .section-sub { font-size:16px; color:var(--muted); line-height:1.7; font-weight:300; }
+.hero h1 {
+  font-size: clamp(38px, 5.6vw, 66px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+  margin-bottom: 24px;
+}
+.hero h1 .accent { color: var(--orange); }
 
-    /* SERVICES */
-    .services { background:var(--cream); }
-    .services-header { text-align:center; margin-bottom:56px; }
-    .services-header .section-sub { max-width:520px; margin:0 auto; }
-    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
-    .service-card { background:var(--white); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:32px 28px; text-decoration:none; color:inherit; transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s; position:relative; overflow:hidden; display:block; }
-    .service-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transition:transform 0.25s; transform-origin:left; }
-    .service-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,0.08); border-color:rgba(201,151,58,0.25); }
-    .service-card:hover::after { transform:scaleX(1); }
-    .service-icon { font-size:32px; margin-bottom:20px; }
-    .service-card h3 { font-family:'Playfair Display',serif; font-size:20px; font-weight:600; color:var(--navy); margin-bottom:10px; }
-    .service-card p { font-size:14px; color:var(--muted); line-height:1.65; margin-bottom:20px; }
-    .service-link { font-size:13px; color:var(--gold); font-weight:600; }
+.hero-sub {
+  font-size: 18.5px;
+  color: rgba(255,255,255,0.80);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+.hero-name-line {
+  display: flex; align-items: center; gap: 13px;
+  margin-bottom: 36px;
+  padding-left: 15px;
+  border-left: 3px solid var(--orange);
+}
+.hero-name-line strong { color: var(--white); font-size: 16px; font-weight: 600; display:block; }
+.hero-name-line span { color: rgba(255,255,255,0.6); font-size: 14px; }
 
-    /* WHY */
-    .why { background:var(--navy); position:relative; overflow:hidden; }
-    .why::before { content:''; position:absolute; top:-200px; right:-200px; width:500px; height:500px; background:radial-gradient(circle,rgba(201,151,58,0.07) 0%,transparent 60%); }
-    .why-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-    .why-left .section-title { color:var(--white); }
-    .why-left .section-sub { color:rgba(255,255,255,0.55); }
-    .why-features { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:36px; }
-    .why-feature { display:flex; align-items:flex-start; gap:14px; }
-    .why-feat-icon { width:40px; height:40px; background:rgba(201,151,58,0.15); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
-    .why-feat-text h4 { font-size:14px; font-weight:600; color:var(--white); margin-bottom:4px; }
-    .why-feat-text p { font-size:13px; color:rgba(255,255,255,0.45); line-height:1.5; }
-    .why-right { display:flex; flex-direction:column; gap:16px; }
-    .stat-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:24px 28px; display:flex; align-items:center; gap:20px; }
-    .stat-num { font-family:'Playfair Display',serif; font-size:38px; font-weight:700; color:var(--gold); line-height:1; min-width:85px; }
-    .stat-desc strong { color:var(--white); display:block; margin-bottom:3px; font-size:15px; }
-    .stat-desc { font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
 
-    /* PRICING */
-    .pricing { background:var(--off-white); }
-    .pricing-header { text-align:center; margin-bottom:48px; }
-    .pricing-header .section-sub { max-width:480px; margin:0 auto; }
-    .pricing-table-wrap { max-width:660px; margin:0 auto; background:var(--white); border-radius:20px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.06); }
-    .pt-head { background:var(--navy); display:grid; grid-template-columns:1fr 1fr; padding:16px 36px; }
-    .pt-head span { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); }
-    .pt-head span:last-child { text-align:right; }
-    .pt-row { display:grid; grid-template-columns:1fr 1fr; padding:18px 36px; border-bottom:1px solid rgba(0,0,0,0.05); align-items:center; transition:background 0.15s; }
-    .pt-row:hover { background:rgba(201,151,58,0.04); }
-    .pt-size { font-size:15px; color:var(--text); }
-    .pt-price { text-align:right; font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:var(--navy); }
-    .pt-row.cta-row { background:var(--navy); border-bottom:none; padding:22px 36px; }
-    .pt-row.cta-row .pt-size { color:rgba(255,255,255,0.6); font-size:14px; }
-    .pt-row.cta-row .pt-price { color:var(--gold); font-size:15px; font-family:'DM Sans',sans-serif; font-weight:600; text-decoration:none; }
-    .pricing-note { text-align:center; margin-top:18px; font-size:13px; color:var(--muted); }
+.hero-licence-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.licence-chip {
+  background: rgba(255,255,255,0.96);
+  border-radius: 10px;
+  padding: 9px 14px;
+  display: flex; align-items: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.16);
+}
+.licence-chip img { height: 30px; width: auto; object-fit: contain; }
+.licence-chip.circle img { height: 34px; }
 
-    /* REVIEWS */
-    .reviews { background:var(--white); }
-    .reviews-header { text-align:center; margin-bottom:50px; }
-    .reviews-header .section-sub { max-width:480px; margin:0 auto; }
-    .reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:24px; }
-    .review-card { background:var(--cream); border-radius:16px; padding:30px; border:1px solid rgba(0,0,0,0.05); position:relative; }
-    .review-card::before { content:'"'; position:absolute; top:12px; right:22px; font-family:'Playfair Display',serif; font-size:80px; color:rgba(201,151,58,0.12); line-height:1; }
-    .stars { color:var(--gold); font-size:14px; margin-bottom:14px; letter-spacing:2px; }
-    .review-text { font-size:15px; line-height:1.7; margin-bottom:18px; color:var(--text); }
-    .review-name { font-size:13px; font-weight:600; color:var(--navy); }
-    .review-detail { font-size:12px; color:var(--muted); }
+/* Hero portrait card */
+.hero-portrait { position: relative; animation: heroFade 1.1s ease 0.25s both; }
+@keyframes heroFade { from {opacity:0; transform: scale(0.96);} to {opacity:1;transform:scale(1);} }
 
-    /* AREAS */
-    .areas { background:var(--cream); padding:70px 5%; text-align:center; }
-    .areas-chips { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:30px; }
-    .area-chip { background:var(--white); border:1px solid rgba(0,0,0,0.08); border-radius:100px; padding:10px 22px; font-size:14px; color:var(--navy); font-weight:500; transition:border-color 0.2s,background 0.2s; }
-    .area-chip:hover { border-color:var(--gold); background:rgba(201,151,58,0.06); }
+.portrait-card {
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32);
+}
+.portrait-img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/4.4;
+  background: var(--blue-dark);
+  margin-bottom: 18px;
+  position: relative;
+}
+.portrait-img-wrap img { width:100%; height:100%; object-fit: cover; object-position: center 22%; }
+.portrait-img-wrap::after {
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(14,42,84,0.45) 0%, transparent 42%);
+}
+.portrait-info { text-align: center; }
+.portrait-info h3 { color: var(--white); font-size: 19px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.3px; }
+.portrait-info .role { color: var(--orange); font-size: 13px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px; }
+.portrait-stats { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.portrait-stat {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
 
-    /* CTA */
-    .cta-section { background:var(--navy); text-align:center; padding:100px 5%; position:relative; overflow:hidden; }
-    .cta-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(201,151,58,0.1) 0%,transparent 70%); }
-    .cta-section .section-title { color:var(--white); }
-    .cta-section .section-sub { max-width:480px; margin:0 auto 40px; color:rgba(255,255,255,0.55); }
-    .cta-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+/* ═══ SERVICES ═══ */
+.services { background: var(--off-white); }
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px,1fr)); gap: 26px; }
+.svc-card {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.3s, border-color 0.3s;
+  display: block;
+}
+.svc-card::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:4px;
+  background: linear-gradient(90deg, var(--orange), #FF8A50);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.svc-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); border-color: rgba(242,101,34,0.3); }
+.svc-card:hover::after { transform: scaleX(1); }
+.svc-icon {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--blue-light), #D6E5F8);
+  border-radius: 15px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  margin-bottom: 22px;
+  transition: background 0.3s, transform 0.3s;
+}
+.svc-card:hover .svc-icon { background: linear-gradient(135deg, var(--orange-light), #FFE0CE); transform: scale(1.06) rotate(-4deg); }
+.svc-card p { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 22px; }
+.svc-link { font-size: 13.5px; color: var(--orange); font-weight: 700; display: flex; align-items: center; gap: 7px; transition: gap 0.25s; }
+.svc-card:hover .svc-link { gap: 12px; }
 
-    /* FOOTER */
-    footer { background:#060d14; padding:60px 5% 30px; }
-    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:50px; }
-    .footer-brand p { font-size:14px; color:rgba(255,255,255,0.5); line-height:1.7; max-width:280px; margin-top:14px; }
-    .footer-brand .contact-info { margin-top:16px; display:flex; flex-direction:column; gap:6px; }
-    .footer-brand .contact-info a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:14px; transition:color 0.2s; }
-    .footer-brand .contact-info a:hover { color:var(--gold-light); }
-    .footer-col h4 { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:18px; font-weight:600; }
-    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
-    .footer-col a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:14px; transition:color 0.2s; }
-    .footer-col a:hover { color:var(--gold-light); }
-    .footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:24px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:rgba(255,255,255,0.35); gap:12px; flex-wrap:wrap; }
-    .footer-bottom a { color:rgba(255,255,255,0.35); text-decoration:none; transition:color 0.2s; }
-    .footer-bottom a:hover { color:var(--gold-light); }
+/* ═══ ON THE JOB (photo gallery) ═══ */
+.onjob { background: var(--white); }
+.onjob-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 230px 230px;
+  gap: 18px;
+  margin-top: 12px;
+}
+.job-tile {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: var(--blue-light);
+}
+.job-tile img { width:100%; height:100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+.job-tile:hover img { transform: scale(1.07); }
+.job-tile::after {
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(14,42,84,0.72) 0%, rgba(14,42,84,0.15) 45%, transparent 70%);
+  opacity: 0.85;
+}
+.job-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 22px;
+  z-index: 2;
+  color: var(--white);
+}
+.job-caption strong { display: block; font-size: 16px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.2px; }
+.job-caption span { font-size: 13px; color: rgba(255,255,255,0.78); }
+.job-tile.tall { grid-row: span 2; }
 
-    /* ANIMATIONS */
-    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
+/* ═══ WHY / CREDENTIALS ═══ */
+.why {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
+  position: relative; overflow: hidden;
+}
+.why::before {
+  content:''; position:absolute; top:-160px; left:-120px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(242,101,34,0.16) 0%, transparent 65%);
+}
+.why-inner { position: relative; z-index:2; display:grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items:center; }
+.why h2 { color: var(--white); }
+.why .lead { color: rgba(255,255,255,0.72); }
+.why-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 38px; }
+.why-feat { display: flex; gap: 15px; align-items: flex-start; }
+.why-feat-ic {
+  width: 44px; height: 44px; flex-shrink:0;
+  background: rgba(242,101,34,0.16);
+  border: 1px solid rgba(242,101,34,0.28);
+  border-radius: 12px;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 19px;
+}
+.why-feat h4 { color: var(--white); font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+.why-feat p { color: rgba(255,255,255,0.55); font-size: 13px; line-height: 1.55; }
 
-    /* RESPONSIVE */
-    @media(max-width:1000px) { .hero-visual{display:none;} .why-inner{grid-template-columns:1fr;gap:50px;} .why-right{display:none;} .footer-grid{grid-template-columns:1fr 1fr;} .nav-links{display:none;} .hamburger{display:flex;} }
-    @media(max-width:600px) { .hero h1{font-size:34px;} .hero-buttons{flex-direction:column;} .why-features{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr;gap:30px;} .footer-bottom{flex-direction:column;text-align:center;} .pt-head,.pt-row{padding:14px 20px;} }
-  </style>
+.cred-panel { display: flex; flex-direction: column; gap: 16px; }
+.cred-item {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: flex; align-items: center; gap: 18px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.cred-item:hover { background: rgba(255,255,255,0.11); border-color: rgba(255,255,255,0.26); transform: translateX(5px); }
+.cred-logo {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 10px 12px;
+  flex-shrink: 0;
+  width: 108px;
+  display: flex; align-items:center; justify-content:center;
+  min-height: 54px;
+}
+.cred-logo img { max-height: 36px; width:auto; object-fit: contain; }
+.cred-txt strong { display:block; color: var(--white); font-size: 15px; font-weight:700; margin-bottom: 3px; }
+.cred-txt span { color: rgba(255,255,255,0.58); font-size: 13px; line-height:1.5; }
+
+/* ═══ PRICING / INQUIRY ═══ */
+.inquiry { background: var(--off-white); }
+.inquiry-card {
+  background: var(--white);
+  border-radius: 26px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--grey-200);
+  overflow: hidden;
+  max-width: 940px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+.inquiry-left { padding: 48px 46px; }
+.inquiry-left h3 { font-size: 27px; font-weight: 700; color: var(--blue-deep); margin-bottom: 14px; letter-spacing:-0.6px; }
+.inquiry-left > p { font-size: 15.5px; color: var(--muted); line-height:1.75; margin-bottom: 26px; }
+.inq-list { list-style:none; display:flex; flex-direction:column; gap: 13px; margin-bottom: 32px; }
+.inq-list li { display:flex; align-items:flex-start; gap: 12px; font-size: 14.5px; color: var(--text-mid); }
+.inq-list li::before {
+  content:'✓'; flex-shrink:0;
+  width: 21px; height:21px; margin-top:1px;
+  background: var(--orange); color:#fff;
+  border-radius: 50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size: 11px; font-weight:700;
+}
+.inquiry-actions { display:flex; flex-direction:column; gap:12px; }
+
+.inquiry-right {
+  background: linear-gradient(150deg, var(--blue-deep) 0%, var(--blue) 100%);
+  padding: 48px 38px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.inquiry-right::before {
+  content:''; position:absolute; bottom:-90px; right:-60px;
+  width: 280px; height:280px;
+  background: radial-gradient(circle, rgba(242,101,34,0.24) 0%, transparent 65%);
+}
+.quote-badge { position: relative; z-index:2; text-align:center; }
+.quote-badge .ic { font-size: 42px; margin-bottom: 16px; }
+.quote-badge h4 { color: var(--white); font-size: 21px; font-weight:700; margin-bottom: 10px; letter-spacing:-0.3px; }
+.quote-badge p { color: rgba(255,255,255,0.66); font-size: 14px; line-height:1.65; margin-bottom: 26px; }
+.quote-contact { display:flex; flex-direction:column; gap:11px; }
+.quote-contact a {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 11px;
+  padding: 13px 16px;
+  color: var(--white);
+  text-decoration:none;
+  font-size: 14.5px; font-weight:600;
+  display:flex; align-items:center; justify-content:center; gap:9px;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+.quote-contact a:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.4); transform: translateY(-2px); }
+
+/* ═══ AREAS ═══ */
+.areas { background: var(--white); text-align:center; }
+.area-chips { display:flex; flex-wrap:wrap; gap:11px; justify-content:center; margin-top: 34px; }
+.area-chip {
+  background: var(--blue-light);
+  border: 1px solid rgba(27,79,156,0.13);
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-size: 14px; color: var(--blue-dark); font-weight:600;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s, color 0.25s;
+}
+.area-chip:hover { background: var(--orange); border-color: var(--orange); color: #fff; transform: translateY(-3px); }
+
+/* ═══ CTA ═══ */
+.cta {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
+  text-align: center; position: relative; overflow: hidden;
+  padding: 104px 5%;
+}
+.cta::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.20) 0%, transparent 68%);
+}
+.cta-inner { position:relative; z-index:2; }
+.cta h2 { color: var(--white); }
+.cta p { color: rgba(255,255,255,0.72); font-size: 17px; max-width: 540px; margin: 0 auto 40px; }
+.cta-btns { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1040px) {
+  .hero-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .hero-portrait { max-width: 400px; }
+  .why-inner { grid-template-columns: 1fr; gap: 48px; }
+  .inquiry-card { grid-template-columns: 1fr; }
+  .onjob-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 210px 210px 210px; }
+  .job-tile.tall { grid-row: span 1; }
+}
+@media (max-width: 640px) {
+  .hero { padding: 108px 5% 60px; min-height: auto; }
+  .hero h1 { font-size: 36px; letter-spacing:-1px; }
+  .hero-actions { flex-direction: column; }
+  .why-feats { grid-template-columns: 1fr; }
+  .onjob-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 200px); }
+  .inquiry-left, .inquiry-right { padding: 34px 26px; }
+  .hero-licence-row { justify-content: flex-start; }
+}
+</style>
 </head>
 <body>
 
+<!-- ═══ NAV ═══ -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">🏠</div>
-    <div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div>
+    <div class="logo-mark">
+      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+      <div class="logo-sub">Home Inspection</div>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="pricing.html">Request a Quote</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="book.html" class="btn-nav">Book Now</a></li>
+    <li><a href="contact.html" class="btn btn-primary btn-nav">Get a Quote</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="services.html">Services</a>
-  <a href="pricing.html">Pricing</a>
+  <a href="pricing.html">Request a Quote</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="book.html">Book Now</a>
+  <a href="contact.html" class="btn btn-primary">Get a Quote</a>
 </div>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Greater Vancouver &amp; Lower Mainland</div>
-    <h1>Professional Home<br>Inspections You<br>Can <em>Trust</em></h1>
-    <p class="hero-sub">Certified, insured, and thorough home inspections — so you can make your property decision with complete confidence.</p>
-    <div class="hero-buttons">
-      <a href="book.html" class="btn-primary">📅 Book Online Now</a>
-      <a href="tel:6047195840" class="btn-outline">📞 604-719-5840</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-card">
-      <div class="hero-card-label">Every inspection includes</div>
-      <div class="check-row"><div class="check-icon">✓</div> Structure &amp; Foundation</div>
-      <div class="check-row"><div class="check-icon">✓</div> Roof &amp; Attic</div>
-      <div class="check-row"><div class="check-icon">✓</div> Electrical Systems</div>
-      <div class="check-row"><div class="check-icon">✓</div> Plumbing</div>
-      <div class="check-row"><div class="check-icon">✓</div> HVAC</div>
-      <div class="check-row"><div class="check-icon">✓</div> Thermal Imaging</div>
-    </div>
-    <div class="hero-price-card">
-      <div class="price-card-left">
-        <span>Starting from</span>
-        <span>$399</span>
+  <div class="hero-photo-bg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-wrap">
+    <div class="hero-copy">
+      <div class="hero-pill">Greater Vancouver &amp; Lower Mainland</div>
+      <h1>Licensed Home<br>Inspections You<br>Can <span class="accent">Trust</span></h1>
+      <p class="hero-sub">
+        Thorough, licensed home and condo inspections across Metro Vancouver — with clear reporting
+        and honest answers so you can move forward with confidence.
+      </p>
+      <div class="hero-name-line">
+        <div>
+          <strong>Vahid Alikhanzadeh</strong>
+          <span>Licensed Home Inspector · HIABC Member</span>
+        </div>
       </div>
-      <div class="price-card-right">Based on<br>home size</div>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">📩 Request a Quote</a>
+        <a href="tel:6047195840" class="btn btn-glass btn-lg">📞 604-719-5840</a>
+      </div>
+      <div class="hero-licence-row">
+        <div class="licence-chip"><img src="images/badge-cpbc.jpg" alt="Licensed by Consumer Protection BC"/></div>
+        <div class="licence-chip"><img src="images/badge-hiabc-wide.png" alt="Home Inspectors Association BC"/></div>
+      </div>
+    </div>
+
+    <div class="hero-portrait">
+      <div class="portrait-card">
+        <div class="portrait-img-wrap">
+          <img src="images/headshot.jpg" alt="Vahid Alikhanzadeh, Licensed Home Inspector"/>
+        </div>
+        <div class="portrait-info">
+          <h3>Vahid Alikhanzadeh</h3>
+          <div class="role">Licensed Home Inspector</div>
+          <div class="portrait-stats">
+            <span class="portrait-stat">CPBC Licensed</span>
+            <span class="portrait-stat">HIABC Member</span>
+            <span class="portrait-stat">Fully Insured</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><div class="t-icon">🏅</div> HIABC Member</div>
-  <div class="trust-item"><div class="t-icon">🛡️</div> Insured &amp; Licensed</div>
-  <div class="trust-item"><div class="t-icon">📋</div> Professional Reports</div>
-  <div class="trust-item"><div class="t-icon">⚡</div> Fast Turnaround</div>
-  <div class="trust-item"><div class="t-icon">🌡️</div> Thermal Imaging</div>
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="trust-strip">
+  <div class="trust-strip-item"><span class="ic">✓</span> Licensed by Consumer Protection BC</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> HIABC Member</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> Fully Insured</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> Thermal Imaging</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> Reports in 24 Hours</div>
 </div>
 
-<!-- SERVICES -->
+<!-- ═══ SERVICES ═══ -->
 <section class="services">
   <div class="container">
-    <div class="services-header reveal">
-      <div class="section-tag">What We Offer</div>
-      <h2 class="section-title">Inspection Services</h2>
-      <p class="section-sub">From detached homes to condos, we cover every type of residential property in Metro Vancouver.</p>
+    <div class="section-head center reveal">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="h-section">Inspection Services</h2>
+      <p class="lead">From detached homes to condos and townhouses — every property type across Metro Vancouver, inspected properly.</p>
     </div>
-    <div class="services-grid">
-      <a href="services.html#home" class="service-card reveal">
-        <div class="service-icon">🏠</div>
-        <h3>Full Home Inspection</h3>
-        <p>Comprehensive inspection of houses, duplexes, and detached properties — every major system covered.</p>
-        <div class="service-link">Learn more →</div>
+    <div class="svc-grid" data-stagger>
+      <a href="services.html#home" class="svc-card reveal">
+        <div class="svc-icon">🏠</div>
+        <h3 class="h-card">Full Home Inspection</h3>
+        <p>Complete inspection of houses, duplexes, and detached properties — structure, roof, electrical, plumbing, and HVAC.</p>
+        <div class="svc-link">Learn more →</div>
       </a>
-      <a href="services.html#condo" class="service-card reveal">
-        <div class="service-icon">🏢</div>
-        <h3>Condo Inspection</h3>
-        <p>Interior, balcony, electrical, and plumbing — everything specific to strata and condo units.</p>
-        <div class="service-link">Learn more →</div>
+      <a href="services.html#condo" class="svc-card reveal">
+        <div class="svc-icon">🏢</div>
+        <h3 class="h-card">Condo Inspection</h3>
+        <p>Focused on your unit — interior, balcony, electrical panel, plumbing fixtures, and in-suite systems.</p>
+        <div class="svc-link">Learn more →</div>
       </a>
-      <a href="services.html#townhouse" class="service-card reveal">
-        <div class="service-icon">🏘️</div>
-        <h3>Townhouse Inspection</h3>
-        <p>Full evaluation of townhomes including shared walls, roofline, and all interior systems.</p>
-        <div class="service-link">Learn more →</div>
+      <a href="services.html#townhouse" class="svc-card reveal">
+        <div class="svc-icon">🏘️</div>
+        <h3 class="h-card">Townhouse Inspection</h3>
+        <p>Full evaluation of townhomes including roofline, exterior, shared walls, and all interior systems.</p>
+        <div class="svc-link">Learn more →</div>
       </a>
-      <a href="services.html#prelisting" class="service-card reveal">
-        <div class="service-icon">📋</div>
-        <h3>Pre-Listing Inspection</h3>
-        <p>Selling? Find issues before buyers do. Price confidently and close faster.</p>
-        <div class="service-link">Learn more →</div>
+      <a href="services.html#prelisting" class="svc-card reveal">
+        <div class="svc-icon">📋</div>
+        <h3 class="h-card">Pre-Listing Inspection</h3>
+        <p>Selling? Find and fix issues before buyers do. Price with confidence and avoid last-minute surprises.</p>
+        <div class="svc-link">Learn more →</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- WHY AUDITORA -->
+<!-- ═══ ON THE JOB ═══ -->
+<section class="onjob">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">On The Job</div>
+      <h2 class="h-section">How We Work</h2>
+      <p class="lead">Every inspection is hands-on and methodical — using professional tools to check what the eye alone can't see.</p>
+    </div>
+    <div class="onjob-grid reveal">
+      <div class="job-tile tall">
+        <img src="images/work-ladder.jpg" alt="Inspecting exterior and roofline with flashlight"/>
+        <div class="job-caption">
+          <strong>Exterior &amp; Roofline</strong>
+          <span>Ladder access to inspect soffits, flashing, and roof condition</span>
+        </div>
+      </div>
+      <div class="job-tile">
+        <img src="images/work-tester.jpg" alt="Testing electrical systems"/>
+        <div class="job-caption">
+          <strong>Electrical Testing</strong>
+          <span>Panels, outlets, and safety checks</span>
+        </div>
+      </div>
+      <div class="job-tile">
+        <img src="images/work-panel.jpg" alt="Inspecting electrical panel enclosure"/>
+        <div class="job-caption">
+          <strong>Panel Inspection</strong>
+          <span>Wiring, breakers, and connections</span>
+        </div>
+      </div>
+      <div class="job-tile">
+        <img src="images/work-tablet.jpg" alt="Documenting findings digitally on site"/>
+        <div class="job-caption">
+          <strong>Digital Documentation</strong>
+          <span>Findings recorded and photographed on site for your report</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY / CREDENTIALS ═══ -->
 <section class="why">
   <div class="container">
     <div class="why-inner">
-      <div class="why-left reveal">
-        <div class="section-tag">Why Choose Us</div>
-        <h2 class="section-title">Your safety and<br>investment come first</h2>
-        <p class="section-sub">Every inspection is performed with care, precision, and modern tools — so you walk away with real answers.</p>
-        <div class="why-features">
-          <div class="why-feature"><div class="why-feat-icon">🎓</div><div class="why-feat-text"><h4>Certified &amp; Trained</h4><p>HIABC &amp; Carson Dunlop trained</p></div></div>
-          <div class="why-feature"><div class="why-feat-icon">📄</div><div class="why-feat-text"><h4>Detailed Reports</h4><p>Clear digital reports, delivered fast</p></div></div>
-          <div class="why-feature"><div class="why-feat-icon">🌡️</div><div class="why-feat-text"><h4>Thermal Camera</h4><p>Spot hidden issues others miss</p></div></div>
-          <div class="why-feature"><div class="why-feat-icon">💬</div><div class="why-feat-text"><h4>Clear Explanations</h4><p>No jargon, just honest answers</p></div></div>
-          <div class="why-feature"><div class="why-feat-icon">💰</div><div class="why-feat-text"><h4>Honest Pricing</h4><p>Transparent rates, no surprises</p></div></div>
-          <div class="why-feature"><div class="why-feat-icon">🛡️</div><div class="why-feat-text"><h4>Fully Insured</h4><p>Full professional liability coverage</p></div></div>
+      <div class="reveal">
+        <div class="eyebrow">Why AuditorA</div>
+        <h2 class="h-section">Licensed, insured,<br>and thorough</h2>
+        <p class="lead">Every inspection is performed to HIABC standards with professional tools — and explained to you in plain language.</p>
+        <div class="why-feats">
+          <div class="why-feat"><div class="why-feat-ic">🎓</div><div><h4>Licensed &amp; Trained</h4><p>Consumer Protection BC licensed, HIABC member</p></div></div>
+          <div class="why-feat"><div class="why-feat-ic">📄</div><div><h4>Detailed Reports</h4><p>Photo-rich digital reports within 24 hours</p></div></div>
+          <div class="why-feat"><div class="why-feat-ic">🌡️</div><div><h4>Thermal Imaging</h4><p>Detects hidden moisture and heat loss</p></div></div>
+          <div class="why-feat"><div class="why-feat-ic">💬</div><div><h4>Clear Explanations</h4><p>No jargon — just honest answers</p></div></div>
+          <div class="why-feat"><div class="why-feat-ic">🛡️</div><div><h4>Fully Insured</h4><p>Professional liability &amp; E&amp;O coverage</p></div></div>
+          <div class="why-feat"><div class="why-feat-ic">⏱️</div><div><h4>Never Rushed</h4><p>Every inspection gets the time it needs</p></div></div>
         </div>
       </div>
-      <div class="why-right">
-        <div class="stat-card reveal"><div class="stat-num">100%</div><div class="stat-desc"><strong>Honest &amp; Transparent</strong>Every finding documented and explained clearly — no sugarcoating.</div></div>
-        <div class="stat-card reveal"><div class="stat-num">FLIR</div><div class="stat-desc"><strong>Thermal Imaging Included</strong>Professional cameras detect moisture, heat leaks, and hidden issues.</div></div>
-        <div class="stat-card reveal"><div class="stat-num">24h</div><div class="stat-desc"><strong>Report Delivery</strong>Full digital inspection report within 24 hours of your appointment.</div></div>
+
+      <div class="cred-panel">
+        <div class="cred-item reveal">
+          <div class="cred-logo"><img src="images/badge-cpbc.jpg" alt="Consumer Protection BC"/></div>
+          <div class="cred-txt">
+            <strong>Licensed by Consumer Protection BC</strong>
+            <span>Provincially licensed home inspector operating under BC regulation</span>
+          </div>
+        </div>
+        <div class="cred-item reveal">
+          <div class="cred-logo"><img src="images/badge-hiabc-circle.png" alt="HIABC"/></div>
+          <div class="cred-txt">
+            <strong>HIABC Member</strong>
+            <span>Home Inspectors Association of British Columbia — inspections performed to association standards</span>
+          </div>
+        </div>
+        <div class="cred-item reveal">
+          <div class="cred-logo" style="font-size:26px;">🛡️</div>
+          <div class="cred-txt">
+            <strong>Fully Insured</strong>
+            <span>Professional liability and errors &amp; omissions coverage on every inspection</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing">
+<!-- ═══ INQUIRY / QUOTE ═══ -->
+<section class="inquiry">
   <div class="container">
-    <div class="pricing-header reveal">
-      <div class="section-tag">Transparent Pricing</div>
-      <h2 class="section-title">Simple. Fair. No Surprises.</h2>
-      <p class="section-sub">Our pricing is based on home size. What you see is what you pay.</p>
+    <div class="section-head center reveal">
+      <div class="eyebrow">Pricing</div>
+      <h2 class="h-section">Request Your Quote</h2>
+      <p class="lead">Every property is different. Reach out with your property details and you'll get an accurate quote — no guesswork, no hidden fees.</p>
     </div>
-    <div class="pricing-table-wrap reveal">
-      <div class="pt-head"><span>Home Size</span><span>Price</span></div>
-      <div class="pt-row"><span class="pt-size">Up to 1,000 sq ft</span><span class="pt-price">$399</span></div>
-      <div class="pt-row"><span class="pt-size">1,001 – 1,500 sq ft</span><span class="pt-price">$449</span></div>
-      <div class="pt-row"><span class="pt-size">1,501 – 2,000 sq ft</span><span class="pt-price">$499</span></div>
-      <div class="pt-row"><span class="pt-size">2,001 – 2,500 sq ft</span><span class="pt-price">$549</span></div>
-      <div class="pt-row cta-row"><span class="pt-size">2,500+ sq ft — call for a custom quote</span><a href="tel:6047195840" class="pt-price">📞 Call Us →</a></div>
-    </div>
-    <p class="pricing-note">Final price may vary based on property complexity. No hidden fees. <a href="pricing.html" style="color:var(--gold);">See full pricing details →</a></p>
-  </div>
-</section>
 
-<!-- REVIEWS -->
-<section class="reviews">
-  <div class="container">
-    <div class="reviews-header reveal">
-      <div class="section-tag">Client Reviews</div>
-      <h2 class="section-title">What Our Clients Say</h2>
-      <p class="section-sub">We take pride in honest, thorough inspections. Here's what people are saying.</p>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Very professional and thorough inspection. Explained everything clearly and gave us real peace of mind before closing. Highly recommended."</p>
-        <div class="review-name">— Happy Client</div>
-        <div class="review-detail">Home Inspection, Vancouver</div>
+    <div class="inquiry-card reveal">
+      <div class="inquiry-left">
+        <h3>Get an accurate quote for your property</h3>
+        <p>Pricing depends on the size, age, and type of property. Send us the details and we'll get back to you with a clear quote and available dates.</p>
+        <ul class="inq-list">
+          <li>Full inspection of all major systems</li>
+          <li>Thermal imaging &amp; moisture testing included</li>
+          <li>Photo-rich digital report within 24 hours</li>
+          <li>You're welcome to attend and ask questions</li>
+          <li>No hidden fees — quoted price is your price</li>
+        </ul>
+        <div class="inquiry-actions">
+          <a href="contact.html" class="btn btn-primary btn-full">📩 Request a Quote Online</a>
+          <a href="tel:6047195840" class="btn btn-ghost btn-full">📞 Call 604-719-5840</a>
+        </div>
       </div>
-      <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Clear report and great communication. We found issues we never would have caught on our own. Worth every penny."</p>
-        <div class="review-name">— Happy Client</div>
-        <div class="review-detail">Condo Inspection, Burnaby</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Booked online easily, showed up on time, and delivered a detailed report fast. Exactly what you want from a home inspector."</p>
-        <div class="review-name">— Happy Client</div>
-        <div class="review-detail">Townhouse Inspection, North Vancouver</div>
+      <div class="inquiry-right">
+        <div class="quote-badge">
+          <div class="ic">💬</div>
+          <h4>Prefer to talk it through?</h4>
+          <p>Call or email directly — happy to answer questions about your property before you book anything.</p>
+          <div class="quote-contact">
+            <a href="tel:6047195840">📞 604-719-5840</a>
+            <a href="mailto:alikhanzadehvahid@yahoo.com">📧 Email Us</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AREAS -->
-<div class="areas">
+<!-- ═══ AREAS ═══ -->
+<section class="areas">
   <div class="container reveal">
-    <div class="section-tag">Service Area</div>
-    <h2 class="section-title">Serving Greater Vancouver</h2>
-    <div class="areas-chips">
-      <div class="area-chip">Vancouver</div><div class="area-chip">Burnaby</div><div class="area-chip">North Vancouver</div><div class="area-chip">West Vancouver</div><div class="area-chip">Richmond</div><div class="area-chip">Coquitlam</div><div class="area-chip">Port Moody</div><div class="area-chip">Surrey</div><div class="area-chip">Langley</div><div class="area-chip">New Westminster</div><div class="area-chip">Delta</div><div class="area-chip">Maple Ridge</div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container reveal">
-    <div class="section-tag">Get Started</div>
-    <h2 class="section-title">Ready to Book Your Inspection?</h2>
-    <p class="section-sub">Schedule online in minutes or give us a call. We're here to help.</p>
-    <div class="cta-buttons">
-      <a href="book.html" class="btn-primary">📅 Book Online Now</a>
-      <a href="tel:6047195840" class="btn-outline">📞 604-719-5840</a>
+    <div class="eyebrow">Service Area</div>
+    <h2 class="h-section">Serving Greater Vancouver</h2>
+    <p class="lead" style="max-width:560px;margin:0 auto;">Available throughout Metro Vancouver and the Lower Mainland.</p>
+    <div class="area-chips">
+      <div class="area-chip">Vancouver</div><div class="area-chip">Burnaby</div>
+      <div class="area-chip">North Vancouver</div><div class="area-chip">West Vancouver</div>
+      <div class="area-chip">Richmond</div><div class="area-chip">Coquitlam</div>
+      <div class="area-chip">Port Moody</div><div class="area-chip">Port Coquitlam</div>
+      <div class="area-chip">New Westminster</div><div class="area-chip">Surrey</div>
+      <div class="area-chip">Langley</div><div class="area-chip">Delta</div>
+      <div class="area-chip">Maple Ridge</div><div class="area-chip">White Rock</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ CTA ═══ -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <div class="eyebrow">Get Started</div>
+    <h2 class="h-section">Ready to Book Your Inspection?</h2>
+    <p>Send us your property details for a quote, or call directly to talk it through.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary btn-lg">📩 Request a Quote</a>
+      <a href="tel:6047195840" class="btn btn-glass btn-lg">📞 604-719-5840</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <div class="nav-logo-icon">🏠</div>
-          <div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div>
+        <a href="index.html" style="text-decoration:none;">
+          <div class="logo-mark light">
+            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+            <div class="logo-sub">Home Inspection</div>
+          </div>
         </a>
-        <p>Certified residential and condo inspections in Greater Vancouver. Honest, detailed, and professional.</p>
-        <div class="contact-info">
+        <p>Licensed residential and condo inspections throughout Greater Vancouver. Honest, thorough, and professional.</p>
+        <div class="footer-contact">
           <a href="tel:6047195840">📞 604-719-5840</a>
-          <a href="mailto:info@auditora.ca">📧 info@auditora.ca</a>
+          <a href="mailto:alikhanzadehvahid@yahoo.com">📧 alikhanzadehvahid@yahoo.com</a>
         </div>
       </div>
       <div class="footer-col">
@@ -405,8 +683,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="book.html">Book Now</a></li>
+          <li><a href="pricing.html">Request a Quote</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -419,21 +696,21 @@
           <li><a href="cancellation.html">Cancellation Policy</a></li>
         </ul>
       </div>
+      <div class="footer-col">
+        <h4>Licensed By</h4>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="images/badge-cpbc.jpg" alt="Consumer Protection BC"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.png" alt="HIABC"/></div>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Auditora Home Inspection. All rights reserved.</span>
-      <span>Serving Vancouver, Burnaby, North Vancouver &amp; surrounding areas.</span>
+      <span>© 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh · Licensed Home Inspector · Vancouver, BC</span>
     </div>
   </div>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  document.querySelectorAll('.reveal').forEach(el => {
-    new IntersectionObserver(([e]) => { if(e.isIntersecting){e.target.classList.add('visible');} }, {threshold:0.1}).observe(el);
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>

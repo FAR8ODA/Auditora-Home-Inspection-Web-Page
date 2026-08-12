@@ -1,124 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Terms & Conditions | Auditora Home Inspection</title>
-  <meta name="description" content="Terms and conditions for Auditora Home Inspection services." />
-  <link rel="canonical" href="https://auditora.ca/terms" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://auditora.ca/terms" />
-  <meta property="og:title" content="Terms &amp; Conditions | Auditora Home Inspection" />
-  <meta property="og:description" content="Terms and conditions for Auditora Home Inspection services." />
-  <meta property="og:site_name" content="Auditora Home Inspection" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{--navy:#0d1b2a;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
-    body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
-    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
-    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;}
-    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
-    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
-    .nav-links a:hover{color:var(--gold-light);}
-    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
-    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
-    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;border-bottom:1px solid rgba(201,151,58,0.2);}
-    .mobile-menu.open{display:flex;}
-    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
-    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
-    .legal-hero{background:var(--navy);padding:130px 5% 60px;}
-    .legal-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:700;color:#fff;margin-bottom:12px;}
-    .legal-hero p{font-size:14px;color:rgba(255,255,255,0.4);}
-    .legal-body{padding:70px 5%;max-width:800px;margin:0 auto;}
-    h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--navy);margin:36px 0 12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.06);}
-    h2:first-child{border-top:none;margin-top:0;}
-    p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:14px;font-weight:300;}
-    ul{margin:10px 0 14px 20px;display:flex;flex-direction:column;gap:8px;}
-    ul li{font-size:15px;color:var(--muted);line-height:1.7;font-weight:300;}
-    a{color:var(--gold);}
-    .legal-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:30px;border-top:1px solid rgba(0,0,0,0.08);}
-    .legal-links a{background:var(--cream);color:var(--navy);padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;border:1px solid rgba(0,0,0,0.08);}
-    .legal-links a:hover{border-color:var(--gold);}
-    footer{background:#060d14;padding:40px 5% 24px;}
-    .footer-bottom{display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
-    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
-    @media(max-width:700px){.nav-links{display:none;}.hamburger{display:flex;}.footer-bottom{flex-direction:column;text-align:center;}}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms &amp; Conditions | AuditorA Home Inspection</title>
+<meta name="description" content="Terms and conditions for home inspection services provided by AuditorA Home Inspection in British Columbia."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.legal-body { padding:72px 5%; max-width:820px; margin:0 auto; }
+.legal-body h2 { font-size:22px;font-weight:700;color:var(--blue-deep);margin:38px 0 14px;padding-top:26px;border-top:1px solid var(--grey-200);letter-spacing:-0.4px; }
+.legal-body h2:first-of-type { border-top:none;padding-top:0;margin-top:0; }
+.legal-body p { font-size:15.5px;color:var(--text-mid);line-height:1.82;margin-bottom:15px; }
+.legal-body ul { margin:12px 0 18px 4px;display:flex;flex-direction:column;gap:10px;list-style:none; }
+.legal-body ul li { font-size:15px;color:var(--text-mid);line-height:1.72;display:flex;gap:11px;align-items:flex-start; }
+.legal-body ul li::before { content:'▸';color:var(--orange);font-weight:700;flex-shrink:0; }
+.legal-body a { color:var(--orange);font-weight:600;text-decoration:none; }
+.legal-body a:hover { text-decoration:underline; }
+.policy-card { background:var(--off-white);border-left:4px solid var(--orange);border-radius:0 16px 16px 0;padding:26px 28px;margin:20px 0; }
+.policy-card h3 { font-size:17px;font-weight:700;color:var(--blue-deep);margin-bottom:9px; }
+.policy-card p { margin-bottom:0;font-size:14.5px; }
+.legal-nav { display:flex;gap:13px;flex-wrap:wrap;margin-top:46px;padding-top:32px;border-top:1px solid var(--grey-200); }
+.contact-block { background:linear-gradient(135deg,var(--blue-deep) 0%,var(--blue) 100%);border-radius:18px;padding:30px 32px;margin-top:34px;color:#fff;position:relative;overflow:hidden; }
+.contact-block::before { content:'';position:absolute;bottom:-80px;right:-50px;width:230px;height:230px;background:radial-gradient(circle,rgba(242,101,34,0.26) 0%,transparent 65%); }
+.contact-block-in { position:relative;z-index:2; }
+.contact-block h4 { font-size:17px;font-weight:700;margin-bottom:10px; }
+.contact-block p { color:rgba(255,255,255,0.72);font-size:14.5px;margin-bottom:16px;line-height:1.7; }
+.contact-block a.cb-link { color:#fff;text-decoration:none;font-weight:600;font-size:15px;display:block;margin-bottom:6px; }
+.contact-block a.cb-link:hover { color:var(--orange); }
+</style>
 </head>
 <body>
+
 <nav>
-  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark">
+      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+      <div class="logo-sub">Home Inspection</div>
+    </div>
+  </a>
   <ul class="nav-links">
-    <li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="book.html" class="btn-nav">Book Now</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Request a Quote</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="btn btn-primary btn-nav">Get a Quote</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+  <a href="services.html">Services</a><a href="pricing.html">Request a Quote</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Get a Quote</a>
 </div>
-<div class="legal-hero">
-  <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:16px;"><a href="index.html" style="color:var(--gold-light);text-decoration:none;">Home</a> / Terms &amp; Conditions</div>
-  <h1>Terms &amp; Conditions</h1>
-  <p>Last updated: January 2026</p>
-</div>
-<div class="legal-body">
-  <h2>Agreement to Terms</h2>
-  <p>By booking an inspection with Auditora Home Inspection ("Auditora"), you agree to the following terms and conditions. Please read them carefully before proceeding.</p>
 
-  <h2>Scope of Inspection</h2>
-  <p>Our inspections are visual, non-invasive examinations of the accessible areas of a residential property. We inspect readily accessible components of the following systems:</p>
-  <ul>
-    <li>Structure and foundation (visible areas)</li>
-    <li>Roof, attic, and insulation</li>
-    <li>Electrical systems</li>
-    <li>Plumbing systems</li>
-    <li>Heating, ventilation, and cooling (HVAC)</li>
-    <li>Exterior and interior components</li>
-    <li>Windows, doors, and finishes</li>
-  </ul>
-  <p>We do not perform destructive testing, move furniture or personal belongings, inspect concealed or inaccessible areas, or provide engineering analysis.</p>
-
-  <h2>Standards of Practice</h2>
-  <p>All inspections are conducted in accordance with the standards of practice set out by the Home Inspectors Association of British Columbia (HIABC).</p>
-
-  <h2>Report Delivery</h2>
-  <p>Your written inspection report will be delivered electronically within 24 hours of the completed inspection. The report is based on observable conditions at the time of inspection and should not be interpreted as a guarantee of any component's future performance.</p>
-
-  <h2>Limitations of Liability</h2>
-  <p>The total liability of Auditora Home Inspection for any claims arising out of or related to the inspection shall not exceed the fee paid for the inspection. We are not responsible for conditions that were not visible, accessible, or detectable using standard non-invasive methods at the time of inspection.</p>
-
-  <h2>Payment</h2>
-  <p>Full payment is required at the time of booking. We accept major credit cards through our secure payment processor (Square). By booking, you authorize the charged amount.</p>
-
-  <h2>Cancellation</h2>
-  <p>Please see our <a href="cancellation.html">Cancellation Policy</a> for full details on cancellations and rescheduling.</p>
-
-  <h2>Your Attendance</h2>
-  <p>You are welcome and encouraged to attend your inspection. Being present allows you to ask questions and better understand the findings. Please be on time as the inspection will begin at the scheduled time.</p>
-
-  <h2>Governing Law</h2>
-  <p>These Terms &amp; Conditions are governed by the laws of British Columbia, Canada. Any disputes will be resolved in the courts of British Columbia.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about these terms? Reach out at <a href="mailto:info@auditora.ca">info@auditora.ca</a> or <a href="tel:6047195840">604-719-5840</a>.</p>
-
-  <div class="legal-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="cancellation.html">Cancellation Policy</a>
-    <a href="index.html">← Back to Home</a>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="crumb"><a href="index.html">Home</a> / Terms &amp; Conditions</div>
+    <div class="eyebrow">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p>Last updated: August 2026</p>
   </div>
 </div>
+
+<div class="legal-body">
+
+<h2>Agreement to Terms</h2>
+<p>By requesting or booking an inspection with AuditorA Home Inspection ("AuditorA"), you agree to the following terms and conditions. Please read them carefully.</p>
+
+<h2>Licensing</h2>
+<p>AuditorA Home Inspection is operated by Vahid Alikhanzadeh, a home inspector licensed by Consumer Protection BC and a member of the Home Inspectors Association of British Columbia (HIABC). All inspections are performed in accordance with applicable BC licensing requirements and HIABC standards of practice.</p>
+
+<h2>Scope of Inspection</h2>
+<p>Our inspections are visual, non-invasive examinations of the readily accessible areas and components of a residential property. We inspect the following systems where accessible:</p>
+<ul>
+<li>Structure and foundation (visible areas)</li>
+<li>Roof, attic, and insulation</li>
+<li>Electrical systems</li>
+<li>Plumbing systems</li>
+<li>Heating, ventilation, and cooling (HVAC)</li>
+<li>Exterior envelope and interior components</li>
+<li>Windows, doors, and finishes</li>
+</ul>
+
+<h2>What Is Not Included</h2>
+<p>A home inspection is not a warranty, guarantee, or insurance policy. We do not:</p>
+<ul>
+<li>Perform destructive or invasive testing</li>
+<li>Move furniture, stored items, or personal belongings</li>
+<li>Inspect concealed, inaccessible, or unsafe areas</li>
+<li>Provide engineering, environmental, or code-compliance analysis</li>
+<li>Test for mould, asbestos, radon, or other environmental hazards unless separately arranged</li>
+<li>Predict future performance or remaining life of any component</li>
+</ul>
+
+<h2>Quotes and Pricing</h2>
+<p>Quotes are provided based on the property information you supply. If the property differs materially from what was described &mdash; for example, significantly larger square footage or additional structures &mdash; we will discuss any adjustment with you before proceeding. You will never be charged more than quoted without your agreement.</p>
+
+<h2>Report Delivery</h2>
+<p>Your written inspection report is typically delivered electronically within 24 hours of the completed inspection. The report reflects observable conditions at the time of inspection only.</p>
+
+<h2>Limitation of Liability</h2>
+<p>The total liability of AuditorA Home Inspection for any claim arising out of or related to an inspection shall not exceed the fee paid for that inspection. We are not responsible for conditions that were not visible, accessible, or reasonably detectable using standard non-invasive inspection methods at the time of inspection.</p>
+
+<h2>Client Attendance</h2>
+<p>You are welcome and encouraged to attend your inspection. Attending allows you to ask questions and better understand the findings. Please arrive on time, as the inspection will begin at the scheduled time.</p>
+
+<h2>Property Access</h2>
+<p>It is the client's responsibility to ensure the inspector has safe and full access to the property at the scheduled time, including utilities being turned on. If access cannot be provided, cancellation terms may apply.</p>
+
+<h2>Cancellation</h2>
+<p>See our <a href="cancellation.html">Cancellation Policy</a> for full details on cancellations and rescheduling.</p>
+
+<h2>Governing Law</h2>
+<p>These Terms &amp; Conditions are governed by the laws of the Province of British Columbia, Canada. Any disputes shall be resolved in the courts of British Columbia.</p>
+
+<div class="contact-block">
+  <div class="contact-block-in">
+    <h4>Questions About These Terms?</h4>
+    <p>We're happy to walk through anything that isn't clear.</p>
+    <a href="tel:6047195840" class="cb-link">&#128222; 604-719-5840</a>
+    <a href="mailto:alikhanzadehvahid@yahoo.com" class="cb-link">&#128231; alikhanzadehvahid@yahoo.com</a>
+  </div>
+</div>
+
+
+<div class="legal-nav">
+  <a href="privacy.html" class="btn btn-ghost btn-sm">Privacy Policy</a>
+  <a href="cancellation.html" class="btn btn-ghost btn-sm">Cancellation Policy</a>
+  <a href="index.html" class="btn btn-ghost btn-sm">&larr; Back to Home</a>
+</div>
+</div>
+
 <footer>
-  <div class="footer-bottom" style="max-width:1100px;margin:0 auto;">
-    <span>© 2026 Auditora Home Inspection. All rights reserved.</span>
-    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cancellation.html">Cancellation</a></span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" style="text-decoration:none;">
+          <div class="logo-mark light">
+            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+            <div class="logo-sub">Home Inspection</div>
+          </div>
+        </a>
+        <p>Licensed residential and condo inspections throughout Greater Vancouver.</p>
+        <div class="footer-contact">
+          <a href="tel:6047195840">&#128222; 604-719-5840</a>
+          <a href="mailto:alikhanzadehvahid@yahoo.com">&#128231; alikhanzadehvahid@yahoo.com</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Request a Quote</a></li><li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul>
+        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+      <div class="footer-col"><h4>Licensed By</h4>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="images/badge-cpbc.jpg" alt="Consumer Protection BC"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.png" alt="HIABC"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh &middot; Licensed Home Inspector &middot; Vancouver, BC</span>
+    </div>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}</script>
+
+<script src="script.js"></script>
 </body>
 </html>

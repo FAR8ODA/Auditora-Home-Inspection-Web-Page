@@ -1,291 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inspection Services | Auditora Home Inspection Vancouver</title>
-  <meta name="description" content="Home, condo, townhouse, and pre-listing inspections in Greater Vancouver. Certified, insured, and thorough." />
-  <link rel="canonical" href="https://auditora.ca/services" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://auditora.ca/services" />
-  <meta property="og:title" content="Inspection Services | Auditora Home Inspection Vancouver" />
-  <meta property="og:description" content="Home, condo, townhouse, and pre-listing inspections in Greater Vancouver. Certified, insured, and thorough." />
-  <meta property="og:site_name" content="Auditora Home Inspection" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{--navy:#0d1b2a;--navy-mid:#1a2e45;--navy-light:#243b55;--gold:#c9973a;--gold-light:#e0b565;--cream:#f8f4ef;--off-white:#f0ece6;--text:#1a1a1a;--muted:#6b7280;--white:#ffffff;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,151,58,0.2);}
-    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .nav-logo-icon{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-    .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
-    .nav-logo-text span:first-child{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--white);}
-    .nav-logo-text span:last-child{font-size:10px;color:var(--gold-light);letter-spacing:1.5px;text-transform:uppercase;}
-    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
-    .nav-links a:hover,.nav-links a.active{color:var(--gold-light);}
-    .btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:9px 20px;border-radius:6px;font-weight:600!important;}
-    .btn-nav:hover{background:var(--gold-light)!important;}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none;}
-    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;}
-    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);z-index:199;padding:20px 5%;flex-direction:column;gap:0;border-bottom:1px solid rgba(201,151,58,0.2);}
-    .mobile-menu.open{display:flex;}
-    .mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
-    .mobile-menu a:last-child{border-bottom:none;background:var(--gold);color:var(--navy);font-weight:600;text-align:center;border-radius:8px;margin-top:10px;padding:14px;}
-    .page-hero{background:var(--navy);padding:140px 5% 80px;position:relative;overflow:hidden;}
-    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(201,151,58,0.07) 0%,transparent 70%);}
-    .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,58,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,58,0.04) 1px,transparent 1px);background-size:60px 60px;}
-    .page-hero-inner{position:relative;z-index:2;max-width:700px;}
-    .breadcrumb{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
-    .breadcrumb a{color:var(--gold-light);text-decoration:none;}
-    .breadcrumb a:hover{text-decoration:underline;}
-    .section-tag{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;}
-    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,54px);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:18px;}
-    .page-hero p{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;max-width:560px;}
-    .btn-primary{background:var(--gold);color:var(--navy);padding:15px 30px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 20px rgba(201,151,58,0.35);}
-    .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);}
-    .btn-outline-dark{border:1.5px solid rgba(13,27,42,0.2);color:var(--navy);padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s,background 0.2s;}
-    .btn-outline-dark:hover{border-color:var(--gold);background:rgba(201,151,58,0.06);}
-    section{padding:80px 5%;}
-    .container{max-width:1100px;margin:0 auto;}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:14px;}
-    /* SERVICE SECTIONS */
-    .service-section{padding:90px 5%;border-bottom:1px solid rgba(0,0,0,0.06);}
-    .service-section:nth-child(even){background:var(--cream);}
-    .service-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1100px;margin:0 auto;}
-    .service-section:nth-child(even) .service-inner{direction:rtl;}
-    .service-section:nth-child(even) .service-inner>*{direction:ltr;}
-    .service-content .section-tag{display:block;}
-    .service-content h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2;}
-    .service-content p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px;font-weight:300;}
-    .service-includes h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);font-weight:600;margin-bottom:14px;}
-    .includes-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-bottom:28px;}
-    .include-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text);}
-    .include-item::before{content:'✓';width:18px;height:18px;background:rgba(201,151,58,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold);font-weight:700;flex-shrink:0;}
-    .service-visual{background:var(--navy);border-radius:20px;padding:40px;display:flex;flex-direction:column;justify-content:center;min-height:340px;position:relative;overflow:hidden;}
-    .service-visual::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,151,58,0.12) 0%,transparent 60%);}
-    .service-emoji{font-size:64px;margin-bottom:20px;}
-    .service-visual h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--white);margin-bottom:10px;}
-    .service-visual p{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6;}
-    .service-price-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.25);border-radius:100px;padding:8px 20px;margin-top:20px;}
-    .service-price-tag span{font-size:13px;color:var(--gold-light);}
-    /* CTA BANNER */
-    .cta-banner{background:var(--navy);padding:80px 5%;text-align:center;position:relative;overflow:hidden;}
-    .cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(201,151,58,0.1) 0%,transparent 70%);}
-    .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);color:var(--white);margin-bottom:14px;}
-    .cta-banner p{font-size:16px;color:rgba(255,255,255,0.55);margin-bottom:36px;font-weight:300;}
-    .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-    .btn-outline{border:1.5px solid rgba(255,255,255,0.3);color:var(--white);padding:15px 28px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s,background 0.2s;}
-    .btn-outline:hover{border-color:var(--gold);background:rgba(201,151,58,0.08);}
-    footer{background:#060d14;padding:60px 5% 30px;}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:50px;}
-    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:280px;margin-top:14px;}
-    .footer-brand .contact-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
-    .footer-brand .contact-info a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;transition:color 0.2s;}
-    .footer-brand .contact-info a:hover{color:var(--gold-light);}
-    .footer-col h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600;}
-    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-    .footer-col a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;transition:color 0.2s;}
-    .footer-col a:hover{color:var(--gold-light);}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,0.35);gap:12px;flex-wrap:wrap;}
-    .footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
-    .footer-bottom a:hover{color:var(--gold-light);}
-    .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
-    .reveal.visible{opacity:1;transform:translateY(0);}
-    @media(max-width:900px){.service-inner{grid-template-columns:1fr;gap:36px;}.service-section:nth-child(even) .service-inner{direction:ltr;}.service-visual{min-height:220px;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hamburger{display:flex;}}
-    @media(max-width:600px){.includes-list{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;text-align:center;}}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Inspection Services | AuditorA Home Inspection Vancouver</title>
+<meta name="description" content="Licensed home, condo, townhouse, and pre-listing inspections in Greater Vancouver. Request a quote today."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.svc-block { padding: 88px 5%; border-bottom: 1px solid var(--grey-100); }
+.svc-block:nth-child(even) { background: var(--off-white); }
+.svc-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 66px; align-items: center; }
+.svc-block:nth-child(even) .svc-inner { direction: rtl; }
+.svc-block:nth-child(even) .svc-inner > * { direction: ltr; }
+
+.svc-body h2 { font-size: clamp(26px,3.2vw,38px); font-weight:700; color: var(--blue-deep); margin-bottom: 16px; letter-spacing:-0.8px; }
+.svc-body > p { font-size: 15.5px; color: var(--muted); line-height:1.78; margin-bottom: 28px; }
+.inc-title { font-size: 11.5px; letter-spacing:2.2px; text-transform:uppercase; color: var(--blue); font-weight:700; margin-bottom:16px; }
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:11px 18px; margin-bottom: 32px; }
+.inc-item { display:flex; align-items:center; gap:10px; font-size:14.5px; color: var(--text-mid); }
+.inc-item::before {
+  content:'✓'; flex-shrink:0;
+  width:19px;height:19px;
+  background: var(--orange-light); color: var(--orange);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;
+}
+
+.svc-visual { position:relative; border-radius: var(--radius-lg); overflow:hidden; aspect-ratio: 4/3.4; box-shadow: var(--shadow-lg); }
+.svc-visual img { width:100%;height:100%;object-fit:cover; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+.svc-visual:hover img { transform: scale(1.06); }
+.svc-visual::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(14,42,84,0.80) 0%, rgba(14,42,84,0.12) 48%, transparent 72%);
+}
+.svc-visual-cap { position:absolute; bottom:0;left:0;right:0; padding:28px; z-index:2; color:#fff; }
+.svc-visual-cap strong { display:block; font-size:19px; font-weight:700; margin-bottom:5px; letter-spacing:-0.3px; }
+.svc-visual-cap span { font-size:13.5px; color:rgba(255,255,255,0.78); line-height:1.5; }
+
+.svc-tag {
+  display:inline-flex; align-items:center; gap:8px;
+  background: var(--orange-light);
+  border: 1px solid rgba(242,101,34,0.2);
+  border-radius:100px;
+  padding:7px 16px;
+  font-size:12.5px; color: var(--orange-dark); font-weight:700;
+  margin-bottom: 18px;
+}
+
+.cta { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%); text-align:center; padding: 92px 5%; position:relative; overflow:hidden; }
+.cta::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.20) 0%, transparent 68%); }
+.cta-inner { position:relative; z-index:2; }
+.cta h2 { color: var(--white); }
+.cta p { color: rgba(255,255,255,0.72); font-size:17px; max-width:520px; margin:0 auto 38px; }
+.cta-btns { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
+
+@media(max-width:1000px){
+  .svc-inner { grid-template-columns:1fr; gap:40px; }
+  .svc-block:nth-child(even) .svc-inner { direction:ltr; }
+}
+@media(max-width:640px){ .inc-grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">🏠</div>
-    <div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div>
+    <div class="logo-mark">
+      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+      <div class="logo-sub">Home Inspection</div>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="pricing.html">Request a Quote</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="book.html" class="btn-nav">Book Now</a></li>
+    <li><a href="contact.html" class="btn btn-primary btn-nav">Get a Quote</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="book.html">Book Now</a>
+  <a href="services.html">Services</a><a href="pricing.html">Request a Quote</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Get a Quote</a>
 </div>
 
 <div class="page-hero">
-  <div class="page-hero-grid"></div>
   <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
-    <div class="section-tag">What We Offer</div>
-    <h1>Professional Inspection<br>Services in Vancouver</h1>
-    <p>From detached homes to condos, every inspection is performed with certified expertise, modern tools, and a commitment to honest reporting.</p>
+    <div class="crumb"><a href="index.html">Home</a> / Services</div>
+    <div class="eyebrow">What We Offer</div>
+    <h1>Licensed Inspection<br>Services in Vancouver</h1>
+    <p>From detached homes to condos — every inspection performed to HIABC standards with professional tools and clear, honest reporting.</p>
   </div>
 </div>
 
-<!-- HOME INSPECTION -->
-<div class="service-section" id="home">
-  <div class="service-inner">
-    <div class="service-content reveal">
-      <span class="section-tag">Full Home Inspection</span>
-      <h2>Complete Residential Home Inspection</h2>
-      <p>Our most comprehensive service — a thorough evaluation of every major system and component of a house, duplex, or detached property. You'll receive a clear, detailed report you can actually understand.</p>
-      <div class="service-includes">
-        <h4>What's Included</h4>
-        <div class="includes-list">
-          <span class="include-item">Structure &amp; Foundation</span>
-          <span class="include-item">Roof &amp; Gutters</span>
-          <span class="include-item">Attic &amp; Insulation</span>
-          <span class="include-item">Exterior &amp; Siding</span>
-          <span class="include-item">Electrical Systems</span>
-          <span class="include-item">Plumbing</span>
-          <span class="include-item">HVAC / Heating</span>
-          <span class="include-item">Windows &amp; Doors</span>
-          <span class="include-item">Thermal Imaging</span>
-          <span class="include-item">Moisture Testing</span>
-          <span class="include-item">Garage</span>
-          <span class="include-item">Detailed Digital Report</span>
-        </div>
+<div class="trust-strip">
+  <div class="trust-strip-item"><span class="ic">✓</span> Licensed by Consumer Protection BC</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> HIABC Member</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> Fully Insured</div>
+  <div class="trust-strip-item"><span class="ic">✓</span> Reports in 24 Hours</div>
+</div>
+
+<!-- FULL HOME -->
+<div class="svc-block" id="home">
+  <div class="svc-inner">
+    <div class="svc-body reveal">
+      <div class="svc-tag">🏠 Most Comprehensive</div>
+      <h2>Full Home Inspection</h2>
+      <p>Our most complete service — a thorough evaluation of every major system in a house, duplex, or detached property. You receive a clear, photo-rich report you can actually understand and act on.</p>
+      <div class="inc-title">What's Included</div>
+      <div class="inc-grid">
+        <span class="inc-item">Structure &amp; Foundation</span>
+        <span class="inc-item">Roof &amp; Gutters</span>
+        <span class="inc-item">Attic &amp; Insulation</span>
+        <span class="inc-item">Exterior &amp; Siding</span>
+        <span class="inc-item">Electrical Systems</span>
+        <span class="inc-item">Plumbing</span>
+        <span class="inc-item">HVAC &amp; Heating</span>
+        <span class="inc-item">Windows &amp; Doors</span>
+        <span class="inc-item">Thermal Imaging</span>
+        <span class="inc-item">Moisture Testing</span>
+        <span class="inc-item">Garage &amp; Driveway</span>
+        <span class="inc-item">Digital Report in 24h</span>
       </div>
-      <a href="book.html" class="btn-primary">📅 Book a Home Inspection</a>
+      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
     </div>
-    <div class="service-visual reveal">
-      <div class="service-emoji">🏠</div>
-      <h3>Full Home Inspection</h3>
-      <p>Best for buyers, sellers, and homeowners who want a complete picture of their property's condition.</p>
-      <div class="service-price-tag"><span>Starting from $399</span></div>
+    <div class="svc-visual reveal">
+      <img src="images/work-ladder.jpg" alt="Full home inspection — exterior and roofline"/>
+      <div class="svc-visual-cap">
+        <strong>Full Home Inspection</strong>
+        <span>For buyers, sellers, and homeowners who want the complete picture</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- CONDO INSPECTION -->
-<div class="service-section" id="condo">
-  <div class="service-inner">
-    <div class="service-content reveal">
-      <span class="section-tag">Condo Inspection</span>
-      <h2>Condo &amp; Strata Unit Inspection</h2>
-      <p>Condos have unique considerations. We focus on everything within your unit and what you're responsible for as an owner — so you know exactly what you're buying into.</p>
-      <div class="service-includes">
-        <h4>What's Included</h4>
-        <div class="includes-list">
-          <span class="include-item">Unit Interior</span>
-          <span class="include-item">Balcony &amp; Patio</span>
-          <span class="include-item">Electrical Panel</span>
-          <span class="include-item">Plumbing Fixtures</span>
-          <span class="include-item">HVAC / In-suite heating</span>
-          <span class="include-item">Windows &amp; Doors</span>
-          <span class="include-item">Thermal Imaging</span>
-          <span class="include-item">Moisture Testing</span>
-          <span class="include-item">Appliances Check</span>
-          <span class="include-item">Detailed Digital Report</span>
-        </div>
+<!-- CONDO -->
+<div class="svc-block" id="condo">
+  <div class="svc-inner">
+    <div class="svc-body reveal">
+      <div class="svc-tag">🏢 Strata Specialist</div>
+      <h2>Condo &amp; Strata Inspection</h2>
+      <p>Condos have unique considerations. We focus on everything inside your unit and what you're responsible for as an owner — so you know exactly what you're buying into before you commit.</p>
+      <div class="inc-title">What's Included</div>
+      <div class="inc-grid">
+        <span class="inc-item">Full Unit Interior</span>
+        <span class="inc-item">Balcony &amp; Patio</span>
+        <span class="inc-item">Electrical Panel</span>
+        <span class="inc-item">Plumbing Fixtures</span>
+        <span class="inc-item">In-Suite HVAC</span>
+        <span class="inc-item">Windows &amp; Doors</span>
+        <span class="inc-item">Thermal Imaging</span>
+        <span class="inc-item">Moisture Testing</span>
+        <span class="inc-item">Appliance Check</span>
+        <span class="inc-item">Digital Report in 24h</span>
       </div>
-      <a href="book.html" class="btn-primary">📅 Book a Condo Inspection</a>
+      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
     </div>
-    <div class="service-visual reveal">
-      <div class="service-emoji">🏢</div>
-      <h3>Condo Inspection</h3>
-      <p>Perfect for condo buyers in Vancouver, Burnaby, and throughout Metro Vancouver's strata market.</p>
-      <div class="service-price-tag"><span>Starting from $399</span></div>
+    <div class="svc-visual reveal">
+      <img src="images/work-panel.jpg" alt="Condo inspection — electrical panel"/>
+      <div class="svc-visual-cap">
+        <strong>Condo Inspection</strong>
+        <span>Built for Vancouver and Burnaby's strata market</span>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- TOWNHOUSE -->
-<div class="service-section" id="townhouse">
-  <div class="service-inner">
-    <div class="service-content reveal">
-      <span class="section-tag">Townhouse Inspection</span>
+<div class="svc-block" id="townhouse">
+  <div class="svc-inner">
+    <div class="svc-body reveal">
+      <div class="svc-tag">🏘️ Attached Homes</div>
       <h2>Townhouse Inspection</h2>
-      <p>Townhouses combine elements of both houses and condos. Our inspection covers everything you own and are responsible for — including the roof, exterior, and shared-wall systems.</p>
-      <div class="service-includes">
-        <h4>What's Included</h4>
-        <div class="includes-list">
-          <span class="include-item">Roof &amp; Roofline</span>
-          <span class="include-item">Exterior &amp; Siding</span>
-          <span class="include-item">Shared Walls Assessment</span>
-          <span class="include-item">Full Interior</span>
-          <span class="include-item">Electrical Systems</span>
-          <span class="include-item">Plumbing</span>
-          <span class="include-item">HVAC / Heating</span>
-          <span class="include-item">Balcony / Deck</span>
-          <span class="include-item">Thermal Imaging</span>
-          <span class="include-item">Detailed Digital Report</span>
-        </div>
+      <p>Townhouses combine elements of both houses and condos. Our inspection covers everything you own and are responsible for — including roofline, exterior envelope, and shared-wall systems.</p>
+      <div class="inc-title">What's Included</div>
+      <div class="inc-grid">
+        <span class="inc-item">Roof &amp; Roofline</span>
+        <span class="inc-item">Exterior &amp; Siding</span>
+        <span class="inc-item">Shared Wall Assessment</span>
+        <span class="inc-item">Full Interior</span>
+        <span class="inc-item">Electrical Systems</span>
+        <span class="inc-item">Plumbing</span>
+        <span class="inc-item">HVAC &amp; Heating</span>
+        <span class="inc-item">Balcony / Deck</span>
+        <span class="inc-item">Thermal Imaging</span>
+        <span class="inc-item">Digital Report in 24h</span>
       </div>
-      <a href="book.html" class="btn-primary">📅 Book a Townhouse Inspection</a>
+      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
     </div>
-    <div class="service-visual reveal">
-      <div class="service-emoji">🏘️</div>
-      <h3>Townhouse Inspection</h3>
-      <p>Ideal for buyers of attached and semi-detached townhomes across Metro Vancouver.</p>
-      <div class="service-price-tag"><span>Starting from $399</span></div>
+    <div class="svc-visual reveal">
+      <img src="images/work-tester.jpg" alt="Townhouse inspection — electrical testing"/>
+      <div class="svc-visual-cap">
+        <strong>Townhouse Inspection</strong>
+        <span>Attached and semi-detached homes across Metro Vancouver</span>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- PRE-LISTING -->
-<div class="service-section" id="prelisting">
-  <div class="service-inner">
-    <div class="service-content reveal">
-      <span class="section-tag">Pre-Listing Inspection</span>
-      <h2>Pre-Listing Inspection for Sellers</h2>
-      <p>Selling your home? A pre-listing inspection lets you find and fix issues before buyers do — so you can price confidently, avoid last-minute surprises, and close faster.</p>
-      <div class="service-includes">
-        <h4>Why It Makes Sense</h4>
-        <div class="includes-list">
-          <span class="include-item">Find Issues Early</span>
-          <span class="include-item">Fix Before Listing</span>
-          <span class="include-item">Price With Confidence</span>
-          <span class="include-item">Sell Faster</span>
-          <span class="include-item">Avoid Deal Fallthrough</span>
-          <span class="include-item">Negotiate From Strength</span>
-          <span class="include-item">Full Written Report</span>
-          <span class="include-item">Share With Buyers</span>
-        </div>
+<div class="svc-block" id="prelisting">
+  <div class="svc-inner">
+    <div class="svc-body reveal">
+      <div class="svc-tag">📋 For Sellers</div>
+      <h2>Pre-Listing Inspection</h2>
+      <p>Selling your home? A pre-listing inspection lets you find and fix issues before buyers do — so you can price confidently, avoid last-minute renegotiation, and close faster with fewer surprises.</p>
+      <div class="inc-title">Why It Makes Sense</div>
+      <div class="inc-grid">
+        <span class="inc-item">Find Issues Early</span>
+        <span class="inc-item">Fix Before Listing</span>
+        <span class="inc-item">Price With Confidence</span>
+        <span class="inc-item">Sell Faster</span>
+        <span class="inc-item">Avoid Deal Fallthrough</span>
+        <span class="inc-item">Negotiate From Strength</span>
+        <span class="inc-item">Full Written Report</span>
+        <span class="inc-item">Share With Buyers</span>
       </div>
-      <a href="book.html" class="btn-primary">📅 Book a Pre-Listing Inspection</a>
+      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
     </div>
-    <div class="service-visual reveal">
-      <div class="service-emoji">📋</div>
-      <h3>Pre-Listing Inspection</h3>
-      <p>Smart sellers know their home before buyers do. Get ahead of issues and sell with confidence.</p>
-      <div class="service-price-tag"><span>Starting from $399</span></div>
+    <div class="svc-visual reveal">
+      <img src="images/work-tablet.jpg" alt="Pre-listing inspection — digital documentation"/>
+      <div class="svc-visual-cap">
+        <strong>Pre-Listing Inspection</strong>
+        <span>Know your home before buyers do</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="cta-banner">
-  <div style="position:relative;z-index:2;">
-    <h2>Not Sure Which Inspection You Need?</h2>
-    <p>Give us a call — we'll help you figure out the right option for your situation.</p>
-    <div class="cta-buttons">
-      <a href="book.html" class="btn-primary">📅 Book Online</a>
-      <a href="tel:6047195840" class="btn-outline">📞 604-719-5840</a>
+<section class="cta">
+  <div class="cta-inner reveal">
+    <div class="eyebrow">Not Sure Which One?</div>
+    <h2 class="h-section">Let's Figure It Out Together</h2>
+    <p>Send us your property details or call directly — we'll recommend the right inspection and give you an accurate quote.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary btn-lg">📩 Request a Quote</a>
+      <a href="tel:6047195840" class="btn btn-glass btn-lg">📞 604-719-5840</a>
     </div>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🏠</div><div class="nav-logo-text"><span>Auditora</span><span>Home Inspection</span></div></a>
-        <p>Certified residential and condo inspections in Greater Vancouver. Honest, detailed, and professional.</p>
-        <div class="contact-info"><a href="tel:6047195840">📞 604-719-5840</a><a href="mailto:info@auditora.ca">📧 info@auditora.ca</a></div>
+        <a href="index.html" style="text-decoration:none;">
+          <div class="logo-mark light">
+            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
+            <div class="logo-sub">Home Inspection</div>
+          </div>
+        </a>
+        <p>Licensed residential and condo inspections throughout Greater Vancouver.</p>
+        <div class="footer-contact">
+          <a href="tel:6047195840">📞 604-719-5840</a>
+          <a href="mailto:alikhanzadehvahid@yahoo.com">📧 alikhanzadehvahid@yahoo.com</a>
+        </div>
       </div>
-      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="book.html">Book Now</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+      <div class="footer-col"><h4>Pages</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Request a Quote</a></li><li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul>
+        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
+      <div class="footer-col"><h4>Licensed By</h4>
+        <div class="footer-badges">
+          <div class="footer-badge"><img src="images/badge-cpbc.jpg" alt="Consumer Protection BC"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.png" alt="HIABC"/></div>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Auditora Home Inspection. All rights reserved.</span><span>Serving Vancouver, Burnaby, North Vancouver &amp; surrounding areas.</span></div>
+    <div class="footer-bottom">
+      <span>© 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh · Licensed Home Inspector · Vancouver, BC</span>
+    </div>
   </div>
 </footer>
-<script>
-  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
-  document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)e.target.classList.add('visible');},{threshold:0.1}).observe(el);});
-</script>
+
+<script src="script.js"></script>
 </body>
 </html>
