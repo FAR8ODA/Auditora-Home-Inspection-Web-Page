@@ -3,337 +3,193 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact &amp; Quote Request | AuditorA Home Inspection Vancouver</title>
-<meta name="description" content="Request a home inspection quote in Greater Vancouver. Call 604-719-5840 or send your property details online."/>
+<title>Contact | AuditorA Home Inspection Vancouver</title>
+<meta name="description" content="Call, text or email AuditorA Home Inspection in Greater Vancouver. Speak directly with Vahid Alikhanzadeh, Licensed BC Home Inspector."/>
+<meta property="og:title" content="Contact | AuditorA Home Inspection Vancouver"/>
+<meta property="og:description" content="Call, text or email AuditorA Home Inspection in Greater Vancouver. Speak directly with Vahid Alikhanzadeh, Licensed BC Home Inspector."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <style>
+
 .contact-section { background: var(--off-white); }
-.contact-inner { display:grid; grid-template-columns: 0.85fr 1.15fr; gap:48px; align-items:start; }
+.contact-grid { max-width: 940px; margin: 0 auto; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 22px; }
+.c-card { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg);
+  padding: 34px 30px; text-decoration: none; display: block; text-align: center;
+  transition: transform 0.3s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.3s, border-color 0.3s; }
+.c-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(242,101,34,0.3); }
+.c-card h2 { font-size: 18px; font-weight: 700; color: var(--blue-deep); margin-bottom: 8px; }
+.c-card p { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.c-value { font-size: 17px; font-weight: 700; color: var(--orange); word-break: break-word; }
+.contact-detail { max-width: 940px; margin: 34px auto 0; display: grid;
+  grid-template-columns: 1fr 1fr; gap: 20px; }
+@media(max-width:800px){ .contact-detail { grid-template-columns: 1fr; } }
 
-.contact-side { display:flex;flex-direction:column;gap:16px; position:sticky; top:100px; }
-.contact-side > h2 { font-size:26px;font-weight:700;color:var(--blue-deep);margin-bottom:4px;letter-spacing:-0.5px; }
-.contact-side > p.intro { font-size:15px;color:var(--muted);line-height:1.72;margin-bottom:10px; }
-
-.c-card {
-  background: var(--white);
-  border:1px solid var(--grey-200);
-  border-radius: 16px;
-  padding: 20px 22px;
-  display:flex;align-items:flex-start;gap:16px;
-  text-decoration:none;
-  transition: border-color 0.3s, transform 0.25s, box-shadow 0.3s;
-}
-.c-card:hover { border-color: rgba(242,101,34,0.35); transform: translateX(5px); box-shadow: var(--shadow-md); }
-.c-ic {
-  width:46px;height:46px;flex-shrink:0;
-  background: linear-gradient(135deg,var(--blue-light),#D6E5F8);
-  border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:21px;
-  transition: background 0.3s;
-}
-.c-card:hover .c-ic { background: linear-gradient(135deg,var(--orange-light),#FFE0CE); }
-.c-txt strong { display:block;font-size:14.5px;font-weight:700;color:var(--blue-deep);margin-bottom:3px; }
-.c-txt span { font-size:14px;color:var(--muted); }
-
-.side-note {
-  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
-  border-radius:16px;
-  padding:24px;
-  color:#fff;
-  position:relative;overflow:hidden;
-}
-.side-note::before { content:'';position:absolute;bottom:-70px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(242,101,34,0.28) 0%,transparent 65%); }
-.side-note-in { position:relative;z-index:2; }
-.side-note h4 { font-size:15.5px;font-weight:700;margin-bottom:9px;display:flex;align-items:center;gap:9px; }
-.side-note p { font-size:13.5px;color:rgba(255,255,255,0.72);line-height:1.68; }
-
-.licence-side { display:flex;gap:11px; }
-.licence-side-item { flex:1;background:#fff;border:1px solid var(--grey-200);border-radius:12px;padding:13px;display:flex;align-items:center;justify-content:center;min-height:60px; }
-.licence-side-item img { max-height:34px;width:auto;object-fit:contain; }
-
-/* FORM */
-.form-card {
-  background: var(--white);
-  border:1px solid var(--grey-200);
-  border-radius: 24px;
-  padding: 44px;
-  box-shadow: var(--shadow-md);
-}
-.form-card h3 { font-size:25px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-0.5px; }
-.form-card > p.sub { font-size:14.5px;color:var(--muted);margin-bottom:32px;line-height:1.65; }
-
-.f-row { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
-.f-group { display:flex;flex-direction:column;gap:7px;margin-bottom:18px; }
-.f-group label { font-size:13px;font-weight:600;color:var(--blue-deep);letter-spacing:0.2px; }
-.f-group label .req { color:var(--orange); }
-.f-group input, .f-group select, .f-group textarea {
-  background: var(--off-white);
-  border:1.5px solid var(--grey-200);
-  border-radius:11px;
-  padding:14px 16px;
-  font-size:15px;
-  font-family:'DM Sans',sans-serif;
-  color: var(--text);
-  outline:none;
-  width:100%;
-  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
-}
-.f-group input::placeholder, .f-group textarea::placeholder { color:#A0AEC0; }
-.f-group input:focus, .f-group select:focus, .f-group textarea:focus {
-  border-color: var(--orange);
-  background: var(--white);
-  box-shadow: 0 0 0 4px rgba(242,101,34,0.10);
-}
-.f-group textarea { resize:vertical;min-height:130px;line-height:1.6; }
-.f-group select { cursor:pointer; }
-
-.form-success {
-  display:none;
-  background: linear-gradient(135deg, #E8F8EE 0%, #D6F0E0 100%);
-  border:1px solid #A8DCBC;
-  border-radius:14px;
-  padding:22px;
-  text-align:center;
-  margin-top:20px;
-}
-.form-success strong { display:block;color:#1B7A45;font-size:16px;font-weight:700;margin-bottom:5px; }
-.form-success span { color:#2D8759;font-size:14px; }
-
-.form-foot { font-size:12.5px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.6; }
-.form-foot a { color:var(--orange);text-decoration:none;font-weight:600; }
-
-/* hidden honeypot */
-.hp { position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden; }
-
-@media(max-width:1000px){
-  .contact-inner { grid-template-columns:1fr;gap:36px; }
-  .contact-side { position:static; }
-}
-@media(max-width:640px){
-  .f-row { grid-template-columns:1fr; }
-  .form-card { padding:30px 24px; }
-}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <div class="logo-mark">
-      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-      <div class="logo-sub">Home Inspection</div>
-    </div>
+  <a href="index.html" class="nav-logo" aria-label="AuditorA Home Inspection, home page">
+    <div class="wordmark"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
   </a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Request a Quote</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
-    <li><a href="tel:6047195840" class="btn btn-primary btn-nav">📞 Call Now</a></li>
+    <li><a href="request.html" class="btn btn-primary btn-nav">Request an Inspection</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a><a href="pricing.html">Request a Quote</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a href="tel:6047195840" class="btn btn-primary">📞 Call Now</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="prepare.html">Prepare for Your Inspection</a>
+  <a href="agreement.html">Inspection Contract</a>
+  <a href="request.html" class="btn btn-primary">Request an Inspection</a>
 </div>
+
 
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="crumb"><a href="index.html">Home</a> / Contact</div>
     <div class="eyebrow">Get In Touch</div>
-    <h1>Request Your Quote</h1>
-    <p>Send us your property details and we'll get back to you with an accurate quote and available dates — no obligation.</p>
+    <h1>Contact AuditorA</h1>
+    <p>Call, text or email Vahid directly. He will confirm availability, the inspection fee and the next
+       steps with you.</p>
   </div>
 </div>
 
 <div class="trust-strip">
-  <div class="trust-strip-item"><span class="ic">✓</span> Free Quote</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> No Obligation</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Fast Response</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licensed by Consumer Protection BC</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licence #89931</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> HIABC Member</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> E&amp;O and Liability Insured</div>
 </div>
 
 <section class="contact-section">
   <div class="container">
-    <div class="contact-inner">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Three Ways to Reach Us</div>
+      <h2 class="h-section">Speak With Vahid Directly</h2>
+      <p class="lead">Whichever is easiest for you. If you would rather send full property details,
+         use the <a href="request.html">inspection request form</a>.</p>
+    </div>
 
-      <div class="contact-side reveal">
-        <h2>Contact AuditorA</h2>
-        <p class="intro">Prefer to talk it through? Call or text directly — happy to answer questions about your property before anything is booked.</p>
+    <div class="contact-grid" data-stagger>
+      <a href="tel:6047195840" class="c-card reveal">
+        <h2>Call</h2>
+        <p>The fastest way to reach us and talk through your property.</p>
+        <div class="c-value">604-719-5840</div>
+      </a>
+      <a href="sms:6047195840" class="c-card reveal">
+        <h2>Text</h2>
+        <p>Send a message any time and Vahid will reply as soon as he can.</p>
+        <div class="c-value">604-719-5840</div>
+      </a>
+      <a href="mailto:info@auditora.ca" class="c-card reveal">
+        <h2>Email</h2>
+        <p>Best for sending property details, documents or longer questions.</p>
+        <div class="c-value">info@auditora.ca</div>
+      </a>
+    </div>
 
-        <a href="tel:6047195840" class="c-card">
-          <div class="c-ic">📞</div>
-          <div class="c-txt"><strong>Call or Text</strong><span>604-719-5840</span></div>
-        </a>
-        <a href="mailto:alikhanzadehvahid@yahoo.com" class="c-card">
-          <div class="c-ic">📧</div>
-          <div class="c-txt"><strong>Email</strong><span>alikhanzadehvahid@yahoo.com</span></div>
-        </a>
-        <div class="c-card" style="cursor:default;">
-          <div class="c-ic">📍</div>
-          <div class="c-txt"><strong>Service Area</strong><span>Greater Vancouver &amp; Lower Mainland, BC</span></div>
-        </div>
-        <div class="c-card" style="cursor:default;">
-          <div class="c-ic">👤</div>
-          <div class="c-txt"><strong>Your Inspector</strong><span>Vahid Alikhanzadeh, Licensed</span></div>
-        </div>
-
-        <div class="side-note">
-          <div class="side-note-in">
-            <h4>⏱️ Fast Response</h4>
-            <p>We typically respond to inquiries within a few hours during business hours, 7 days a week.</p>
-          </div>
-        </div>
-
-        <div class="licence-side">
-          <div class="licence-side-item"><img src="images/badge-cpbc.webp" alt="Consumer Protection BC" loading="lazy" decoding="async"/></div>
-          <div class="licence-side-item"><img src="images/badge-hiabc-wide.webp" alt="HIABC" loading="lazy" decoding="async"/></div>
-        </div>
-      </div>
-
-      <div class="form-card reveal">
-        <h3>Send Your Details</h3>
-        <p class="sub">Fill in what you know — if you're missing something, just leave it blank and we'll sort it out.</p>
-
-        <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm">
-          <input type="hidden" name="form-name" value="quote-request"/>
-          <p class="hp"><label>Don't fill this out: <input name="bot-field"/></label></p>
-
-          <div class="f-row">
-            <div class="f-group">
-              <label for="fname">First Name <span class="req">*</span></label>
-              <input type="text" id="fname" name="first-name" placeholder="John" required/>
-            </div>
-            <div class="f-group">
-              <label for="lname">Last Name <span class="req">*</span></label>
-              <input type="text" id="lname" name="last-name" placeholder="Smith" required/>
-            </div>
-          </div>
-
-          <div class="f-row">
-            <div class="f-group">
-              <label for="phone">Phone <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="604-000-0000" required/>
-            </div>
-            <div class="f-group">
-              <label for="email">Email <span class="req">*</span></label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" required/>
-            </div>
-          </div>
-
-          <div class="f-group">
-            <label for="address">Property Address</label>
-            <input type="text" id="address" name="property-address" placeholder="123 Main St, Vancouver, BC"/>
-          </div>
-
-          <div class="f-row">
-            <div class="f-group">
-              <label for="ptype">Property Type</label>
-              <select id="ptype" name="property-type">
-                <option value="">Select...</option>
-                <option>Detached House</option>
-                <option>Condo / Apartment</option>
-                <option>Townhouse</option>
-                <option>Duplex</option>
-                <option>Other / Not sure</option>
-              </select>
-            </div>
-            <div class="f-group">
-              <label for="sqft">Approx. Square Footage</label>
-              <select id="sqft" name="square-footage">
-                <option value="">Select...</option>
-                <option>Under 1,000 sq ft</option>
-                <option>1,000 – 1,500 sq ft</option>
-                <option>1,500 – 2,000 sq ft</option>
-                <option>2,000 – 2,500 sq ft</option>
-                <option>2,500+ sq ft</option>
-                <option>Not sure</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="f-row">
-            <div class="f-group">
-              <label for="service">Inspection Type</label>
-              <select id="service" name="service-type">
-                <option value="">Select...</option>
-                <option>Full Home Inspection</option>
-                <option>Condo Inspection</option>
-                <option>Townhouse Inspection</option>
-                <option>Pre-Listing Inspection</option>
-                <option>Not sure — need advice</option>
-              </select>
-            </div>
-            <div class="f-group">
-              <label for="timing">When Do You Need It?</label>
-              <select id="timing" name="timing">
-                <option value="">Select...</option>
-                <option>As soon as possible</option>
-                <option>Within a few days</option>
-                <option>Within 1–2 weeks</option>
-                <option>Just gathering quotes</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="f-group">
-            <label for="message">Additional Details</label>
-            <textarea id="message" name="message" placeholder="Anything else we should know about the property or your timeline?"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full btn-lg">📩 Send Quote Request</button>
-        </form>
-
-        <div class="form-success" id="formSuccess">
-          <strong>✅ Request sent!</strong>
-          <span>We'll get back to you shortly with your quote.</span>
-        </div>
-
-        <p class="form-foot">
-          Prefer to talk? Call <a href="tel:6047195840">604-719-5840</a> · By submitting you agree to our <a href="privacy.html">Privacy Policy</a>.
+    <div class="contact-detail reveal">
+      <div class="info-card">
+        <h3 class="h-card">Your Inspector</h3>
+        <p style="font-size:14.5px;color:var(--text-mid);line-height:1.72;">
+          Vahid Alikhanzadeh, Licensed BC Home Inspector, Licence #89931. Licensed by Consumer
+          Protection BC and a member of the Home Inspectors Association BC.
         </p>
       </div>
+      <div class="info-card">
+        <h3 class="h-card">Service Area</h3>
+        <p style="font-size:14.5px;color:var(--text-mid);line-height:1.72;">
+          Greater Vancouver and the Lower Mainland, including Vancouver, Burnaby, North and West
+          Vancouver, Richmond, Coquitlam, Surrey, Langley and Delta.
+        </p>
+      </div>
+    </div>
 
+    <div style="max-width:940px;margin:20px auto 0;" class="reveal">
+      <div class="note-box">
+        <strong>Ready to request an inspection?</strong> The
+        <a href="request.html">inspection request form</a> collects the property details needed to confirm
+        your fee and appointment.
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:34px;">
+      <a href="request.html" class="btn btn-primary btn-lg">Request an Inspection</a>
     </div>
   </div>
 </section>
+
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" style="text-decoration:none;">
-          <div class="logo-mark light">
-            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-            <div class="logo-sub">Home Inspection</div>
-          </div>
+        <a href="index.html" style="text-decoration:none;display:inline-block;">
+          <div class="wordmark light"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
         </a>
-        <p>Licensed residential and condo inspections throughout Greater Vancouver.</p>
+        <p>Licensed residential home and condo inspections throughout Greater Vancouver and the Lower Mainland.</p>
         <div class="footer-contact">
-          <a href="tel:6047195840">📞 604-719-5840</a>
-          <a href="mailto:alikhanzadehvahid@yahoo.com">📧 alikhanzadehvahid@yahoo.com</a>
+          <a href="tel:6047195840">Call or text 604-719-5840</a>
+          <a href="mailto:info@auditora.ca">info@auditora.ca</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Pages</h4><ul>
-        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Request a Quote</a></li><li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul>
-        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li>
-        <li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
-      <div class="footer-col"><h4>Licensed By</h4>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="request.html">Request an Inspection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Before Your Inspection</h4>
+        <ul>
+          <li><a href="prepare.html">Prepare for Your Inspection</a></li>
+          <li><a href="agreement.html">Inspection Contract</a></li>
+          <li><a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a></li>
+          <li><a href="cancellation.html">Cancellation Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Website Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licensing</h4>
+        <div class="footer-cred">
+          <strong>Licensed by Consumer Protection BC</strong>
+          <span>BC Home Inspector Licence #89931</span>
+          <span>Member, Home Inspectors Association BC</span>
+          <span>E&amp;O and Commercial General Liability insured</span>
+        </div>
         <div class="footer-badges">
-          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Consumer Protection BC" loading="lazy" decoding="async"/></div>
-          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="HIABC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Licensed by Consumer Protection BC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="Home Inspectors Association BC" loading="lazy" decoding="async"/></div>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 AuditorA Home Inspection. All rights reserved.</span>
-      <span>Vahid Alikhanzadeh · Licensed Home Inspector · Vancouver, BC</span>
+      <span>&copy; 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh, Licensed BC Home Inspector, Vancouver, BC</span>
     </div>
   </div>
 </footer>

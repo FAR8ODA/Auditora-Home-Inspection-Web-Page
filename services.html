@@ -4,277 +4,338 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Inspection Services | AuditorA Home Inspection Vancouver</title>
-<meta name="description" content="Licensed home, condo, townhouse, and pre-listing inspections in Greater Vancouver. Request a quote today."/>
+<meta name="description" content="House, condo, townhouse and pre-listing inspections in Greater Vancouver by a licensed BC home inspector, conducted in accordance with the HIABC Scope of Inspection."/>
+<meta property="og:title" content="Inspection Services | AuditorA Home Inspection Vancouver"/>
+<meta property="og:description" content="House, condo, townhouse and pre-listing inspections in Greater Vancouver by a licensed BC home inspector, conducted in accordance with the HIABC Scope of Inspection."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <style>
-.svc-block { padding: 88px 5%; border-bottom: 1px solid var(--grey-100); }
-.svc-block:nth-child(even) { background: var(--off-white); }
-.svc-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 66px; align-items: center; }
-.svc-block:nth-child(even) .svc-inner { direction: rtl; }
-.svc-block:nth-child(even) .svc-inner > * { direction: ltr; }
 
-.svc-body h2 { font-size: clamp(26px,3.2vw,38px); font-weight:700; color: var(--blue-deep); margin-bottom: 16px; letter-spacing:-0.8px; }
-.svc-body > p { font-size: 15.5px; color: var(--muted); line-height:1.78; margin-bottom: 28px; }
-.inc-title { font-size: 11.5px; letter-spacing:2.2px; text-transform:uppercase; color: var(--blue); font-weight:700; margin-bottom:16px; }
-.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:11px 18px; margin-bottom: 32px; }
+.svc-block { padding: 84px 5%; border-bottom: 1px solid var(--grey-100); }
+.svc-block:nth-of-type(even) { background: var(--off-white); }
+.svc-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 62px; align-items: center; }
+.svc-body h2 { font-size: clamp(25px,3vw,36px); font-weight:700; color: var(--blue-deep); margin-bottom: 15px; }
+.svc-body > p { font-size: 15.5px; color: var(--text-mid); line-height:1.78; margin-bottom: 22px; }
+.svc-tag { display:inline-flex; align-items:center; gap:8px; background: var(--orange-light);
+  border: 1px solid rgba(242,101,34,0.22); border-radius:100px; padding:7px 16px;
+  font-size:12px; color: var(--orange-dark); font-weight:700; margin-bottom: 16px;
+  letter-spacing: 1px; text-transform: uppercase; }
+.inc-title { font-size: 11.5px; letter-spacing:2.2px; text-transform:uppercase; color: var(--blue);
+  font-weight:700; margin-bottom:15px; }
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; margin-bottom: 26px; }
 .inc-item { display:flex; align-items:center; gap:10px; font-size:14.5px; color: var(--text-mid); }
-.inc-item::before {
-  content:'✓'; flex-shrink:0;
-  width:19px;height:19px;
-  background: var(--orange-light); color: var(--orange);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:700;
-}
-
-.svc-visual { position:relative; border-radius: var(--radius-lg); overflow:hidden; aspect-ratio: 4/3.4; box-shadow: var(--shadow-lg); }
-.svc-visual img { width:100%;height:100%;object-fit:cover; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
-.svc-visual:hover img { transform: scale(1.06); }
-.svc-visual::after {
-  content:''; position:absolute; inset:0;
-  background: linear-gradient(to top, rgba(14,42,84,0.80) 0%, rgba(14,42,84,0.12) 48%, transparent 72%);
-}
-.svc-visual-cap { position:absolute; bottom:0;left:0;right:0; padding:28px; z-index:2; color:#fff; }
-.svc-visual-cap strong { display:block; font-size:19px; font-weight:700; margin-bottom:5px; letter-spacing:-0.3px; }
-.svc-visual-cap span { font-size:13.5px; color:rgba(255,255,255,0.78); line-height:1.5; }
-
-.svc-tag {
-  display:inline-flex; align-items:center; gap:8px;
-  background: var(--orange-light);
-  border: 1px solid rgba(242,101,34,0.2);
-  border-radius:100px;
-  padding:7px 16px;
-  font-size:12.5px; color: var(--orange-dark); font-weight:700;
-  margin-bottom: 18px;
-}
-
-.cta { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%); text-align:center; padding: 92px 5%; position:relative; overflow:hidden; }
-.cta::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.20) 0%, transparent 68%); }
-.cta-inner { position:relative; z-index:2; }
+.inc-item::before { content:'\2713'; flex-shrink:0; width:19px;height:19px;
+  background: var(--orange-light); color: var(--orange); border-radius:50%;
+  display:flex;align-items:center;justify-content:center; font-size:10px;font-weight:700; }
+.svc-side { display: flex; flex-direction: column; gap: 18px; }
+.side-panel { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg);
+  padding: 30px 28px; box-shadow: var(--shadow-sm); }
+.svc-block:nth-of-type(even) .side-panel { background: var(--white); }
+.side-panel h3 { font-size: 17px; font-weight: 700; color: var(--blue-deep); margin-bottom: 12px; }
+.side-panel p { font-size: 14px; color: var(--muted); line-height: 1.72; }
+.price-peek { display: flex; align-items: baseline; gap: 10px; margin-top: 16px;
+  padding-top: 16px; border-top: 1px solid var(--grey-100); }
+.price-peek strong { font-size: 25px; color: var(--blue-deep); font-weight: 700; }
+.price-peek span { font-size: 13.5px; color: var(--muted); }
+.tools-band { background: var(--blue-tint); }
+.tools-inner { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 54px; align-items: center; max-width: 1140px; margin: 0 auto; }
+.cta { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%); text-align:center;
+  padding: 88px 5%; position:relative; overflow:hidden; }
+.cta::before { content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.20) 0%, transparent 68%); }
+.cta-in { position:relative; z-index:2; }
 .cta h2 { color: var(--white); }
-.cta p { color: rgba(255,255,255,0.72); font-size:17px; max-width:520px; margin:0 auto 38px; }
-.cta-btns { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
-
+.cta p { color: rgba(255,255,255,0.74); font-size: 16.5px; max-width: 540px; margin: 0 auto 34px; }
+.cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 @media(max-width:1000px){
-  .svc-inner { grid-template-columns:1fr; gap:40px; }
-  .svc-block:nth-child(even) .svc-inner { direction:ltr; }
+  .svc-inner { grid-template-columns:1fr; gap:38px; }
+  .tools-inner { grid-template-columns:1fr; gap:38px; }
 }
 @media(max-width:640px){ .inc-grid { grid-template-columns:1fr; } }
+
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <div class="logo-mark">
-      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-      <div class="logo-sub">Home Inspection</div>
-    </div>
+  <a href="index.html" class="nav-logo" aria-label="AuditorA Home Inspection, home page">
+    <div class="wordmark"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
   </a>
   <ul class="nav-links">
     <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="pricing.html">Request a Quote</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="contact.html" class="btn btn-primary btn-nav">Get a Quote</a></li>
+    <li><a href="request.html" class="btn btn-primary btn-nav">Request an Inspection</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a><a href="pricing.html">Request a Quote</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="prepare.html">Prepare for Your Inspection</a>
+  <a href="agreement.html">Inspection Contract</a>
+  <a href="request.html" class="btn btn-primary">Request an Inspection</a>
 </div>
+
 
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="crumb"><a href="index.html">Home</a> / Services</div>
     <div class="eyebrow">What We Offer</div>
-    <h1>Licensed Inspection<br>Services in Vancouver</h1>
-    <p>From detached homes to condos — every inspection performed to HIABC standards with professional tools and clear, honest reporting.</p>
+    <h1>Residential Inspection Services</h1>
+    <p>Residential inspections performed by a licensed BC home inspector. The inspection is conducted in accordance with the <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a>.</p>
   </div>
 </div>
 
 <div class="trust-strip">
-  <div class="trust-strip-item"><span class="ic">✓</span> Licensed by Consumer Protection BC</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> HIABC Member</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Fully Insured</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Reports in 24 Hours</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licensed by Consumer Protection BC</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licence #89931</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> HIABC Member</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> E&amp;O and Liability Insured</div>
 </div>
 
-<!-- FULL HOME -->
-<div class="svc-block" id="home">
+<div class="svc-block" id="house">
   <div class="svc-inner">
     <div class="svc-body reveal">
-      <div class="svc-tag">🏠 Most Comprehensive</div>
-      <h2>Full Home Inspection</h2>
-      <p>Our most complete service — a thorough evaluation of every major system in a house, duplex, or detached property. You receive a clear, photo-rich report you can actually understand and act on.</p>
-      <div class="inc-title">What's Included</div>
+      <div class="svc-tag">Detached and Duplex</div>
+      <h2>House Inspection</h2>
+      <p>A visual inspection of readily accessible systems and components within the HIABC Scope of Inspection. Findings are documented with photographs and explained in plain language so you
+         have a better understanding of the property before you make a decision.</p>
+      <div class="inc-title">Areas Reviewed Where Readily Accessible</div>
       <div class="inc-grid">
-        <span class="inc-item">Structure &amp; Foundation</span>
-        <span class="inc-item">Roof &amp; Gutters</span>
-        <span class="inc-item">Attic &amp; Insulation</span>
-        <span class="inc-item">Exterior &amp; Siding</span>
-        <span class="inc-item">Electrical Systems</span>
-        <span class="inc-item">Plumbing</span>
-        <span class="inc-item">HVAC &amp; Heating</span>
-        <span class="inc-item">Windows &amp; Doors</span>
-        <span class="inc-item">Thermal Imaging</span>
-        <span class="inc-item">Moisture Testing</span>
-        <span class="inc-item">Garage &amp; Driveway</span>
-        <span class="inc-item">Digital Report in 24h</span>
+        <span class="inc-item">Structure and foundation</span>
+        <span class="inc-item">Roof and gutters</span>
+        <span class="inc-item">Attic and insulation</span>
+        <span class="inc-item">Exterior and siding</span>
+        <span class="inc-item">Electrical systems</span>
+        <span class="inc-item">Plumbing systems</span>
+        <span class="inc-item">Heating and ventilation</span>
+        <span class="inc-item">Windows and doors</span>
+        <span class="inc-item">Interior finishes</span>
+        <span class="inc-item">Garage where present</span>
       </div>
-      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
+      <a href="request.html" class="btn btn-primary">Request an Inspection</a>
     </div>
-    <div class="svc-visual reveal">
-      <img src="images/work-ladder.webp" alt="Full home inspection — exterior and roofline" loading="lazy" decoding="async"/>
-      <div class="svc-visual-cap">
-        <strong>Full Home Inspection</strong>
-        <span>For buyers, sellers, and homeowners who want the complete picture</span>
+    <div class="svc-side reveal">
+      <div class="side-panel">
+        <h3>House inspection pricing</h3>
+        <p>Fees are based on interior square footage. Properties with suites, unusual configurations or
+           limited accessibility are quoted individually.</p>
+        <div class="price-peek">
+          <strong>From $650</strong>
+          <span>See the full pricing table</span>
+        </div>
+        <a href="pricing.html" class="btn btn-ghost btn-sm" style="margin-top:16px;">View Pricing</a>
       </div>
+      <div class="note-box">A clear digital inspection report is normally provided within 24 hours after the inspection.</div>
     </div>
   </div>
 </div>
 
-<!-- CONDO -->
 <div class="svc-block" id="condo">
   <div class="svc-inner">
     <div class="svc-body reveal">
-      <div class="svc-tag">🏢 Strata Specialist</div>
-      <h2>Condo &amp; Strata Inspection</h2>
-      <p>Condos have unique considerations. We focus on everything inside your unit and what you're responsible for as an owner — so you know exactly what you're buying into before you commit.</p>
-      <div class="inc-title">What's Included</div>
+      <div class="svc-tag">Strata Units</div>
+      <h2>Condo Inspection</h2>
+      <p>A condo inspection primarily covers the readily accessible systems and components within the unit and any other areas specifically included and accessible at the time of inspection. Clients should separately review strata documents, depreciation reports, meeting minutes and planned expenditures.</p>
+      <div class="inc-title">Areas Reviewed Where Readily Accessible</div>
       <div class="inc-grid">
-        <span class="inc-item">Full Unit Interior</span>
-        <span class="inc-item">Balcony &amp; Patio</span>
-        <span class="inc-item">Electrical Panel</span>
-        <span class="inc-item">Plumbing Fixtures</span>
-        <span class="inc-item">In-Suite HVAC</span>
-        <span class="inc-item">Windows &amp; Doors</span>
-        <span class="inc-item">Thermal Imaging</span>
-        <span class="inc-item">Moisture Testing</span>
-        <span class="inc-item">Appliance Check</span>
-        <span class="inc-item">Digital Report in 24h</span>
+        <span class="inc-item">Unit interior</span>
+        <span class="inc-item">Balcony or patio</span>
+        <span class="inc-item">Electrical panel and outlets</span>
+        <span class="inc-item">Plumbing fixtures</span>
+        <span class="inc-item">In-suite heating</span>
+        <span class="inc-item">Windows and doors</span>
+        <span class="inc-item">Interior finishes</span>
+        <span class="inc-item">Installed appliances</span>
       </div>
-      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
+      <a href="request.html" class="btn btn-primary">Request an Inspection</a>
     </div>
-    <div class="svc-visual reveal">
-      <img src="images/work-panel.webp" alt="Condo inspection — electrical panel" loading="lazy" decoding="async"/>
-      <div class="svc-visual-cap">
-        <strong>Condo Inspection</strong>
-        <span>Built for Vancouver and Burnaby's strata market</span>
+    <div class="svc-side reveal">
+      <div class="side-panel">
+        <h3>Condo inspection pricing</h3>
+        <p>Condo fees are set separately from house fees and are based on the interior square footage
+           of the unit.</p>
+        <div class="price-peek">
+          <strong>From $499</strong>
+          <span>See the full pricing table</span>
+        </div>
+        <a href="pricing.html" class="btn btn-ghost btn-sm" style="margin-top:16px;">View Pricing</a>
       </div>
+      <div class="note-box orange"><strong>Scope note.</strong> A condo inspection primarily covers the readily accessible systems and components within the individual unit. Common-property areas and shared building systems are generally outside the scope unless specifically included and accessible.</div>
     </div>
   </div>
 </div>
 
-<!-- TOWNHOUSE -->
 <div class="svc-block" id="townhouse">
   <div class="svc-inner">
     <div class="svc-body reveal">
-      <div class="svc-tag">🏘️ Attached Homes</div>
-      <h2>Townhouse Inspection</h2>
-      <p>Townhouses combine elements of both houses and condos. Our inspection covers everything you own and are responsible for — including roofline, exterior envelope, and shared-wall systems.</p>
-      <div class="inc-title">What's Included</div>
+      <div class="svc-tag">Attached Homes</div>
+      <h2>Townhouse and Duplex Inspection</h2>
+      <p>Townhouses and duplexes vary considerably in size, layout and what falls under owner
+         responsibility. A visual inspection of readily accessible systems and components within the HIABC Scope of Inspection. The scope and fee are confirmed for each property individually.</p>
+      <div class="inc-title">Areas Reviewed Where Readily Accessible</div>
       <div class="inc-grid">
-        <span class="inc-item">Roof &amp; Roofline</span>
-        <span class="inc-item">Exterior &amp; Siding</span>
-        <span class="inc-item">Shared Wall Assessment</span>
-        <span class="inc-item">Full Interior</span>
-        <span class="inc-item">Electrical Systems</span>
-        <span class="inc-item">Plumbing</span>
-        <span class="inc-item">HVAC &amp; Heating</span>
-        <span class="inc-item">Balcony / Deck</span>
-        <span class="inc-item">Thermal Imaging</span>
-        <span class="inc-item">Digital Report in 24h</span>
+        <span class="inc-item">Roof where accessible</span>
+        <span class="inc-item">Exterior and siding</span>
+        <span class="inc-item">Full interior</span>
+        <span class="inc-item">Electrical systems</span>
+        <span class="inc-item">Plumbing systems</span>
+        <span class="inc-item">Heating and ventilation</span>
+        <span class="inc-item">Windows and doors</span>
+        <span class="inc-item">Balcony or deck</span>
       </div>
-      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
+      <a href="request.html" class="btn btn-primary">Contact Us for a Quote</a>
     </div>
-    <div class="svc-visual reveal">
-      <img src="images/work-tester.webp" alt="Townhouse inspection — electrical testing" loading="lazy" decoding="async"/>
-      <div class="svc-visual-cap">
-        <strong>Townhouse Inspection</strong>
-        <span>Attached and semi-detached homes across Metro Vancouver</span>
+    <div class="svc-side reveal">
+      <div class="side-panel">
+        <h3>Quoted individually</h3>
+        <p>Townhouses, duplexes, homes with suites and unusual properties are quoted individually so the
+           fee reflects the actual property.</p>
+        <div class="price-peek">
+          <strong>Contact us</strong>
+          <span>for a quote</span>
+        </div>
+        <a href="request.html" class="btn btn-ghost btn-sm" style="margin-top:16px;">Request a Quote</a>
       </div>
+      <div class="note-box">A clear digital inspection report is normally provided within 24 hours after the inspection.</div>
     </div>
   </div>
 </div>
 
-<!-- PRE-LISTING -->
 <div class="svc-block" id="prelisting">
   <div class="svc-inner">
     <div class="svc-body reveal">
-      <div class="svc-tag">📋 For Sellers</div>
+      <div class="svc-tag">For Sellers</div>
       <h2>Pre-Listing Inspection</h2>
-      <p>Selling your home? A pre-listing inspection lets you find and fix issues before buyers do — so you can price confidently, avoid last-minute renegotiation, and close faster with fewer surprises.</p>
-      <div class="inc-title">Why It Makes Sense</div>
+      <p>A pre-listing inspection gives sellers a better understanding of the property before it goes on
+         the market. A visual inspection of readily accessible systems and components within the HIABC Scope of Inspection.</p>
+      <div class="inc-title">Why Sellers Request One</div>
       <div class="inc-grid">
-        <span class="inc-item">Find Issues Early</span>
-        <span class="inc-item">Fix Before Listing</span>
-        <span class="inc-item">Price With Confidence</span>
-        <span class="inc-item">Sell Faster</span>
-        <span class="inc-item">Avoid Deal Fallthrough</span>
-        <span class="inc-item">Negotiate From Strength</span>
-        <span class="inc-item">Full Written Report</span>
-        <span class="inc-item">Share With Buyers</span>
+        <span class="inc-item">Understand the property first</span>
+        <span class="inc-item">Address items before listing</span>
+        <span class="inc-item">Fewer surprises during the sale</span>
+        <span class="inc-item">Clearer discussions with buyers</span>
+        <span class="inc-item">Written report to share</span>
+        <span class="inc-item">Informed pricing decisions</span>
       </div>
-      <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
+      <a href="request.html" class="btn btn-primary">Request an Inspection</a>
     </div>
-    <div class="svc-visual reveal">
-      <img src="images/work-tablet.webp" alt="Pre-listing inspection — digital documentation" loading="lazy" decoding="async"/>
-      <div class="svc-visual-cap">
-        <strong>Pre-Listing Inspection</strong>
-        <span>Know your home before buyers do</span>
-      </div>
+    <div class="svc-side reveal">
+      <figure class="photo-figure">
+        <img src="images/work-tablet.webp" alt="AuditorA home inspector documenting an exterior electrical component." loading="lazy" decoding="async"/>
+        <figcaption>Findings are documented on site with photographs and included in your written report.</figcaption>
+      </figure>
     </div>
   </div>
 </div>
 
-<section class="cta">
-  <div class="cta-inner reveal">
-    <div class="eyebrow">Not Sure Which One?</div>
-    <h2 class="h-section">Let's Figure It Out Together</h2>
-    <p>Send us your property details or call directly — we'll recommend the right inspection and give you an accurate quote.</p>
-    <div class="cta-btns">
-      <a href="contact.html" class="btn btn-primary btn-lg">📩 Request a Quote</a>
-      <a href="tel:6047195840" class="btn btn-glass btn-lg">📞 604-719-5840</a>
+<section class="tools-band">
+  <div class="tools-inner">
+    <div class="reveal">
+      <div class="eyebrow">Inspection Tools</div>
+      <h2 class="h-section">Equipment Used During an Inspection</h2>
+      <p class="lead" style="margin-bottom:22px;">
+        Inspections are visual and non-invasive. Testing equipment is used to support the visual
+        inspection where conditions make it appropriate.
+      </p>
+      <ul class="checklist">
+        <li>Electrical testing equipment for outlets and accessible components</li>
+        <li>Moisture measurement where conditions indicate it is appropriate</li>
+        <li>Ladder access for roof and elevated areas where safe to do so</li>
+        <li>Inspection lighting for attics, crawl spaces and enclosed areas</li>
+        <li>Digital photography for documenting findings in the report</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="note-box orange">
+        <strong>Infrared camera.</strong> An infrared camera may be used at the inspector’s discretion as a supplementary screening tool when conditions make its use appropriate. Infrared observations are not a full thermographic assessment and do not guarantee the detection of concealed moisture, insulation deficiencies, electrical problems or other hidden conditions. Any relevant observation will be interpreted in context and reported with appropriate limitations.
+      </div>
+      <div class="note-box" style="margin-top:16px;">
+        <strong>Please note.</strong> AuditorA does not perform repairs, provide repair cost estimates,
+        offer warranties or make contractor referrals.
+      </div>
     </div>
   </div>
 </section>
+
+<section class="cta">
+  <div class="cta-in reveal">
+    <div class="eyebrow">Next Step</div>
+    <h2 class="h-section">Not Sure Which Inspection You Need?</h2>
+    <p>Call, text or email Vahid and he will confirm the right inspection and the fee for your property.</p>
+    <div class="cta-btns">
+      <a href="request.html" class="btn btn-primary btn-lg">Request an Inspection</a>
+      <a href="tel:6047195840" class="btn btn-glass btn-lg">Call 604-719-5840</a>
+    </div>
+  </div>
+</section>
+
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" style="text-decoration:none;">
-          <div class="logo-mark light">
-            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-            <div class="logo-sub">Home Inspection</div>
-          </div>
+        <a href="index.html" style="text-decoration:none;display:inline-block;">
+          <div class="wordmark light"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
         </a>
-        <p>Licensed residential and condo inspections throughout Greater Vancouver.</p>
+        <p>Licensed residential home and condo inspections throughout Greater Vancouver and the Lower Mainland.</p>
         <div class="footer-contact">
-          <a href="tel:6047195840">📞 604-719-5840</a>
-          <a href="mailto:alikhanzadehvahid@yahoo.com">📧 alikhanzadehvahid@yahoo.com</a>
+          <a href="tel:6047195840">Call or text 604-719-5840</a>
+          <a href="mailto:info@auditora.ca">info@auditora.ca</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Pages</h4><ul>
-        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Request a Quote</a></li><li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul>
-        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li>
-        <li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
-      <div class="footer-col"><h4>Licensed By</h4>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="request.html">Request an Inspection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Before Your Inspection</h4>
+        <ul>
+          <li><a href="prepare.html">Prepare for Your Inspection</a></li>
+          <li><a href="agreement.html">Inspection Contract</a></li>
+          <li><a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a></li>
+          <li><a href="cancellation.html">Cancellation Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Website Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licensing</h4>
+        <div class="footer-cred">
+          <strong>Licensed by Consumer Protection BC</strong>
+          <span>BC Home Inspector Licence #89931</span>
+          <span>Member, Home Inspectors Association BC</span>
+          <span>E&amp;O and Commercial General Liability insured</span>
+        </div>
         <div class="footer-badges">
-          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Consumer Protection BC" loading="lazy" decoding="async"/></div>
-          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="HIABC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Licensed by Consumer Protection BC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="Home Inspectors Association BC" loading="lazy" decoding="async"/></div>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 AuditorA Home Inspection. All rights reserved.</span>
-      <span>Vahid Alikhanzadeh · Licensed Home Inspector · Vancouver, BC</span>
+      <span>&copy; 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh, Licensed BC Home Inspector, Vancouver, BC</span>
     </div>
   </div>
 </footer>

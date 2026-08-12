@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Page Not Found | AuditorA Home Inspection</title>
-<meta name="description" content="The page you are looking for does not exist."/>
-<meta property="og:title" content="Page Not Found | AuditorA Home Inspection"/>
-<meta property="og:description" content="The page you are looking for does not exist."/>
+<title>Request Received | AuditorA Home Inspection</title>
+<meta name="description" content="Your inspection request has been received. AuditorA will be in touch to confirm the details."/>
+<meta property="og:title" content="Request Received | AuditorA Home Inspection"/>
+<meta property="og:description" content="Your inspection request has been received. AuditorA will be in touch to confirm the details."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -14,17 +14,19 @@
 <link rel="stylesheet" href="styles.css"/>
 <style>
 
-.nf { min-height: 76vh; display: flex; align-items: center; justify-content: center; text-align: center;
+.ty { min-height: 78vh; display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
-  padding: 140px 5% 88px; position: relative; overflow: hidden; }
-.nf::before { content:''; position:absolute; inset:0;
+  padding: 140px 5% 90px; position: relative; overflow: hidden; text-align: center; }
+.ty::before { content:''; position:absolute; inset:0;
   background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.20) 0%, transparent 68%); }
-.nf-in { position: relative; z-index: 2; max-width: 540px; }
-.nf-code { font-size: 100px; font-weight: 700; color: var(--orange); line-height: 1;
-  letter-spacing: -4px; margin-bottom: 10px; }
-.nf h1 { color: #fff; font-size: 31px; font-weight: 700; margin-bottom: 14px; }
-.nf p { color: rgba(255,255,255,0.72); font-size: 16.5px; line-height: 1.72; margin-bottom: 32px; }
-.nf-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.ty-in { position: relative; z-index: 2; max-width: 620px; }
+.ty-mark { width: 74px; height: 74px; margin: 0 auto 26px; border-radius: 50%;
+  background: var(--orange); display: flex; align-items: center; justify-content: center;
+  font-size: 34px; color: #fff; font-weight: 700;
+  box-shadow: 0 8px 30px rgba(242,101,34,0.45); }
+.ty h1 { color: var(--white); font-size: clamp(28px,4vw,42px); font-weight: 700; margin-bottom: 16px; }
+.ty p { color: rgba(255,255,255,0.78); font-size: 16.5px; line-height: 1.74; margin-bottom: 14px; }
+.ty-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
 
 </style>
 </head>
@@ -56,14 +58,19 @@
 </div>
 
 
-<div class="nf">
-  <div class="nf-in">
-    <div class="nf-code">404</div>
-    <h1>Page Not Found</h1>
-    <p>That page does not exist. Let us get you back on track, or call Vahid directly.</p>
-    <div class="nf-btns">
-      <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
-      <a href="tel:6047195840" class="btn btn-glass btn-lg">Call 604-719-5840</a>
+<div class="ty">
+  <div class="ty-in">
+    <div class="ty-mark" aria-hidden="true">&#10003;</div>
+    <h1>Your Request Has Been Sent</h1>
+    <p>Thank you. Your property information has been received and Vahid will be in touch to confirm
+       availability, the inspection fee and the next steps.</p>
+    <p style="font-size:15px;color:rgba(255,255,255,0.62);">
+      Please remember that the appointment and final inspection fee are confirmed only after AuditorA
+      reviews the property information. If your matter is time sensitive, please call or text directly.
+    </p>
+    <div class="ty-btns">
+      <a href="tel:6047195840" class="btn btn-primary btn-lg">Call 604-719-5840</a>
+      <a href="prepare.html" class="btn btn-glass btn-lg">Prepare for Your Inspection</a>
     </div>
   </div>
 </div>

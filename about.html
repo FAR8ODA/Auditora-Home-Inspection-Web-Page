@@ -4,261 +4,205 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>About Vahid Alikhanzadeh | AuditorA Home Inspection Vancouver</title>
-<meta name="description" content="Meet Vahid Alikhanzadeh, Licensed Home Inspector at AuditorA. Licensed by Consumer Protection BC and HIABC member serving Greater Vancouver."/>
+<meta name="description" content="Vahid Alikhanzadeh is a Licensed BC Home Inspector, Licence #89931, licensed by Consumer Protection BC and a member of the Home Inspectors Association BC."/>
+<meta property="og:title" content="About Vahid Alikhanzadeh | AuditorA Home Inspection Vancouver"/>
+<meta property="og:description" content="Vahid Alikhanzadeh is a Licensed BC Home Inspector, Licence #89931, licensed by Consumer Protection BC and a member of the Home Inspectors Association BC."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <style>
+
 .about-main { background: var(--white); }
-.about-inner { display:grid; grid-template-columns: 0.9fr 1.1fr; gap:70px; align-items:start; }
-
-.about-photo-col { display:flex; flex-direction:column; gap:20px; position:sticky; top:100px; }
-.about-photo {
-  border-radius: var(--radius-lg);
-  overflow:hidden;
-  aspect-ratio: 4/4.6;
-  box-shadow: var(--shadow-lg);
-  position:relative;
-}
-.about-photo img { width:100%;height:100%;object-fit:cover;object-position:center 20%; }
-.about-photo::after { content:''; position:absolute;inset:0;background:linear-gradient(to top,rgba(14,42,84,0.30) 0%,transparent 40%); }
-
-.cred-stack { display:flex;flex-direction:column;gap:13px; }
-.cred-badge {
-  background: var(--off-white);
-  border: 1px solid var(--grey-200);
-  border-radius: 14px;
-  padding: 16px 18px;
-  display:flex;align-items:center;gap:16px;
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-.cred-badge:hover { border-color: rgba(242,101,34,0.3); transform: translateX(5px); box-shadow: var(--shadow-sm); }
-.cred-badge-logo {
-  background:#fff; border:1px solid var(--grey-200);
-  border-radius:9px; padding:8px 10px;
-  width:92px; min-height:48px; flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-}
-.cred-badge-logo img { max-height:30px;width:auto;object-fit:contain; }
-.cred-badge-txt strong { display:block;font-size:14px;font-weight:700;color:var(--blue-deep);margin-bottom:2px; }
-.cred-badge-txt span { font-size:12.5px;color:var(--muted);line-height:1.5; }
-
-.about-story h2 { font-size:clamp(26px,3.2vw,38px);font-weight:700;color:var(--blue-deep);margin-bottom:18px;letter-spacing:-0.8px; }
-.about-story p { font-size:16px;color:var(--text-mid);line-height:1.82;margin-bottom:18px; }
-.about-story p strong { color:var(--blue-deep);font-weight:600; }
-.about-quote {
-  border-left: 4px solid var(--orange);
-  background: linear-gradient(90deg, var(--orange-light) 0%, rgba(255,240,232,0.25) 100%);
-  border-radius: 0 14px 14px 0;
-  padding: 22px 26px;
-  margin: 28px 0;
-  font-size: 16.5px;
-  color: var(--blue-deep);
-  line-height:1.65;
-  font-weight: 500;
-  font-style: italic;
-}
-.signature { margin-top:32px;padding-top:26px;border-top:1px solid var(--grey-200); }
-.signature strong { display:block;font-size:17px;font-weight:700;color:var(--blue-deep);letter-spacing:-0.3px; }
-.signature span { font-size:13.5px;color:var(--orange);font-weight:600;letter-spacing:1.2px;text-transform:uppercase; }
-
-/* GALLERY */
-.gallery { background: var(--off-white); }
-.gal-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px; }
-.gal-item { border-radius: var(--radius-lg);overflow:hidden;position:relative;aspect-ratio:3/3.6;box-shadow:var(--shadow-sm);transition:transform 0.35s cubic-bezier(0.34,1.3,0.64,1),box-shadow 0.35s; }
-.gal-item:hover { transform:translateY(-7px); box-shadow: var(--shadow-lg); }
-.gal-item img { width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.4,0,0.2,1); }
-.gal-item:hover img { transform:scale(1.08); }
-.gal-item::after { content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,42,84,0.82) 0%,rgba(14,42,84,0.1) 46%,transparent 68%); }
-.gal-cap { position:absolute;bottom:0;left:0;right:0;padding:24px 22px;z-index:2;color:#fff; }
-.gal-cap strong { display:block;font-size:16.5px;font-weight:700;margin-bottom:5px;letter-spacing:-0.2px; }
-.gal-cap span { font-size:13px;color:rgba(255,255,255,0.76);line-height:1.5; }
-
-/* TOOLS */
-.tools { background: var(--white); }
-.tool-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px; }
-.tool-card {
-  background: var(--off-white);
-  border:1px solid var(--grey-200);
-  border-radius: var(--radius);
-  padding: 32px 26px;
-  text-align:center;
-  transition: transform 0.3s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.3s, border-color 0.3s;
-}
-.tool-card:hover { transform:translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(242,101,34,0.28); }
-.tool-card .ic { font-size:36px;margin-bottom:16px; }
-.tool-card h4 { font-size:15.5px;font-weight:700;color:var(--blue-deep);margin-bottom:8px; }
-.tool-card p { font-size:13.5px;color:var(--muted);line-height:1.65; }
-
-/* VALUES */
-.values { background: linear-gradient(135deg,var(--blue-deep) 0%,var(--blue) 100%); position:relative;overflow:hidden; }
-.values::before { content:'';position:absolute;top:-150px;left:-110px;width:460px;height:460px;background:radial-gradient(circle,rgba(242,101,34,0.17) 0%,transparent 65%); }
-.values .container { position:relative;z-index:2; }
-.values h2 { color:var(--white); }
-.values .lead { color:rgba(255,255,255,0.70); }
-.val-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:24px;margin-top:48px; }
-.val-card {
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(14px);
-  border:1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-lg);
-  padding: 34px 28px;
-  transition: background 0.3s,border-color 0.3s,transform 0.3s;
-}
-.val-card:hover { background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.28);transform:translateY(-6px); }
-.val-card .ic { font-size:32px;margin-bottom:18px; }
-.val-card h4 { color:var(--white);font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-0.2px; }
-.val-card p { color:rgba(255,255,255,0.58);font-size:14px;line-height:1.68; }
-
-.cta { background: var(--white); text-align:center; }
-.cta-box { background:linear-gradient(135deg,var(--blue-deep) 0%,var(--blue) 100%);border-radius:26px;padding:66px 40px;position:relative;overflow:hidden;max-width:940px;margin:0 auto; }
-.cta-box::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(242,101,34,0.22) 0%,transparent 68%); }
-.cta-box-inner { position:relative;z-index:2; }
-.cta-box h2 { color:var(--white); }
-.cta-box p { color:rgba(255,255,255,0.72);font-size:16.5px;max-width:500px;margin:0 auto 36px; }
-.cta-btns { display:flex;gap:15px;justify-content:center;flex-wrap:wrap; }
-
+.about-inner { display: grid; grid-template-columns: 1fr 1.15fr; gap: 62px; align-items: start; }
+.about-side { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 100px; }
+.about-story h2 { font-size: clamp(25px,3vw,36px); font-weight: 700; color: var(--blue-deep);
+  margin-bottom: 18px; }
+.about-story p { font-size: 16px; color: var(--text-mid); line-height: 1.84; margin-bottom: 18px; }
+.about-story p strong { color: var(--blue-deep); font-weight: 600; }
+.about-quote { border-left: 4px solid var(--orange);
+  background: linear-gradient(90deg, var(--orange-light) 0%, rgba(255,241,233,0.3) 100%);
+  border-radius: 0 14px 14px 0; padding: 22px 26px; margin: 26px 0;
+  font-size: 16.5px; color: var(--blue-deep); line-height: 1.66; font-weight: 500; font-style: italic; }
+.signature { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--grey-200); }
+.signature strong { display: block; font-size: 17px; font-weight: 700; color: var(--blue-deep); }
+.signature span { font-size: 13.5px; color: var(--orange); font-weight: 600;
+  letter-spacing: 1.1px; text-transform: uppercase; }
+.tools-section { background: var(--off-white); }
+.tools-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+  max-width: 1140px; margin: 0 auto; }
+.values { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
+  position: relative; overflow: hidden; }
+.values::before { content:''; position:absolute; top:-150px; left:-110px; width:460px; height:460px;
+  background: radial-gradient(circle, rgba(242,101,34,0.17) 0%, transparent 65%); }
+.values .container { position: relative; z-index: 2; }
+.values h2 { color: var(--white); }
+.values .lead { color: rgba(255,255,255,0.72); }
+.val-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(225px,1fr));
+  gap: 22px; margin-top: 46px; }
+.val-card { background: rgba(255,255,255,0.07); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-lg); padding: 32px 26px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s; }
+.val-card:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28);
+  transform: translateY(-5px); }
+.val-card h3 { color: var(--white); font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.val-card p { color: rgba(255,255,255,0.60); font-size: 14px; line-height: 1.7; }
+.cta { background: var(--white); text-align: center; }
+.cta-box { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
+  border-radius: 26px; padding: 62px 40px; position: relative; overflow: hidden;
+  max-width: 940px; margin: 0 auto; }
+.cta-box::before { content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(242,101,34,0.22) 0%, transparent 68%); }
+.cta-box-in { position: relative; z-index: 2; }
+.cta-box h2 { color: var(--white); }
+.cta-box p { color: rgba(255,255,255,0.74); font-size: 16px; max-width: 520px; margin: 0 auto 34px; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 @media(max-width:1000px){
-  .about-inner { grid-template-columns:1fr;gap:44px; }
-  .about-photo-col { position:static;max-width:420px; }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-side { position: static; max-width: 460px; }
+  .tools-inner { grid-template-columns: 1fr; gap: 40px; }
 }
+
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
-    <div class="logo-mark">
-      <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-      <div class="logo-sub">Home Inspection</div>
-    </div>
+  <a href="index.html" class="nav-logo" aria-label="AuditorA Home Inspection, home page">
+    <div class="wordmark"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
   </a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Request a Quote</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="contact.html" class="btn btn-primary btn-nav">Get a Quote</a></li>
+    <li><a href="request.html" class="btn btn-primary btn-nav">Request an Inspection</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a><a href="pricing.html">Request a Quote</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="prepare.html">Prepare for Your Inspection</a>
+  <a href="agreement.html">Inspection Contract</a>
+  <a href="request.html" class="btn btn-primary">Request an Inspection</a>
 </div>
+
 
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="crumb"><a href="index.html">Home</a> / About</div>
-    <div class="eyebrow">The Person Behind AuditorA</div>
+    <div class="eyebrow">About AuditorA</div>
     <h1>Meet Your Inspector</h1>
-    <p>Licensed, insured, and genuinely invested in helping you make the right decision about your property.</p>
+    <p>Licensed, professionally trained and genuinely committed to helping you make an informed
+       property decision.</p>
   </div>
 </div>
 
 <div class="trust-strip">
-  <div class="trust-strip-item"><span class="ic">✓</span> Licensed by Consumer Protection BC</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> HIABC Member</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Fully Insured</div>
-  <div class="trust-strip-item"><span class="ic">✓</span> Thermal Imaging Equipped</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licensed by Consumer Protection BC</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> Licence #89931</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> HIABC Member</div>
+  <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> E&amp;O and Liability Insured</div>
 </div>
 
 <section class="about-main">
   <div class="container">
     <div class="about-inner">
-      <div class="about-photo-col reveal">
-        <div class="about-photo">
-          <img src="images/headshot.webp" alt="Vahid Alikhanzadeh, Licensed Home Inspector" loading="lazy" decoding="async"/>
+      <div class="about-side reveal">
+      <div class="cred-list">
+        <div class="cred-row">
+          <span class="cred-check" aria-hidden="true">&#10003;</span>
+          <div><strong>Licensed by Consumer Protection BC</strong><span>Consumer Protection BC is the licensing authority for home inspectors in British Columbia.</span></div>
         </div>
-        <div class="cred-stack">
-          <div class="cred-badge">
-            <div class="cred-badge-logo"><img src="images/badge-cpbc.webp" alt="Consumer Protection BC" loading="lazy" decoding="async"/></div>
-            <div class="cred-badge-txt"><strong>Licensed by Consumer Protection BC</strong><span>Provincially licensed inspector</span></div>
-          </div>
-          <div class="cred-badge">
-            <div class="cred-badge-logo"><img src="images/badge-hiabc-wide.webp" alt="HIABC" loading="lazy" decoding="async"/></div>
-            <div class="cred-badge-txt"><strong>HIABC Member</strong><span>Home Inspectors Association of BC</span></div>
-          </div>
-          <div class="cred-badge">
-            <div class="cred-badge-logo" style="font-size:22px;">🛡️</div>
-            <div class="cred-badge-txt"><strong>Fully Insured</strong><span>Liability &amp; E&amp;O coverage</span></div>
-          </div>
-          <div class="cred-badge">
-            <div class="cred-badge-logo" style="font-size:22px;">🌡️</div>
-            <div class="cred-badge-txt"><strong>Thermal Imaging</strong><span>Professional FLIR equipment</span></div>
-          </div>
+        <div class="cred-row">
+          <span class="cred-check" aria-hidden="true">&#10003;</span>
+          <div><strong>BC Home Inspector Licence #89931</strong><span>Licence number available for verification at any time.</span></div>
         </div>
+        <div class="cred-row">
+          <span class="cred-check" aria-hidden="true">&#10003;</span>
+          <div><strong>Member of the Home Inspectors Association BC</strong><span>HIABC is the professional association for home inspectors in BC.</span></div>
+        </div>
+        <div class="cred-row">
+          <span class="cred-check" aria-hidden="true">&#10003;</span>
+          <div><strong>E&amp;O and Commercial General Liability insured</strong><span>Errors and omissions plus commercial general liability coverage in place.</span></div>
+        </div>
+      </div>
+      <div class="cred-logos">
+        <div class="cred-logo"><img src="images/badge-cpbc.webp" alt="Licensed by Consumer Protection BC" loading="lazy" decoding="async"/></div>
+        <div class="cred-logo"><img src="images/badge-hiabc-wide.webp" alt="Member of the Home Inspectors Association BC" loading="lazy" decoding="async"/></div>
+      </div>
+        <div class="note-box" style="margin-top:6px;">The inspection is conducted in accordance with the <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a>.</div>
       </div>
 
       <div class="about-story reveal">
-        <div class="eyebrow">My Story</div>
-        <h2>Hi, I'm Vahid Alikhanzadeh</h2>
-        <p>I started <strong>AuditorA Home Inspection</strong> with one goal: to give people in Greater Vancouver an inspector they can genuinely trust. Someone who shows up prepared, explains things clearly, and puts your interests ahead of a fast turnaround.</p>
-        <p>I'm <strong>licensed by Consumer Protection BC</strong> and a member of the <strong>Home Inspectors Association of British Columbia (HIABC)</strong> — meaning every inspection I perform follows established professional standards, not shortcuts.</p>
-        <p>I've invested in professional-grade equipment including <strong>thermal imaging and moisture detection tools</strong>, because a real inspection goes well beyond what the eye alone can see. Hidden moisture behind a wall or an overheating electrical connection won't show up in a casual walkthrough — but it will show up in mine.</p>
+        <div class="eyebrow">My Background</div>
+        <h2>Vahid Alikhanzadeh, Licensed BC Home Inspector</h2>
+        <p>I started <strong>AuditorA Home Inspection</strong> to give people across Greater Vancouver an
+           inspector who shows up prepared, explains findings clearly and puts the client first.</p>
+        <p>I am <strong>licensed by Consumer Protection BC</strong> under licence <strong>#89931</strong>,
+           and I am a member of the <strong>Home Inspectors Association BC</strong>. Consumer Protection BC
+           is the provincial licensing authority for home inspectors. HIABC is the professional association
+           whose Scope of Inspection my inspections follow.</p>
+        <p>I carry both <strong>errors and omissions insurance</strong> and
+           <strong>commercial general liability insurance</strong> on every inspection.</p>
 
         <div class="about-quote">
-          "A home is one of the biggest investments of your life. You deserve honest, detailed information — not a rushed walkthrough."
+          A home is one of the largest financial decisions most people make. My role is to give you clear,
+          practical inspection findings so you can make that decision with a better understanding of the
+          property.
         </div>
 
-        <p>Every inspection follows the same approach: methodical, thorough, and clearly communicated before, during, and after. You're always welcome to attend and ask me anything as we go — most clients find that's where they learn the most about their property.</p>
-        <p>I serve clients throughout <strong>Vancouver, Burnaby, North Vancouver, Richmond, Coquitlam, Surrey</strong>, and the wider Lower Mainland. I built AuditorA to be the kind of company I'd want to hire myself.</p>
+        <p>Every inspection follows the same approach: methodical, careful and clearly communicated before,
+           during and after. You are welcome to attend and ask questions as we go, and most clients find
+           that is where they learn the most about the property.</p>
+        <p>I serve clients throughout <strong>Vancouver, Burnaby, North and West Vancouver, Richmond,
+           Coquitlam, Surrey</strong> and the wider Lower Mainland.</p>
 
         <div class="signature">
           <strong>Vahid Alikhanzadeh</strong>
-          <span>Licensed Home Inspector</span>
+          <span>Licensed BC Home Inspector, Licence #89931</span>
         </div>
 
-        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;">
-          <a href="contact.html" class="btn btn-primary">📩 Request a Quote</a>
-          <a href="tel:6047195840" class="btn btn-ghost">📞 604-719-5840</a>
+        <div style="display:flex;gap:13px;flex-wrap:wrap;margin-top:28px;">
+          <a href="request.html" class="btn btn-primary">Request an Inspection</a>
+          <a href="tel:6047195840" class="btn btn-ghost">Call 604-719-5840</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="gallery">
-  <div class="container">
-    <div class="section-head center reveal">
-      <div class="eyebrow">On The Job</div>
-      <h2 class="h-section">How I Work</h2>
-      <p class="lead">Hands-on, methodical, and documented. Here's what an inspection actually looks like.</p>
+<section class="tools-section">
+  <div class="tools-inner">
+    <div class="reveal">
+      <figure class="photo-figure">
+        <img src="images/work-tester.webp" alt="Home inspector using professional testing equipment during a residential inspection." loading="lazy" decoding="async"/>
+        <figcaption>Testing equipment supports the visual inspection where conditions make it appropriate.</figcaption>
+      </figure>
     </div>
-    <div class="gal-grid" data-stagger>
-      <div class="gal-item reveal">
-        <img src="images/work-ladder.webp" alt="Inspecting exterior and roofline" loading="lazy" decoding="async"/>
-        <div class="gal-cap"><strong>Exterior &amp; Roofline</strong><span>Ladder access for soffits, flashing, and roof condition</span></div>
+    <div class="reveal">
+      <div class="eyebrow">Inspection Tools</div>
+      <h2 class="h-section">Equipment I Use</h2>
+      <p class="lead" style="margin-bottom:24px;">
+        Home inspections are visual and non-invasive. Equipment is used to support that visual inspection,
+        not to replace it.
+      </p>
+      <ul class="checklist">
+        <li>Electrical testing equipment for accessible outlets and components</li>
+        <li>Moisture measurement where conditions indicate it is appropriate</li>
+        <li>Ladder access for roof and elevated areas where safe to do so</li>
+        <li>Inspection lighting for attics, crawl spaces and enclosed areas</li>
+        <li>Digital photography to document findings for your report</li>
+      </ul>
+      <div class="note-box orange" style="margin-top:24px;">
+        <strong>Infrared camera.</strong> An infrared camera may be used at the inspector’s discretion as a supplementary screening tool when conditions make its use appropriate. Infrared observations are not a full thermographic assessment and do not guarantee the detection of concealed moisture, insulation deficiencies, electrical problems or other hidden conditions. Any relevant observation will be interpreted in context and reported with appropriate limitations.
       </div>
-      <div class="gal-item reveal">
-        <img src="images/work-tester.webp" alt="Electrical testing" loading="lazy" decoding="async"/>
-        <div class="gal-cap"><strong>Electrical Testing</strong><span>Panels, outlets, and safety verification</span></div>
-      </div>
-      <div class="gal-item reveal">
-        <img src="images/work-panel.webp" alt="Panel inspection" loading="lazy" decoding="async"/>
-        <div class="gal-cap"><strong>Panel Inspection</strong><span>Wiring, breakers, and connections checked</span></div>
-      </div>
-      <div class="gal-item reveal">
-        <img src="images/work-tablet.webp" alt="Digital documentation" loading="lazy" decoding="async"/>
-        <div class="gal-cap"><strong>Digital Documentation</strong><span>Findings recorded on site for your report</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tools">
-  <div class="container">
-    <div class="section-head center reveal">
-      <div class="eyebrow">Professional Equipment</div>
-      <h2 class="h-section">What I Inspect With</h2>
-      <p class="lead">Modern tools mean better inspections. All of this comes on every job.</p>
-    </div>
-    <div class="tool-grid" data-stagger>
-      <div class="tool-card reveal"><div class="ic">🌡️</div><h4>Thermal Camera</h4><p>Detects hidden moisture, insulation gaps, and electrical hotspots invisible to the eye.</p></div>
-      <div class="tool-card reveal"><div class="ic">💧</div><h4>Moisture Meter</h4><p>Measures moisture in walls, floors, and ceilings to catch water intrusion early.</p></div>
-      <div class="tool-card reveal"><div class="ic">⚡</div><h4>Electrical Tester</h4><p>Tests outlets, GFCIs, and panel safety throughout the property.</p></div>
-      <div class="tool-card reveal"><div class="ic">🪜</div><h4>Ladder Access</h4><p>Proper roof, soffit, and elevated area inspection — not just from the ground.</p></div>
-      <div class="tool-card reveal"><div class="ic">🔦</div><h4>Inspection Lighting</h4><p>High-output lights for crawl spaces, attics, and dark enclosures.</p></div>
-      <div class="tool-card reveal"><div class="ic">📱</div><h4>Digital Reporting</h4><p>Findings photographed and logged on site, delivered within 24 hours.</p></div>
     </div>
   </div>
 </section>
@@ -266,66 +210,102 @@
 <section class="values">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow">What I Stand For</div>
+      <div class="eyebrow">How I Work</div>
       <h2 class="h-section">My Commitments to You</h2>
-      <p class="lead" style="max-width:540px;margin:0 auto;">Not just words — this is how every inspection is run.</p>
+      <p class="lead" style="max-width:560px;margin:0 auto;">AuditorA is committed to earning every client’s trust through careful inspections, clear reporting and professional communication.</p>
     </div>
     <div class="val-grid" data-stagger>
-      <div class="val-card reveal"><div class="ic">🎯</div><h4>Thoroughness</h4><p>I don't rush. Every inspection gets the time it needs, regardless of the schedule.</p></div>
-      <div class="val-card reveal"><div class="ic">💬</div><h4>Clear Communication</h4><p>I explain findings in plain language — no confusing technical jargon.</p></div>
-      <div class="val-card reveal"><div class="ic">✅</div><h4>Honesty</h4><p>I report what I see, good or bad. My job is to inform you, not to please anyone.</p></div>
-      <div class="val-card reveal"><div class="ic">🔒</div><h4>Professionalism</h4><p>On time, prepared, respectful of the property, and reliable every single time.</p></div>
+      <div class="val-card reveal">
+        <h3>Careful inspections</h3>
+        <p>Every inspection gets the time it needs. Findings are checked rather than assumed.</p>
+      </div>
+      <div class="val-card reveal">
+        <h3>Clear reporting</h3>
+        <p>Findings are explained in plain language, with photographs, so the report is genuinely useful.</p>
+      </div>
+      <div class="val-card reveal">
+        <h3>Honest communication</h3>
+        <p>I report what I observe. My role is to inform you, not to influence the outcome of a sale.</p>
+      </div>
+      <div class="val-card reveal">
+        <h3>Professional conduct</h3>
+        <p>On time, prepared, respectful of the property and accountable to my licence.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <div class="cta-box reveal">
-    <div class="cta-box-inner">
+    <div class="cta-box-in">
       <div class="eyebrow">Get Started</div>
       <h2 class="h-section">Ready to Work Together?</h2>
-      <p>Send your property details for a quote, or call to talk it through directly.</p>
+      <p>Send your property details or call directly to talk it through.</p>
       <div class="cta-btns">
-        <a href="contact.html" class="btn btn-primary btn-lg">📩 Request a Quote</a>
-        <a href="tel:6047195840" class="btn btn-glass btn-lg">📞 604-719-5840</a>
+        <a href="request.html" class="btn btn-primary btn-lg">Request an Inspection</a>
+        <a href="tel:6047195840" class="btn btn-glass btn-lg">Call 604-719-5840</a>
       </div>
     </div>
   </div>
 </section>
 
+
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" style="text-decoration:none;">
-          <div class="logo-mark light">
-            <div class="logo-word"><span class="a-cap">A</span>uditor<span class="a-cap">A</span><span class="dot-ca">.ca</span></div>
-            <div class="logo-sub">Home Inspection</div>
-          </div>
+        <a href="index.html" style="text-decoration:none;display:inline-block;">
+          <div class="wordmark light"><div class="wm-name"><span class="wm-a">A</span>uditor<span class="wm-a">A</span><span class="wm-tld">.ca</span></div><div class="wm-sub">Home Inspection</div></div>
         </a>
-        <p>Licensed residential and condo inspections throughout Greater Vancouver.</p>
+        <p>Licensed residential home and condo inspections throughout Greater Vancouver and the Lower Mainland.</p>
         <div class="footer-contact">
-          <a href="tel:6047195840">📞 604-719-5840</a>
-          <a href="mailto:alikhanzadehvahid@yahoo.com">📧 alikhanzadehvahid@yahoo.com</a>
+          <a href="tel:6047195840">Call or text 604-719-5840</a>
+          <a href="mailto:info@auditora.ca">info@auditora.ca</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Pages</h4><ul>
-        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Request a Quote</a></li><li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul>
-        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li>
-        <li><a href="cancellation.html">Cancellation Policy</a></li></ul></div>
-      <div class="footer-col"><h4>Licensed By</h4>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="request.html">Request an Inspection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Before Your Inspection</h4>
+        <ul>
+          <li><a href="prepare.html">Prepare for Your Inspection</a></li>
+          <li><a href="agreement.html">Inspection Contract</a></li>
+          <li><a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a></li>
+          <li><a href="cancellation.html">Cancellation Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Website Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licensing</h4>
+        <div class="footer-cred">
+          <strong>Licensed by Consumer Protection BC</strong>
+          <span>BC Home Inspector Licence #89931</span>
+          <span>Member, Home Inspectors Association BC</span>
+          <span>E&amp;O and Commercial General Liability insured</span>
+        </div>
         <div class="footer-badges">
-          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Consumer Protection BC" loading="lazy" decoding="async"/></div>
-          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="HIABC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-cpbc.webp" alt="Licensed by Consumer Protection BC" loading="lazy" decoding="async"/></div>
+          <div class="footer-badge"><img src="images/badge-hiabc-wide.webp" alt="Home Inspectors Association BC" loading="lazy" decoding="async"/></div>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 AuditorA Home Inspection. All rights reserved.</span>
-      <span>Vahid Alikhanzadeh · Licensed Home Inspector · Vancouver, BC</span>
+      <span>&copy; 2026 AuditorA Home Inspection. All rights reserved.</span>
+      <span>Vahid Alikhanzadeh, Licensed BC Home Inspector, Vancouver, BC</span>
     </div>
   </div>
 </footer>
