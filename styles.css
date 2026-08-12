@@ -14,6 +14,7 @@
 
   --orange:      #F26522;
   --orange-dark: #D9531A;
+  --orange-link: #B8420C;   /* darker orange for inline text links, 5.49:1 on white */
   --orange-light:#FFF1E9;
 
   --ink:         #14181F;
@@ -45,42 +46,85 @@ body {
 }
 
 img { max-width: 100%; display: block; }
-a { color: var(--orange); }
+a { color: var(--orange-link); }
+a:visited { color: var(--orange-link); }
 
 /* ==========================================================
    WORDMARK
-   Both A's orange. Other letters black on light, white on dark.
+   Both A's orange. Other letters near-black on light,
+   white on dark. Colours are locked with high specificity so
+   the wordmark can never inherit a link or visited-link colour.
    ========================================================== */
+.nav-logo,
+.nav-logo:link,
+.nav-logo:visited,
+.nav-logo:hover,
+.nav-logo:active,
+a .wordmark,
+a:visited .wordmark { color: var(--ink); text-decoration: none; }
+
 .wordmark {
   display: inline-flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
   line-height: 1;
   font-weight: 700;
+  color: var(--ink);
 }
-.wm-name {
-  font-size: 26px;
-  letter-spacing: -0.6px;
+
+.wordmark .wm-name,
+a .wordmark .wm-name,
+a:visited .wordmark .wm-name {
+  font-size: 27px;
+  letter-spacing: -0.7px;
   color: var(--ink);
   white-space: nowrap;
+  font-weight: 700;
 }
-.wm-a { color: var(--orange); }
-.wm-tld {
+
+.wordmark .wm-a,
+a .wordmark .wm-a,
+a:visited .wordmark .wm-a { color: var(--orange-link); }
+a:visited { color: var(--orange-link); }
+
+.wordmark .wm-tld,
+a .wordmark .wm-tld,
+a:visited .wordmark .wm-tld {
   color: var(--orange);
   font-size: 19px;
   font-weight: 700;
 }
-.wm-sub {
+
+.wordmark .wm-sub,
+a .wordmark .wm-sub,
+a:visited .wordmark .wm-sub {
   font-size: 8.5px;
   letter-spacing: 3.4px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--blue);
   border-top: 1.5px solid var(--orange);
-  padding-top: 4px;
+  padding-top: 5px;
+  white-space: nowrap;
 }
-.wordmark.light .wm-name { color: var(--white); }
-.wordmark.light .wm-sub { color: rgba(255,255,255,0.82); }
+
+/* Light variant, used on dark backgrounds */
+.wordmark.light,
+a .wordmark.light,
+a:visited .wordmark.light { color: var(--white); }
+
+.wordmark.light .wm-name,
+a .wordmark.light .wm-name,
+a:visited .wordmark.light .wm-name { color: var(--white); }
+
+.wordmark.light .wm-sub,
+a .wordmark.light .wm-sub,
+a:visited .wordmark.light .wm-sub { color: rgba(255,255,255,0.88); }
+
+.wordmark.light .wm-a,
+.wordmark.light .wm-tld,
+a .wordmark.light .wm-a,
+a .wordmark.light .wm-tld { color: var(--orange); }
 
 .wordmark-lg .wm-name { font-size: 40px; }
 .wordmark-lg .wm-tld { font-size: 29px; }
@@ -132,6 +176,23 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(27,79,156,0.09); height: 70px; }
 .nav-links > li > a.active { color: var(--blue); font-weight: 600; }
 .nav-links > li > a.active::after { transform: scaleX(1); }
 .nav-links > li > a.btn-nav::after { display: none; }
+
+/* Buttons keep their own colour regardless of surrounding link rules */
+.nav-links > li > a.btn-primary,
+.mobile-menu a.btn-primary,
+a.btn-primary { color: var(--white); }
+.nav-links > li > a.btn-blue,
+.mobile-menu a.btn-blue,
+a.btn-blue { color: var(--white); }
+.nav-links > li > a.btn-glass,
+.mobile-menu a.btn-glass,
+a.btn-glass { color: var(--white); }
+.nav-links > li > a.btn-ghost,
+.mobile-menu a.btn-ghost,
+a.btn-ghost { color: var(--blue); }
+.nav-links > li > a.btn:hover { color: inherit; }
+.nav-links > li > a.btn-primary:hover,
+.nav-links > li > a.btn-blue:hover { color: var(--white); }
 
 .hamburger {
   display: none;
@@ -362,7 +423,7 @@ h1, h2, h3, h4 { letter-spacing: -0.7px; line-height: 1.16; }
 .trust-item {
   display: flex; align-items: center; gap: 9px;
   font-size: 13.5px; font-weight: 500;
-  color: rgba(255,255,255,0.92);
+  color: #FFFFFF;
   white-space: nowrap;
 }
 .ti-check {
@@ -387,7 +448,8 @@ h1, h2, h3, h4 { letter-spacing: -0.7px; line-height: 1.16; }
   font-size: 11px; color: var(--orange); font-weight: 700;
 }
 .cred-row strong { display: block; font-size: 15.5px; font-weight: 700; color: var(--blue-deep); margin-bottom: 3px; }
-.cred-row span { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+.cred-row > div > span { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+.cred-row span.cred-check { color: var(--orange); font-size: 11px; }
 .on-dark .cred-row strong { color: var(--white); }
 .on-dark .cred-row span { color: rgba(255,255,255,0.60); }
 .on-dark .cred-check { background: rgba(242,101,34,0.20); }
@@ -432,7 +494,7 @@ h1, h2, h3, h4 { letter-spacing: -0.7px; line-height: 1.16; }
 .checklist { list-style: none; display: flex; flex-direction: column; gap: 13px; }
 .checklist li { display: flex; align-items: flex-start; gap: 13px; font-size: 15px; color: var(--text-mid); line-height: 1.66; }
 .checklist li::before {
-  content: '\\2713';
+  content: "✓";
   flex-shrink: 0; margin-top: 2px;
   width: 21px; height: 21px;
   background: var(--orange); color: #fff;
@@ -451,6 +513,11 @@ h1, h2, h3, h4 { letter-spacing: -0.7px; line-height: 1.16; }
   padding: 14px 20px;
   line-height: 1.55;
 }
+
+/* Links on dark backgrounds keep the bright brand orange */
+.page-hero a, .cta a, .commit a, .values a, footer a.bright,
+.note-box a { color: var(--orange-link); }
+.page-hero .crumb a, .cta a, .values a { color: var(--orange); }
 
 /* ==========================================================
    FOOTER
