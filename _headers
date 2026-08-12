@@ -1,0 +1,20 @@
+# Images and static assets — cache hard, they rarely change
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/styles.css
+  Cache-Control: public, max-age=604800
+
+/script.js
+  Cache-Control: public, max-age=604800
+
+# HTML — revalidate so content updates show up
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Security headers on everything
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
