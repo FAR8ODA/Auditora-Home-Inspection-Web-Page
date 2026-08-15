@@ -515,9 +515,16 @@ h1, h2, h3, h4 { letter-spacing: -0.7px; line-height: 1.16; }
 }
 
 /* Links on dark backgrounds keep the bright brand orange */
-.page-hero a, .cta a, .commit a, .values a, footer a.bright,
-.note-box a { color: var(--orange-link); }
-.page-hero .crumb a, .cta a, .values a { color: var(--orange); }
+/* Text links on dark panels. Buttons are excluded so they keep their own colour. */
+.page-hero a:not(.btn), .cta a:not(.btn), .commit a:not(.btn),
+.values a:not(.btn), .note-box a:not(.btn) { color: var(--orange-link); }
+.page-hero .crumb a:not(.btn), .cta a:not(.btn), .values a:not(.btn) { color: var(--orange); }
+
+/* Buttons always win on colour, wherever they sit */
+a.btn.btn-primary, a.btn.btn-primary:visited,
+a.btn.btn-blue, a.btn.btn-blue:visited,
+a.btn.btn-glass, a.btn.btn-glass:visited { color: var(--white); }
+a.btn.btn-ghost, a.btn.btn-ghost:visited { color: var(--blue); }
 
 /* ==========================================================
    FOOTER

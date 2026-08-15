@@ -4,9 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Inspection Contract | AuditorA Home Inspection</title>
-<meta name="description" content="AuditorA inspections are carried out under a signed HIABC inspection contract, provided for review and electronic signature before the inspection."/>
+<meta name="description" content="Read the full AuditorA home inspection contract before you book. Provided for review and electronic signature before every inspection, in accordance with the HIABC Scope of Inspection."/>
 <meta property="og:title" content="Inspection Contract | AuditorA Home Inspection"/>
-<meta property="og:description" content="AuditorA inspections are carried out under a signed HIABC inspection contract, provided for review and electronic signature before the inspection."/>
+<meta property="og:description" content="Read the full AuditorA home inspection contract before you book. Provided for review and electronic signature before every inspection, in accordance with the HIABC Scope of Inspection."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -14,12 +14,100 @@
 <link rel="stylesheet" href="styles.css?v=4.1"/>
 <style>
 
-.agree-body { padding: 76px 5%; max-width: 860px; margin: 0 auto; }
-.agree-body h2 { font-size: 22px; font-weight: 700; color: var(--blue-deep); margin: 38px 0 14px;
-  padding-top: 26px; border-top: 1px solid var(--grey-200); }
-.agree-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-.agree-body p { font-size: 15.5px; color: var(--text-mid); line-height: 1.82; margin-bottom: 15px; }
-.agree-body ul { margin: 12px 0 18px; }
+.contract-shell { background: var(--off-white); }
+.contract-inner { max-width: 1120px; margin: 0 auto; display: grid;
+  grid-template-columns: 1fr 340px; gap: 44px; align-items: start; }
+
+.doc { background: var(--white); border: 1px solid var(--line, var(--grey-200));
+  border-radius: 20px; padding: 46px 48px; box-shadow: var(--shadow-sm); }
+.doc-head { text-align: center; padding-bottom: 26px; margin-bottom: 30px;
+  border-bottom: 2px solid var(--blue-deep); }
+.doc-head h2 { font-size: 24px; font-weight: 700; color: var(--blue-deep);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+.doc-warn { background: var(--orange-light); border: 1px solid rgba(242,101,34,0.28);
+  border-radius: 10px; padding: 12px 16px; font-size: 14px; color: var(--orange-dark);
+  font-weight: 600; display: inline-block; }
+
+.party-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+.party { background: var(--blue-tint); border-radius: 12px; padding: 20px 22px; }
+.party h3 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); font-weight: 700; margin-bottom: 14px; }
+.party dl { display: flex; flex-direction: column; gap: 9px; }
+.party .fld { font-size: 14px; color: var(--text-mid); line-height: 1.5; }
+.party .fld b { display: block; font-size: 11px; letter-spacing: 0.8px;
+  text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+.blank { color: var(--muted); font-style: italic; }
+
+.art { margin-bottom: 34px; }
+.art > h3 { font-size: 16px; font-weight: 700; color: var(--blue-deep);
+  letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px;
+  padding-bottom: 9px; border-bottom: 1px solid var(--grey-200); }
+.art p { font-size: 14.5px; color: var(--text-mid); line-height: 1.78; margin-bottom: 13px; }
+.art ol.clauses { list-style: none; counter-reset: cl; padding: 0; margin: 0 0 14px; }
+.art ol.clauses > li { counter-increment: cl; position: relative; padding-left: 34px;
+  margin-bottom: 12px; font-size: 14.5px; color: var(--text-mid); line-height: 1.74; }
+.art ol.clauses > li::before { content: counter(cl) ")"; position: absolute; left: 0; top: 0;
+  font-weight: 700; color: var(--orange); font-size: 14px; }
+.art ol.lettered { list-style: none; counter-reset: lt; padding: 0; margin: 0 0 14px; }
+.art ol.lettered > li { counter-increment: lt; position: relative; padding-left: 34px;
+  margin-bottom: 12px; font-size: 14.5px; color: var(--text-mid); line-height: 1.74; }
+.art ol.lettered > li::before { content: counter(lt, lower-alpha) ")"; position: absolute;
+  left: 0; top: 0; font-weight: 700; color: var(--blue); font-size: 14px; }
+
+.disclose { background: var(--blue-tint); border-radius: 12px; padding: 22px 24px; margin: 20px 0; }
+.disclose h4 { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase;
+  color: var(--blue-deep); font-weight: 700; margin-bottom: 12px; }
+.disclose p { font-size: 14px; margin-bottom: 12px; }
+.tick-line { display: flex; align-items: center; gap: 12px; font-size: 14px;
+  color: var(--text-mid); flex-wrap: wrap; }
+.tickbox { width: 18px; height: 18px; border: 2px solid var(--blue); border-radius: 4px; flex-shrink: 0; }
+.ruled { flex: 1; min-width: 180px; border-bottom: 1px solid var(--grey-200); height: 20px; }
+
+.fee-line { background: var(--orange-light); border-left: 4px solid var(--orange);
+  border-radius: 0 12px 12px 0; padding: 18px 22px; margin-bottom: 16px; }
+.fee-line .lbl { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--orange-dark); font-weight: 700; margin-bottom: 8px; }
+.fee-line .amount-rule { border-bottom: 1px solid rgba(242,101,34,0.4); height: 24px; }
+
+.sig-block { margin-top: 34px; padding-top: 28px; border-top: 2px solid var(--blue-deep); }
+.sig-row { margin-bottom: 26px; }
+.sig-row .who { font-size: 13px; font-weight: 700; color: var(--blue-deep);
+  letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px; }
+.sig-fields { display: grid; grid-template-columns: 2fr 1fr; gap: 22px; }
+.sig-fields .f { border-bottom: 1px solid var(--text-mid); height: 34px; }
+.sig-fields .cap { font-size: 11.5px; color: var(--muted); margin-top: 5px; }
+
+.cpbc-note { background: var(--blue-tint); border-radius: 12px; padding: 20px 22px;
+  margin-top: 30px; font-size: 13px; color: var(--text-mid); line-height: 1.72; }
+
+.side { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 100px; }
+.side-card { background: var(--white); border: 1px solid var(--grey-200);
+  border-radius: 16px; padding: 24px; }
+.side-card h3 { font-size: 16px; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px; }
+.side-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.7; margin-bottom: 12px; }
+.side-card p:last-child { margin-bottom: 0; }
+.dl-card { background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+  border-radius: 16px; padding: 26px 24px; position: relative; overflow: hidden; }
+.dl-card::before { content:''; position:absolute; bottom:-70px; right:-50px; width:200px; height:200px;
+  background: radial-gradient(circle, rgba(242,101,34,0.28), transparent 65%); }
+.dl-in { position: relative; z-index: 2; }
+.dl-in h3 { color: var(--white); font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.dl-in p { color: rgba(255,255,255,0.72); font-size: 13.5px; line-height: 1.66; margin-bottom: 18px; }
+
+@media (max-width: 1000px) {
+  .contract-inner { grid-template-columns: 1fr; gap: 34px; }
+  .side { position: static; }
+  .doc { padding: 32px 24px; }
+  .party-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .sig-fields { grid-template-columns: 1fr; gap: 16px; }
+}
+@media print {
+  nav, .mobile-menu, .page-hero, .trust-strip, .side, footer, .no-print { display: none !important; }
+  .doc { border: none; box-shadow: none; padding: 0; }
+  body { background: #fff; }
+}
 
 </style>
 </head>
@@ -32,6 +120,7 @@
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="agreement.html" class="active">Contract</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="request.html" class="btn btn-primary btn-nav">Request an Inspection</a></li>
@@ -43,10 +132,10 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="services.html">Services</a>
   <a href="pricing.html">Pricing</a>
+  <a href="agreement.html">Contract</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="prepare.html">Prepare for Your Inspection</a>
-  <a href="agreement.html">Inspection Contract</a>
   <a href="request.html" class="btn btn-primary">Request an Inspection</a>
 </div>
 
@@ -56,7 +145,8 @@
     <div class="crumb"><a href="index.html">Home</a> / Inspection Contract</div>
     <div class="eyebrow">Before the Inspection</div>
     <h1>Inspection Contract</h1>
-    <p>Every AuditorA inspection is carried out under a signed HIABC inspection contract.</p>
+    <p>Every AuditorA inspection is carried out under a signed HIABC inspection contract. You can read
+       the full agreement here before you book anything.</p>
   </div>
 </div>
 
@@ -67,51 +157,212 @@
   <div class="trust-item"><span class="ti-check" aria-hidden="true">&#10003;</span> E&amp;O and Liability Insured</div>
 </div>
 
-<div class="agree-body">
-  <h2>The inspection agreement</h2>
-  <p>A personalized HIABC inspection contract will be provided for review and electronic signature before the inspection. The inspection cannot proceed until the agreement has been accepted and signed.</p>
-  <p>The contract sets out what is included in the inspection, what falls outside it, and the
-     responsibilities of both the client and the inspector. Please read it carefully and ask any
-     questions before signing.</p>
+<section class="contract-shell">
+  <div class="contract-inner">
 
-  <h2>Scope of the inspection</h2>
-  <p>The inspection is conducted in accordance with the <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a>.</p>
-  <p>A visual inspection of readily accessible systems and components within the HIABC Scope of Inspection. The inspection does not include destructive or invasive testing, and areas that are
-     concealed, locked, obstructed or unsafe to access cannot be inspected.</p>
+    <div class="doc reveal">
+      <div class="doc-head">
+        <h2>Inspection Contract</h2>
+        <div class="doc-warn">This contract affects your legal rights. Please read carefully before signing.</div>
+      </div>
 
-  <div class="note-box orange">
-    <strong>Important.</strong> The Website Terms published on this site are for use of the website only.
-    They do not replace, modify or override the signed HIABC inspection contract, which governs the
-    inspection itself.
+      <div class="party-grid">
+        <div class="party">
+          <h3>Between: The Client</h3>
+          <dl>
+            <div class="fld"><b>Client</b><span class="blank">First and last name(s)</span></div>
+            <div class="fld"><b>Mailing address</b><span class="blank">Completed on your copy</span></div>
+            <div class="fld"><b>Telephone</b><span class="blank">Completed on your copy</span></div>
+            <div class="fld"><b>Email</b><span class="blank">Completed on your copy</span></div>
+          </dl>
+        </div>
+        <div class="party">
+          <h3>And: The Inspector</h3>
+          <dl>
+            <div class="fld"><b>Inspection company</b>AuditorA Home Inspection</div>
+            <div class="fld"><b>Business address</b>701 West Georgia Street, Suite 1500, Vancouver, BC V7Y 1G5</div>
+            <div class="fld"><b>Telephone</b>604-719-5840</div>
+            <div class="fld"><b>Email</b>alikhanzadehvahid@yahoo.com</div>
+            <div class="fld"><b>Inspected by</b>Vahid Alikhanzadeh, Licence #89931</div>
+          </dl>
+        </div>
+      </div>
+
+      <p style="font-size:14px;color:var(--muted);line-height:1.72;margin-bottom:26px;">
+        The Inspector includes its employees and individual inspectors, whether an employee or independent
+        contractor and/or that independent contractor&#8217;s company. The contract identifies the Subject
+        Property by address and the agreed inspection date.
+      </p>
+
+      <div class="art">
+        <h3>Article 1. Inspection</h3>
+        <p>The Client requests that the Inspector perform an inspection of the Subject Property and prepare
+           a written Inspection Report, to be provided to the Client no later than 24 hours after completion
+           of the Inspection.</p>
+        <p>The Inspection and Inspection Report are subject to the following limitations and conditions,
+           each of which is acknowledged, understood and accepted by the Client:</p>
+        <ol class="lettered">
+          <li>The Inspection and the Inspection Report shall be performed and prepared in accordance with the
+              Home Inspectors Association BC Scope of Inspection, a copy of which is available upon request
+              or at the <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a>.</li>
+          <li>The Inspection is non-invasive and the Inspection Report constitutes an opinion of the condition
+              of the Subject Property based on a visual examination of the readily accessible features and
+              components of the Subject Property.</li>
+          <li>The Inspection and the Inspection Report do not constitute a guarantee, warranty or an
+              insurance policy.</li>
+          <li>The Client is encouraged, at their own risk, to participate in the Inspection and understands
+              the importance of doing so.</li>
+          <li>The condition of certain systems, components and equipment will be randomly sampled by the
+              Inspector. Examples include, but may not be restricted to, window and door function, electrical
+              receptacles, switches and lights, cabinets, paint and caulking integrity, roof covering
+              materials, and examination of interior and exterior surfaces for signs of moisture ingress.</li>
+          <li>The Inspection does not include an inspection for mould or asbestos on the Subject Property.</li>
+          <li>Weather conditions may limit the extent of the inspection. The Client understands that the
+              scope and accuracy of the Inspection Report can be affected by weather conditions existing at
+              the time of the Inspection.</li>
+          <li>The Inspection Report is for the confidential use of the Client only and will not be disclosed
+              to third parties such as real estate agents, sellers or lenders (i) without the express written
+              consent of the Client, (ii) except as required by law, or (iii) except as deemed necessary if,
+              in the opinion of the Inspector, there is a serious health or safety issue.</li>
+        </ol>
+
+        <div class="disclose">
+          <h4>Report Disclosure Authorization</h4>
+          <p>The Client authorizes the Inspector to disclose the Inspection Report to third parties.</p>
+          <div class="tick-line">
+            <span class="tickbox" aria-hidden="true"></span>
+            <span>Yes, to the following third parties only:</span>
+            <span class="ruled" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <p>The Inspection Report is an opinion on the current condition of the Subject Property on the day of
+           the Inspection and is not intended to be relied on by a potential third-party buyer of the Subject
+           Property. The Inspection Report is for the exclusive use of the Client and it is not reasonable for
+           any other party to rely on the Inspection Report. Liability for errors, omissions, breaches of
+           contract and/or negligence in any part of the Inspection or Inspection Report to any person other
+           than the Client is expressly denied and, accordingly, no responsibility is accepted for any damage
+           suffered by any such person as a result of decisions made or actions based on the Inspection Report.</p>
+        <p>The Client shall protect and indemnify the Inspector from any claim against the Inspector by any
+           third party arising from disclosure of the Inspection Report.</p>
+        <p>The Client is responsible for reviewing all available strata documents as well as discussing
+           upcoming maintenance work and the associated costs with the strata, prior to subject removal, when
+           purchasing a residential dwelling within a multi-unit complex.</p>
+      </div>
+
+      <div class="art">
+        <h3>Article 2. Restrictions on Legal Rights</h3>
+        <ol class="clauses">
+          <li>In the event that the Client claims damages against AuditorA Home Inspection and does not prove
+              those damages, the Client shall pay all legal fees, legal expenses and costs incurred by
+              AuditorA Home Inspection in defence of the claim as determined by the courts.</li>
+          <li>AuditorA Home Inspection shall not be liable to the Client for the cost of any repairs to or
+              replacement of any system, component or equipment undertaken by the Client without prior
+              consultation with AuditorA Home Inspection.</li>
+        </ol>
+      </div>
+
+      <div class="art">
+        <h3>Article 3. Fee</h3>
+        <div class="fee-line">
+          <div class="lbl">Inspection fee payable at the time of the Inspection</div>
+          <div class="amount-rule" aria-hidden="true"></div>
+        </div>
+        <p><strong>Cancellation terms.</strong> The inspection may be cancelled or rescheduled up to 24 hours before the scheduled inspection time without charge. Cancellations or rescheduling requests received less than 24 hours before the scheduled inspection time are subject to a $100 cancellation fee.</p>
+        <p style="font-size:13.5px;color:var(--muted);">See the
+           <a href="pricing.html">pricing page</a> for the current fee schedule, or
+           <a href="request.html">request a quote</a> for your property.</p>
+      </div>
+
+      <div class="art">
+        <h3>Article 4. Acknowledgment</h3>
+        <p>By signing this Inspection Contract, the Client acknowledges and agrees that:</p>
+        <ol class="lettered">
+          <li>The Client understands and agrees to be bound by each and every provision of this Inspection
+              Contract.</li>
+          <li>The Client has the authority to bind any other family members or other interested parties to
+              this Inspection Contract.</li>
+          <li>The Inspector has not made any representations or warranties, whether written or oral, about
+              the terms of this Inspection Contract other than those contained in this Inspection Contract.</li>
+          <li>The Client has had such legal advice as the Client desires in relation to the effect of this
+              Inspection Contract on the Client&#8217;s legal rights.</li>
+        </ol>
+      </div>
+
+      <div class="sig-block">
+        <div class="sig-row">
+          <div class="who">Inspector: Vahid Alikhanzadeh</div>
+          <div class="sig-fields">
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Signature</div></div>
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Date signed</div></div>
+          </div>
+        </div>
+        <div class="sig-row">
+          <div class="who">Client</div>
+          <div class="sig-fields">
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Signature</div></div>
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Date signed</div></div>
+          </div>
+          <div class="sig-fields" style="margin-top:18px;">
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Signature</div></div>
+            <div><div class="f" aria-hidden="true"></div><div class="cap">Date signed</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cpbc-note">
+        Home inspectors operating in British Columbia are required to be licensed under the Business Practices
+        and Consumer Protection Act and are regulated under that Act. The services of a home inspector are not
+        provided on behalf of, or in affiliation with, the Province of British Columbia or the Business
+        Practices and Consumer Protection Authority (commonly known and doing business as Consumer Protection
+        BC). For more information on the regulation of home inspectors, what a home inspection should involve,
+        how to select a home inspector and about your rights as a consumer, please contact Consumer Protection BC.
+      </div>
+    </div>
+
+    <div class="side reveal">
+      <div class="dl-card">
+        <div class="dl-in">
+          <h3>Download a copy</h3>
+          <p>Read the full agreement offline or share it with your lawyer or realtor before signing.</p>
+          <a href="Auditora-Home-Inspection-Contract.docx" class="btn btn-primary btn-full btn-sm" download>Download the contract</a>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h3>How signing works</h3>
+        <p>A personalized HIABC inspection contract will be provided for review and electronic signature before the inspection. The inspection cannot proceed until the agreement has been accepted and signed.</p>
+        <p>A personalized copy with your name, the property address and the agreed fee is prepared for you.
+           The version shown here is the standard template.</p>
+      </div>
+
+      <div class="side-card">
+        <h3>Scope of the inspection</h3>
+        <p>The inspection is conducted in accordance with the <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener">HIABC Scope of Inspection</a>.</p>
+        <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener" class="btn btn-ghost btn-full btn-sm">Read the HIABC Scope</a>
+      </div>
+
+      <div class="note-box orange">
+        <strong>Website Terms are separate.</strong> The
+        <a href="terms.html">Website Terms</a> cover use of this website only. They do not replace, modify or
+        override this signed inspection contract.
+      </div>
+
+      <div class="side-card">
+        <h3>Questions before signing?</h3>
+        <p>Call or text <a href="tel:6047195840">604-719-5840</a> and Vahid will walk you through any clause.</p>
+        <a href="request.html" class="btn btn-primary btn-full btn-sm">Request an Inspection</a>
+      </div>
+
+      <div class="side-card no-print">
+        <h3>Before your appointment</h3>
+        <p>Review the preparation checklist so as much of the property as possible can be inspected.</p>
+        <a href="prepare.html" class="btn btn-ghost btn-full btn-sm">Prepare for Your Inspection</a>
+      </div>
+    </div>
+
   </div>
-
-  <h2>Condo inspections</h2>
-  <p>A condo inspection primarily covers the readily accessible systems and components within the unit and any other areas specifically included and accessible at the time of inspection. Clients should separately review strata documents, depreciation reports, meeting minutes and planned expenditures.</p>
-
-  <h2>Before your appointment</h2>
-  <p>Please review <a href="prepare.html">Prepare for Your Inspection</a> so the property is ready and as
-     much of it as possible can be inspected on the day.</p>
-
-  <h2>Payment</h2>
-  <p>Payment is due at the time of the inspection. Available payment methods will be confirmed when your appointment is scheduled.</p>
-
-  <h2>Cancellation</h2>
-  <p>The inspection may be cancelled or rescheduled up to 24 hours before the scheduled inspection time without charge. Cancellations or rescheduling requests received less than 24 hours before the scheduled inspection time are subject to a $100 cancellation fee.</p>
-  <p>See the <a href="cancellation.html">cancellation policy</a> for full details.</p>
-
-  <h2>Your report</h2>
-  <p>A clear digital inspection report is normally provided within 24 hours after the inspection.</p>
-
-  <div class="note-box" style="margin-top:32px;">
-    Questions about the agreement? Call or text <a href="tel:6047195840">604-719-5840</a> or email
-    <a href="mailto:info@auditora.ca">info@auditora.ca</a> and Vahid will walk you through it.
-  </div>
-
-  <div style="display:flex;gap:13px;flex-wrap:wrap;margin-top:32px;">
-    <a href="request.html" class="btn btn-primary">Request an Inspection</a>
-    <a href="https://hiabc.ca/about-us/scope-of-inspection/" target="_blank" rel="noopener" class="btn btn-ghost">HIABC Scope of Inspection</a>
-  </div>
-</div>
+</section>
 
 
 <footer>
@@ -124,7 +375,7 @@
         <p>Licensed residential home and condo inspections throughout Greater Vancouver and the Lower Mainland.</p>
         <div class="footer-contact">
           <a href="tel:6047195840">Call or text 604-719-5840</a>
-          <a href="mailto:info@auditora.ca">info@auditora.ca</a>
+          <a href="mailto:alikhanzadehvahid@yahoo.com">alikhanzadehvahid@yahoo.com</a>
         </div>
       </div>
 
